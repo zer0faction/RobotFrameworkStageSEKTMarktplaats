@@ -38,7 +38,7 @@ Testcase 2: Aanmelden als Avans student/medewerker
     :FOR  ${browser}  IN    @{BROWSERS}  
     \   log to console  call keyword that does your test with ${browser}
     \   Open Browser On Local Machine  ${TEST_URL}  ${browser}
-
+njnu
     \   Wait Until Page Contains Element    id=mxui_widget_Wrapper_2    timeout=5
     \   Click Element   //*[contains(@type,'submit')]    modifier=False
     \   ${Result} =   Page Should Contain Element  //*[contains(text(),'Avans Hogeschool (new test)')]      timeout=5  
