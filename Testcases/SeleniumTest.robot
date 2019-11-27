@@ -9,7 +9,7 @@ Documentation        Keyword documentation: https://robotframework.org/SeleniumL
 ${SELENIUM_DELAY}    0
 ${TEST_URL}          https://avansmarktplaats-test.mendixcloud.com/index.html
 
-@{BROWSERS}          chrome IE
+@{BROWSERS}          chrome     IE
 
 ${CURSUS_NAAM}       Dit Is Een Cursus Naam
 
@@ -19,22 +19,32 @@ ${CURSUS_NAAM}       Dit Is Een Cursus Naam
     #Open Browser On Local Machine       https://www.google.com
     #Wait Until Page Contains Element    name=q                    timeout=5
 
-Opdracht 1: Login in de cursusclient
+# Testcase 1: Aanmelden als extern bedrijfsmedewerker
+#     :FOR  ${browser}  IN    @{BROWSERS}  
+#     \  log to console  call keyword that does your test with ${browser}
+#     \   Open Browser On Local Machine  ${TEST_URL}  ${browser}
+
+#     \   Wait Until Page Contains Element    id=mxui_widget_Wrapper_2    timeout=5
+#     \   Click Element   id=mxui_widget_Wrapper_2    modifier=False
+    
+#     \   Wait Until Page Contains Element    id=55_10    timeout=5
+#     \   input text        id=55_10  gijs@avans.nl
+#     \   input text        id=55_11  Welkom123
+
+#     \   Click Element   id=mxui_widget_LoginButton_0    modifier=False
+#     \   Wait Until Page Contains Element    //*[contains(@class,'mx-link mx-name-actionButton3')]   timeout=5
+
+Testcase 2: Aanmelden als Avans student/medewerker
     :FOR  ${browser}  IN    @{BROWSERS}  
-    \  log to console  call keyword that does your test with ${browser}
+    \   log to console  call keyword that does your test with ${browser}
+    \   Open Browser On Local Machine  ${TEST_URL}  ${browser}
 
-    Open Browser On Local Machine  ${TEST_URL}
-    Wait Until Page Contains Element    id=mxui_widget_Wrapper_2    timeout=5
-    Click Element   id=mxui_widget_Wrapper_2    modifier=False
-
-    Wait Until Page Contains Element    id=55_10    timeout=5
-    input text        id=55_10  gijs@avans.nl
-    input text        id=55_11  Welkom123
-
-    Click Element   id=mxui_widget_LoginButton_0    modifier=False
-
-Opdracht 2: Controleer of de pagina correct geladen is
-    Wait Until Page Contains Element    //*[contains(@class,'mx-link mx-name-actionButton3')]   timeout=5
+    \   Wait Until Page Contains Element    id=mxui_widget_Wrapper_2    timeout=5
+    \   Click Element   //*[contains(@type,'submit')]    modifier=False
+    \   ${Result} =   Page Should Contain Element  //*[contains(text(),'Avans Hogeschool (new test)')]      timeout=5  
+    \   log to console  result is ${Result}
+    \   Run Keyword If    '${RESULT}'=='PASS'   Click Element   //*[contains(@class,'result active')]    modifier=False
+    \   ...                ELSE     Click Element   //*[contains(@class,'result active access')]    modifier=False
 
 # Opdracht 3: Open het scherm om een nieuwe training aan te maken
 #     Wait Until Page Contains Element    id=create                   timeout=5

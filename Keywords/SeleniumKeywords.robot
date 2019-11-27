@@ -4,9 +4,9 @@ Library    SeleniumLibrary
 
 *** Keywords ***
 Open Browser On Local Machine
-    [Arguments]                         ${URL}
+    [Arguments]                         ${URL}                                                       ${BROWSER}                                                   
     Set Selenium Speed                  ${SELENIUM_DELAY}
-    Open Browser                        ${URL}                                                       browser=chrome
+    Open Browser                        ${URL}                                                       ${BROWSER} 
 
 Open Browser In Jenkins
     [Arguments]                         ${URL}
