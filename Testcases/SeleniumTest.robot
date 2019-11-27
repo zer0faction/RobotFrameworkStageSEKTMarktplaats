@@ -9,52 +9,68 @@ Documentation        Keyword documentation: https://robotframework.org/SeleniumL
 ${SELENIUM_DELAY}    0
 ${TEST_URL}          https://avansmarktplaats-test.mendixcloud.com/index.html
 
-@{BROWSERS}          chrome     IE
+${BROWSER}          Chrome
 
 ${CURSUS_NAAM}       Dit Is Een Cursus Naam
 
 *** Test Cases ***
-#Opdracht 0: Google Test
-    # Als deze test werkt dan werkt RobotFramework goed. Verwijder deze als je begint.
-    #Open Browser On Local Machine       https://www.google.com
-    #Wait Until Page Contains Element    name=q                    timeout=5
+Testcase 0: Site bezoeken
+    Open Browser On Local Machine  ${TEST_URL}  ${BROWSER}
+    Wait Until Page Contains Element    id=mxui_widget_Wrapper_2    timeout=5
 
 # Testcase 1: Aanmelden als extern bedrijfsmedewerker
-#     :FOR  ${browser}  IN    @{BROWSERS}  
-#     \  log to console  call keyword that does your test with ${browser}
-#     \   Open Browser On Local Machine  ${TEST_URL}  ${browser}
+#     Click Element   id=mxui_widget_Wrapper_2    modifier=False
+#     Wait Until Page Contains Element    id=55_10    timeout=5
+#     input text        id=55_10  gijs@avans.nl
+#     input text        id=55_11  Welkom123
+#     Click Element   id=mxui_widget_LoginButton_0    modifier=False
+#     Wait Until Page Contains Element    //*[contains(@class,'mx-link mx-name-actionButton3')]   timeout=5
 
-#     \   Wait Until Page Contains Element    id=mxui_widget_Wrapper_2    timeout=5
-#     \   Click Element   id=mxui_widget_Wrapper_2    modifier=False
-    
-#     \   Wait Until Page Contains Element    id=55_10    timeout=5
-#     \   input text        id=55_10  gijs@avans.nl
-#     \   input text        id=55_11  Welkom123
+# Testcase 2: Aanmelden als Avans student/medewerker 
+#     Click Element   //*[@type'submit']    modifier=False
+#     Wait Until Page Contains Element    //*[contains(@class,'mod-search-input active')]   timeout=5
+#     input text        //*[@class='mod-search-input active']  Avans Hogeschool
+#     Wait Until Page Contains Element    //*[contains(@class,'result active access focussed')]   timeout=2
+#     Click Element   //*[@class='result active access focussed']    modifier=False 
 
-#     \   Click Element   id=mxui_widget_LoginButton_0    modifier=False
-#     \   Wait Until Page Contains Element    //*[contains(@class,'mx-link mx-name-actionButton3')]   timeout=5
+#     Click Element  id=loginButton2  modifier=False  
 
-Testcase 2: Aanmelden als Avans student/medewerker
-    :FOR  ${browser}  IN    @{BROWSERS}  
-    \   log to console  call keyword that does your test with ${browser}
-    \   Open Browser On Local Machine  ${TEST_URL}  ${browser}
-    \   Wait Until Page Contains Element    id=mxui_widget_Wrapper_2    timeout=5
-    \   Click Element   //*[contains(@type,'submit')]    modifier=False
-    \  ${textelement}=  Get Webelement  //*[contains(text(), "Avans Hogeschool")]
-    \  log to console  ${textelement}
-    \  ${parent}=  Get Parent WebElement   ${textelement}
-    \  Click Element  ${parent}  modifier=False
-    \  Wait Until Page Contains Element  id=Ecom_User_ID  timeout=5
+Opdracht 3: Registreren als extern bedrijfsmedewerker
+    Click Element   id=mxui_widget_Wrapper_2    modifier=False
+    Wait Until Page Contains Element    id=55_10    timeout=5   
+    Click Element       //*[@class='mx-link mx-name-actionButton2']    modifier=False
 
-    \  input text  id=Ecom_User_ID  e.wallaard@student.avans.nl
-    \  input text  id=Ecom_Password  Gekkehenk@1
+    Wait Until Page Contains Element        //*[contains(@class,'mx-name-textBox1 mx-textbox form-group')]      timeout=5
+    input text      //*[@class='mx-name-textBox1 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        Ed
+    input text      //*[@class='mx-name-textBox3 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        van
+    input text      //*[@class='mx-name-textBox2 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        Vreemden
+    input text      //*[@class='mx-name-textBox4 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        Edje@Outlook.com
+    input text      //*[@class='mx-name-textBox6 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        ChatMetVreemden.nl
+    input text      //*[@class='mx-name-textBox5 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        Werkloos
 
-    \  Click Element  id=loginButton2  modifier=False
-    \  
+    click element   id=mxui_widget_ReferenceSelector_0      modifier=False
+    Wait Until Page Contains Element    //*[contains(text(),'+30 (Griekenland)')]
+    click element   //*[text()='+30 (Griekenland)']       modifier=False
 
-# Opdracht 3: Open het scherm om een nieuwe training aan te maken
-#     Wait Until Page Contains Element    id=create                   timeout=5
-#     Click Element   id=create   modifier=False
+    input text      //*[contains(@id,'53_26')]        46123124
+
+    click element   //*[contains(@name,'53_12')]       modifier=False
+    click element   //*[@class='btn mx-button mx-name-actionButton1 btn-default']       modifier=False
+
+# Testcase 4: Als Technisch beheer medewerker een organisatie registratie goedkeuren/afkeuren
+#     Click Element  //*[@class='mx-name-159b6aef-dbc3-5b23-a735-cf99f8341771-0']  modifier=false
+#     Click Element  //*[@class='mx-link mx-name-actionButton26 nowrap']  modifier=false
+#     Wait Until Page Contains Element    id=mxui_widget_ControlBarButton_0   timeout=5
+#     Click Element  //*[text()='Ed']    modifier=false
+#     Click Element  id=mxui_widget_ControlBarButton_0  modifier=false
+#     Wait Until Page Contains Element  //*[text()='Persoonsgegevens']  timeout=5
+#     Click Element  //*[@class='btn mx-button mx-name-actionButton2 btn-default']    modifier=false
+
+# #   Afkeuren veldje inklikken
+#     input text  //*[@class='form-control mx-textarea-input']   Reden Van Afkeuren Text
+#     Click Element  //*[@class='btn mx-button mx-name-actionButton3 btn-primary']    modifier=false
+
+#     Page Should Not Contain Element  //*[contains(text(),'Ed')]  timeout=5
 
 # Opdracht 4: Maak een nieuwe training aan
 #     Wait Until Page Contains Element    id=maxParticipants                   timeout=5
@@ -97,11 +113,3 @@ Testcase 2: Aanmelden als Avans student/medewerker
 #     Wait Until Page Contains Element    //*[contains(text(),'fietsen')]  timeout=5
 #     Click Element   //*[contains(text(),'fietsen')]
 #     Sleep   0.5
-
-#     Click ELement   //*[contains(text(),'Verwijderen')]
-#     Sleep   0.5
-#     Wait Until Page Contains Element    id=yesImSure                   timeout=5
-
-# Opdracht 9: Test de logout functionaliteit
-#     Wait Until Page Contains Element    id=logout  timeout=5
-#     Click Element   id=logout    modifier=False
