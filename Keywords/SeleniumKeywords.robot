@@ -8,6 +8,17 @@ Open Browser On Local Machine
     Set Selenium Speed                  ${SELENIUM_DELAY}
     Open Browser                        ${URL}                                                       ${BROWSER} 
 
+Get Parent Webelement
+    [Arguments]    ${locator}
+
+    ${element}    Get WebElement    ${locator}
+    ${parent}     Call Method
+    ...                ${element}
+    ...                find_element
+    ...                  by=xpath    value=parent::*
+
+    [Return]    ${parent}
+
 Open Browser In Jenkins
     [Arguments]                         ${URL}
     Set Selenium Speed                  ${SELENIUM_DELAY}

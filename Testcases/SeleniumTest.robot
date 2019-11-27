@@ -38,13 +38,19 @@ Testcase 2: Aanmelden als Avans student/medewerker
     :FOR  ${browser}  IN    @{BROWSERS}  
     \   log to console  call keyword that does your test with ${browser}
     \   Open Browser On Local Machine  ${TEST_URL}  ${browser}
-njnu
     \   Wait Until Page Contains Element    id=mxui_widget_Wrapper_2    timeout=5
     \   Click Element   //*[contains(@type,'submit')]    modifier=False
-    \   ${Result} =   Page Should Contain Element  //*[contains(text(),'Avans Hogeschool (new test)')]      timeout=5  
-    \   log to console  result is ${Result}
-    \   Run Keyword If    '${RESULT}'=='PASS'   Click Element   //*[contains(@class,'result active')]    modifier=False
-    \   ...                ELSE     Click Element   //*[contains(@class,'result active access')]    modifier=False
+    \  ${textelement}=  Get Webelement  //*[contains(text(), "Avans Hogeschool")]
+    \  log to console  ${textelement}
+    \  ${parent}=  Get Parent WebElement   ${textelement}
+    \  Click Element  ${parent}  modifier=False
+    \  Wait Until Page Contains Element  id=Ecom_User_ID  timeout=5
+
+    \  input text  id=Ecom_User_ID  e.wallaard@student.avans.nl
+    \  input text  id=Ecom_Password  Gekkehenk@1
+
+    \  Click Element  id=loginButton2  modifier=False
+    \  
 
 # Opdracht 3: Open het scherm om een nieuwe training aan te maken
 #     Wait Until Page Contains Element    id=create                   timeout=5

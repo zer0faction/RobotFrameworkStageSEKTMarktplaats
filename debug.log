@@ -1,0 +1,2 @@
+[1127/100603.005:ERROR:process_reader_win.cc(123)] NtOpenThread: {Toegang geweigerd} Een proces heeft toegang tot een object aangevraagd, maar heeft deze toegangsrechten niet gekregen. (0xc0000022)
+[1127/100603.014:ERROR:exception_snapshot_win.cc(98)] thread ID 15752 not found in process
