@@ -16,15 +16,7 @@ ${CURSUS_NAAM}       Dit Is Een Cursus Naam
 *** Test Cases ***
 Testcase 0: Site bezoeken
     Open Browser On Local Machine  ${TEST_URL}  ${BROWSER}
-    Wait Until Page Contains Element    id=mxui_widget_Wrapper_2    timeout=5
-
-# Testcase 1: Aanmelden als extern bedrijfsmedewerker
-#     Click Element   id=mxui_widget_Wrapper_2    modifier=False
-#     Wait Until Page Contains Element    id=55_10    timeout=5
-#     input text        id=55_10  gijs@avans.nl
-#     input text        id=55_11  Welkom123
-#     Click Element   id=mxui_widget_LoginButton_0    modifier=False
-#     Wait Until Page Contains Element    //*[contains(@class,'mx-link mx-name-actionButton3')]   timeout=5
+    Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]    timeout=5
 
 # Testcase 2: Aanmelden als Avans student/medewerker 
 #     Click Element   //*[@type'submit']    modifier=False
@@ -57,20 +49,37 @@ Opdracht 3: Registreren als extern bedrijfsmedewerker
     click element   //*[contains(@name,'53_12')]       modifier=False
     click element   //*[@class='btn mx-button mx-name-actionButton1 btn-default']       modifier=False
 
-# Testcase 4: Als Technisch beheer medewerker een organisatie registratie goedkeuren/afkeuren
-#     Click Element  //*[@class='mx-name-159b6aef-dbc3-5b23-a735-cf99f8341771-0']  modifier=false
-#     Click Element  //*[@class='mx-link mx-name-actionButton26 nowrap']  modifier=false
-#     Wait Until Page Contains Element    id=mxui_widget_ControlBarButton_0   timeout=5
-#     Click Element  //*[text()='Ed']    modifier=false
-#     Click Element  id=mxui_widget_ControlBarButton_0  modifier=false
-#     Wait Until Page Contains Element  //*[text()='Persoonsgegevens']  timeout=5
-#     Click Element  //*[@class='btn mx-button mx-name-actionButton2 btn-default']    modifier=false
+    Wait Until Page Contains Element    //*[contains(@class,'btn btn-primary')]     timeout=5
+    click element   //*[@class='btn btn-primary']       modifier=False
 
-# #   Afkeuren veldje inklikken
-#     input text  //*[@class='form-control mx-textarea-input']   Reden Van Afkeuren Text
-#     Click Element  //*[@class='btn mx-button mx-name-actionButton3 btn-primary']    modifier=false
+Testcase 1: Aanmelden als extern bedrijfsmedewerker
+    Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]    timeout=5
+    Sleep   0.5
+    Click Element   //*[@class='btn mx-button mx-name-actionButton2 squarebutton btn-default']      modifier=False
+    Wait Until Page Contains Element    id=55_10    timeout=5
+    input text        id=55_10  gijs@avans.nl
+    input text        id=55_11  Welkom123
+    Click Element   //*[@class='btn mx-button mx-name-signInButton1 SignIn btn-default']    modifier=False
 
-#     Page Should Not Contain Element  //*[contains(text(),'Ed')]  timeout=5
+Testcase 4: Als Technisch beheer medewerker een organisatie registratie goedkeuren/afkeuren
+    Wait Until Page Contains Element    //*[contains(@class,'mx-name-159b6aef-dbc3-5b23-a735-cf99f8341771-0')]   timeout=5
+    Sleep   0.5
+    Click Element  //*[@class='mx-name-159b6aef-dbc3-5b23-a735-cf99f8341771-0']  modifier=false
+    Wait Until Page Contains Element    //*[contains(@class,'mx-link mx-name-actionButton26 nowrap')]   timeout=5
+    Click Element  //*[@class='mx-link mx-name-actionButton26 nowrap']  modifier=false
+    Wait Until Page Contains Element    id=mxui_widget_ControlBarButton_0   timeout=5
+    Click Element  //*[text()='Ed']    modifier=false
+    Click Element  id=mxui_widget_ControlBarButton_0  modifier=false
+    Wait Until Page Contains Element  //*[text()='Persoonsgegevens']  timeout=5
+    Click Element  //*[@class='btn mx-button mx-name-actionButton2 btn-default']    modifier=false
+
+#   Afkeuren veldje inklikken
+    Wait Until Page Contains Element    //*[@class='form-control mx-textarea-input']    timeout=5
+    input text  //*[@class='form-control mx-textarea-input']   Reden Van Afkeuren Text
+    Click Element  //*[@class='btn mx-button mx-name-actionButton3 btn-primary']    modifier=false
+
+    Sleep   0.5
+    Page Should Not Contain Element  //*[contains(text(),'Ed')]  timeout=5
 
 # Opdracht 4: Maak een nieuwe training aan
 #     Wait Until Page Contains Element    id=maxParticipants                   timeout=5
