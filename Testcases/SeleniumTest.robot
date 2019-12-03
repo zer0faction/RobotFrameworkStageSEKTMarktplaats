@@ -103,20 +103,142 @@ Testcase 1: Aanmelden als extern bedrijfsmedewerker
 #     Wait Until Page Contains Element    //*[contains(@class,'btn btn-primary')]   timeout=5
 #     Click Element  //*[@class='btn btn-primary']  modifier=false
 
-Testcase 5: Als extern bedrijfsmedewerker uw opdrachten inzien
-    Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton12 nowrap btn-default')]   timeout=5
-    Click Element  //*[@class='btn mx-button mx-name-actionButton12 nowrap btn-default']  modifier=false
+# Testcase 5: Als extern bedrijfsmedewerker uw opdrachten inzien
+#     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton12 nowrap btn-default')]   timeout=5
+#     Click Element  //*[@class='btn mx-button mx-name-actionButton12 nowrap btn-default']  modifier=false
 
-    Wait Until Page Contains Element    //*[contains(@class,'mx-grid-search-input mx-name-searchField2')]   timeout=5
-    input text      //*[@class='mx-grid-search-input mx-name-searchField2']//*[@class='form-control']        testopdracht
-    Click Element  //*[@class='btn mx-button btn-default mx-name-search mx-grid-search-button']  modifier=false
+#     Wait Until Page Contains Element    //*[contains(@class,'mx-grid-search-input mx-name-searchField2')]   timeout=5
+#     input text      //*[@class='mx-grid-search-input mx-name-searchField2']//*[@class='form-control']        testopdracht
+#     Click Element  //*[@class='btn mx-button btn-default mx-name-search mx-grid-search-button']  modifier=false
 
+#     Sleep   0.5
+#     Click Element  //*[contains(text(),'testopdracht')]     modifier=false
+#     Click Element  //*[@class='btn mx-button mx-name-actionButton2 btn-default']  modifier=false
+
+#     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 btn-inverse')]   timeout=5
+#     Click Element  //*[@class='mx-name-159b6aef-dbc3-5b23-a735-cf99f8341771-1']  modifier=false
+
+Testcase 9: Als extern bedrijfsmedewerker mijn persoonsgegevens wijzigen
+    Wait Until Page Contains Element    //*[contains(@class,'mx-name-container4')]//*[contains(@class,'mx-link mx-name-actionButton1')]   timeout=5
+    Click Element  //*[@class='mx-link mx-name-actionButton1']  modifier=false
+
+    Wait Until Page Contains Element    //*[contains(@class,'mx-name-MijnOrganisatie')]   timeout=5
+#     #Click Element  //*[@class='mx-name-mijnwerkervaring']  modifier=false
+
+#     Sleep  1.0
+#     #voornaam
+#     Press Keys  //*[@class='mx-name-textBox4 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']       CTRL+a+BACKSPACE
+#     input text  //*[@class='mx-name-textBox4 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']  Gino
+
+#     #tussenvoegsel
+#     Press Keys  //*[@class='mx-name-textBox6 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']       CTRL+a+BACKSPACE
+#     input text  //*[@class='mx-name-textBox6 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']  van
+
+#     #achternaam
+#     Press Keys  //*[@class='mx-name-textBox5 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']       CTRL+a+BACKSPACE
+#     input text  //*[@class='mx-name-textBox5 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']  Morsel
+
+#     #email
+#     Press Keys  //*[@class='mx-name-textBox1 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']       CTRL+a+BACKSPACE
+#     input text  //*[@class='mx-name-textBox1 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']  g.vanmorsel@coolblue.nl
+
+#     #Telefoonnummer
+#     Press Keys  //*[@class='mx-name-textBox2 mx-textbox form-group no-columns']//*[@class='form-control']       CTRL+a+BACKSPACE
+#     input text  //*[@class='mx-name-textBox2 mx-textbox form-group no-columns']//*[@class='form-control']  677825691
+
+#     Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']  modifier=False
+
+#     #Wacht op confirmation venster en klik die weg
+#     Wait Until Page Contains Element  //*[contains(@class, 'modal-footer mx-dialog-footer')]  timeout=5
+#     Click Element  //*[@class='modal-footer mx-dialog-footer']//*[@class='btn btn-primary']  modifier=False
+
+# Testcase 3: Als extern bedrijfsmedewerker mijn werkervaringsgegevens wijzigen
+#     Wait Until Page Contains Element  //*[contains(@class, 'mx-name-mijnwerkervaring')]  timeout=5
+#     Sleep  1
+#     Click Element  //*[@class='mx-name-mijnwerkervaring']
+
+#     Wait Until Page Contains Element  //*[contains(text(),'Afdeling')]  timeout=5
+
+#     #Functie
+#     Press Keys    //*[@class='mx-dataview mx-name-dataView3 form-horizontal']//*[@class='mx-dataview-content']//*[@class='mx-name-textBox1 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        CTRL+a+BACKSPACE
+#     input text  //*[@class='mx-dataview mx-name-dataView3 form-horizontal']//*[@class='mx-dataview-content']//*[@class='mx-name-textBox1 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']  Manager Logistiek
+
+#     #Afdeling
+#     Press Keys    //*[@class='mx-name-textBox7 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        CTRL+a+BACKSPACE
+#     input text  //*[@class='mx-name-textBox7 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']  Logistiek
+
+#     #Datum
+#     Press Keys    //*[@class='mx-name-datePicker1 mx-datepicker form-group']//*[@class='col-sm-9']//*[@class='mx-compound-control']//*[@class='form-control']        CTRL+a+BACKSPACE
+#     input text  //*[@class='mx-name-datePicker1 mx-datepicker form-group']//*[@class='col-sm-9']//*[@class='mx-compound-control']//*[@class='form-control']  01-06-2016
+
+#     Select From List By Index   //*[@class='mx-dataview mx-name-dataView3 form-horizontal']//*[@class='mx-dataview-content']//*[@class='mx-name-dropDown2 mx-dropdown form-group']//*[@class='col-sm-9']//*[@class='form-control']  4
+#     Select From List By Index   //*[@class='mx-dataview mx-name-dataView3 form-horizontal']//*[@class='mx-dataview-content']//*[@class='mx-name-dropDown3 mx-dropdown form-group']//*[@class='col-sm-9']//*[@class='form-control']  2
+
+#     Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']  modifier=False
+
+#     #Wacht op confirmation venster en klik die weg
+#     Wait Until Page Contains Element  //*[contains(@class, 'modal-footer mx-dialog-footer')]  timeout=5
+#     Click Element  //*[@class='modal-footer mx-dialog-footer']//*[@class='btn btn-primary']  modifier=False
+
+Testcase 11: Als extern bedrijfsmedewerker mijn organisatiegegevens wijzigen
+    Wait Until Page Contains Element    //*[contains(@role,'presentation')]//*[contains(@class,'mx-name-MijnOrganisatie')]   timeout=5
     Sleep   0.5
-    Click Element  //*[contains(text(),'testopdracht')]     modifier=false
-    Click Element  //*[@class='btn mx-button mx-name-actionButton2 btn-default']  modifier=false
+    Click Element   //*[@role='presentation']//*[@class='mx-name-MijnOrganisatie']  modifier=False
 
-    Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 btn-inverse')]   timeout=5
-    Click Element  //*[@class='mx-name-159b6aef-dbc3-5b23-a735-cf99f8341771-1']  modifier=false
+    Wait Until Page Contains Element    //*[contains(@class,'mx-name-layoutGrid2 mx-layoutgrid mx-layoutgrid-fluid')]//*[contains(@class,'btn mx-button mx-name-actionButton3 btn-default')]   timeout=5
+    Sleep   0.5
+    Click Element  //*[@class='mx-name-layoutGrid2 mx-layoutgrid mx-layoutgrid-fluid']//*[@class='btn mx-button mx-name-actionButton3 btn-default']  modifier=False
+
+    Wait Until Page Contains Element    //*[contains(@class,'mx-name-layoutGrid4 mx-layoutgrid mx-layoutgrid-fluid')]//*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
+    Sleep   0.5
+    Click Element  //*[@class='mx-name-layoutGrid4 mx-layoutgrid mx-layoutgrid-fluid']//*[@class='btn mx-button mx-name-actionButton1 btn-default']  modifier=False
+
+    Wait Until Page Contains Element    //*[contains(@class,'mx-name-textBox1 mx-textbox form-group')]//*[contains(@class,'col-sm-8')]//*[contains(@class,'form-control')]   timeout=5
+
+    #organisatienaam
+    Press Keys  //*[@class='mx-name-textBox1 mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']       CTRL+a+BACKSPACE
+    input text  //*[@class='mx-name-textBox1 mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']    Coolblue
+
+    Select From List By Index   //*[@class='mx-name-dropDown1 mx-dropdown form-group']//*[@class='col-sm-8']//*[@class='form-control']  1
+
+    #website
+    Press Keys  //*[@class='mx-name-textBox3 mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']       CTRL+a+BACKSPACE
+    input text  //*[@class='mx-name-textBox3 mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']    http://www.coolblue.nl
+
+    Select From List By Index   //*[@class='mx-name-dropDown2 mx-dropdown form-group']//*[@class='col-sm-8']//*[@class='form-control']      8
+
+    #tooltip
+    Press Keys  //*[@class='mx-name-textArea3 TestTooltip mx-textarea form-group']//*[@class='col-sm-8']//*[@class='form-control mx-textarea-input']       CTRL+a+BACKSPACE
+    input text  //*[@class='mx-name-textArea3 TestTooltip mx-textarea form-group']//*[@class='col-sm-8']//*[@class='form-control mx-textarea-input']    Coolblue. Ooit begonnen als studentenbedrijf. Nu een snelgroeiend e-commercebedrijf met 11 fysieke winkels in Nederland en België. Sinds onze oprichting in 1999 hebben we maar één doel: jou blij maken. We geven advies met verstand van zaken en we hebben een obsessieve focus op klanttevredenheid. Met meer dan 3.000 Coolblue'ers werken we keihard om onze klanten te verwonderen.
+
+    Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']  modifier=False
+
+    Wait Until Page Contains Element    //*[contains(@class,'mx-name-tabPage2')]   timeout=5
+    Click Element   //*[@class='mx-name-tabPage2']  modifier=False
+
+    Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton3 btn-default')]   timeout=5
+    Click Element   //*[@class='btn mx-button mx-name-actionButton3 btn-default']  modifier=False
+
+    Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton1 btn-primary')]   timeout=5
+    input text  //*[@class='mx-name-textBox12 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']   3011KW
+    input text  //*[@class='mx-name-textBox9 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']    3
+    input text  //*[@class='mx-name-textBox8 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']    Oostplein
+    #input text  //*[@class='mx-name-textBox11 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']   Rotterdam
+
+    # Select Checkbox     //*[@class='mx-name-checkBox1 mx-checkbox label-after form-group']//*[contains(@class,'col-sm-9')]//*[@type='checkbox']
+    Click Element   //*[@class='btn mx-button mx-name-actionButton1 btn-primary']  modifier=False
+
+    Wait Until Page Contains Element    //*[contains(@class, 'mx-grid-search-input mx-name-searchField4')]//*[contains(@class,'form-control')]  timeout=5
+    input text  //*[contains(@class, 'mx-grid-search-input mx-name-searchField4')]//*[contains(@class,'form-control')]  3011KW
+    input text  //*[contains(@class, 'mx-grid-search-input mx-name-searchField5')]//*[contains(@class,'form-control')]  Oostplein
+    input text  //*[contains(@class, 'mx-grid-search-input mx-name-searchField6')]//*[contains(@class,'form-control')]  3
+
+    Click Element  //*[@class='btn mx-button btn-default mx-name-search mx-grid-search-button']  modifier=False
+    Sleep   1
+    Click Element  //*[@class='mx-name-index-0']  modifier=False
+
+    Click Element  //*[@class='btn mx-button mx-name-actionButton5 btn-inverse']  modifier=False
+    Click Element  //*[@class='btn mx-button mx-name-actionButton2 btn-inverse']  modifier=False
 
 # Testcase 14: Als Avans medewerker een organisatie toevoegen
 #     Wait Until Page Contains Element    //*[contains(@class,'mx-name-container26 card cardaction col-center ClickableContainer')]   timeout=5
@@ -156,20 +278,14 @@ Testcase 5: Als extern bedrijfsmedewerker uw opdrachten inzien
     
 #     Wait Until Page Contains Element    //*[@class='mx-name-textBox1 mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']      timeout=5
     
-#     ${value}=     Get Element Attribute     //*[@class='mx-name-textBox1 mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']      value
-#     ${backspaces count}=    Get Length      ${value}
-#     Run Keyword If    """${value}""" != ''    # if there's no current value - no need to slow down by an extra SE call
-#     ...     Repeat Keyword  ${backspaces count +1}  Press Key  //*[@class='mx-name-textBox1 mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']   \\08
-#     input text      //*[@class='mx-name-textBox1 mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']        chatmetvreemden.com
+#     Press Keys    //*[@class='mx-name-textBox1 mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']        CTRL+a+BACKSPACE
+#     input text    //*[@class='mx-name-textBox1 mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']        chatmetvreemden.com
 
 #     Select From List By Index   //*[@class='mx-name-dropDown1 mx-dropdown form-group']//*[@class='col-sm-8']//*[@class='form-control']   4      
 #     # Select From List By Index   //*[@class='form-group mx-referenceselector mx-name-referenceSelector1']//*[@class='col-sm-8']//*[@class='mx-compound-control']//*[@class='form-control']   7
 
-#     ${value}=     Get Element Attribute     //*[@class='mx-name-textBox3 mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']      value
-#     ${backspaces count}=    Get Length      ${value}
-#     Run Keyword If    """${value}""" != ''    # if there's no current value - no need to slow down by an extra SE call
-#     ...     Repeat Keyword  ${backspaces count +1}  Press Key  //*[@class='mx-name-textBox3 mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']   \\08
-#     input text      //*[@class='mx-name-textBox3 mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']        wwww.chatmetvreemden.com
+#     Press Keys    //*[@class='mx-name-textBox3 mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']        CTRL+a+BACKSPACE
+#     input text    //*[@class='mx-name-textBox3 mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']        wwww.chatmetvreemden.com
 
 #     Select From List By Index   //*[@class='mx-name-dropDown2 mx-dropdown form-group']//*[@class='col-sm-8']//*[@class='form-control']      5
 #     Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']    modifier=false
@@ -182,28 +298,16 @@ Testcase 5: Als extern bedrijfsmedewerker uw opdrachten inzien
 
 #     Wait Until Page Contains Element        //*[contains(@class,'mx-name-textBox12 mx-textbox form-group')]      timeout=5
     
-#     ${value}=     Get Element Attribute     //*[@class='mx-name-textBox12 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']      value
-#     ${backspaces count}=    Get Length      ${value}
-#     Run Keyword If    """${value}""" != ''    # if there's no current value - no need to slow down by an extra SE call
-#     ...     Repeat Keyword  ${backspaces count +1}  Press Key  //*[@class='mx-name-textBox12 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']   \\08
+#     Press Keys    //*[@class='mx-name-textBox12 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        CTRL+a+BACKSPACE
 #     input text      //*[@class='mx-name-textBox12 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']       4761 BK     True
     
-#      ${value}=     Get Element Attribute     //*[@class='mx-name-textBox9 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']      value
-#     ${backspaces count}=    Get Length      ${value}
-#     Run Keyword If    """${value}""" != ''    # if there's no current value - no need to slow down by an extra SE call
-#     ...     Repeat Keyword  ${backspaces count +1}  Press Key  //*[@class='mx-name-textBox9 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']   \\08   
+#     Press Keys    //*[@class='mx-name-textBox9 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        CTRL+a+BACKSPACE 
 #     input text      //*[@class='mx-name-textBox9 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']       1        True
 
-#     ${value}=     Get Element Attribute     //*[@class='mx-name-textBox8 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']      value
-#     ${backspaces count}=    Get Length      ${value}
-#     Run Keyword If    """${value}""" != ''    # if there's no current value - no need to slow down by an extra SE call
-#     ...     Repeat Keyword  ${backspaces count +1}  Press Key  //*[@class='mx-name-textBox8 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']   \\08  
+#     Press Keys    //*[@class='mx-name-textBox8 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        CTRL+a+BACKSPACE 
 #     input text      //*[@class='mx-name-textBox8 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']       IJshof       True
 
-#     ${value}=     Get Element Attribute     //*[@class='mx-name-textBox11 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']      value
-#     ${backspaces count}=    Get Length      ${value}
-#     Run Keyword If    """${value}""" != ''    # if there's no current value - no need to slow down by an extra SE call
-#     ...     Repeat Keyword  ${backspaces count +1}  Press Key  //*[@class='mx-name-textBox11 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']   \\08
+#     Press Keys    //*[@class='mx-name-textBox11 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        CTRL+a+BACKSPACE
 #     input text      //*[@class='mx-name-textBox11 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']       Zevenbergen     True
 
 #     Select From List By Index   //*[@class='mx-name-dropDown1 mx-dropdown form-group']//*[@class='col-sm-9']//*[@class='form-control']      1
