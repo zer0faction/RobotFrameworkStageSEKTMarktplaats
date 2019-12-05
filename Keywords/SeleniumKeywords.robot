@@ -7,33 +7,37 @@ Open Browser On Local Machine
     Set Selenium Speed                  ${SELENIUM_DELAY}
     Open Browser                        ${URL}                                                       ${BROWSER} 
 
-Get Parent Webelement
-    [Arguments]    ${locator}
+Login As Organisation
+    # Klik op de "Inloggen voor bedrijven" knop
+    Click Element   //*[@class='btn mx-button mx-name-actionButton2 squarebutton btn-default']      modifier=False
+    Wait Until Page Contains Element    //*[contains(@class,'form-group mx-loginidtextbox no-columns mx-name-loginIdTextBox1')]    timeout=5
+    # Gebruikersnaam invullen
+    input text        id=55_13  g.vanmorsel@coolblue.nl
+    # Wachtwoord invullen
+    input text        id=55_14  Mendix1
+    # Klik op de "Aanmelden" knop
+    Click Element       id=mxui_widget_LoginButton_0    modifier=False
 
-    ${element}    Get WebElement    ${locator}
-    ${parent}     Call Method
-    ...                ${element}
-    ...                find_element
-    ...                  by=xpath    value=parent::*
+Login As Student Or Teacher
+    [Arguments]                         ${STUDENT_PASSWORD}
+    # Klik op de "Inloggen voor studenten en medewerkers" knop
+    Click Element   //*[@type='submit']    modifier=False
+    Wait Until Page Contains Element    //*[contains(@class,'mod-search-input active')]   timeout=5
+    # Naam van instelling invullen
+    input text        //*[@class='mod-search-input active']  Avans Hogeschool
+    Wait Until Page Contains Element    //*[contains(@class,'result active access focussed')]   timeout=2
+    # Instelling kiezen
+    Click Element   //*[@class='result active access focussed']    modifier=False
+    
+    Wait Until Page Contains Element  id=Ecom_User_ID  timeout=5
+    # Gebruikersnaam invullen
+    input text  id=Ecom_User_ID  e.wallaard@student.avans.nl
+    # Wachtwoord invullen
+    input text  id=Ecom_Password  ${STUDENT_PASSWORD}
+    # Klik op de "Sign in" knop
+    Click Element  id=loginButton2  modifier=False
 
-    [Return]    ${parent}
-
-Get Child Webelements
-    [Arguments]    ${locator}
-
-    ${element}    Get WebElement    ${locator}    
-    ${children}     Call Method       
-    ...                ${element}    
-    ...                find_elements   
-    ...                  by=xpath    value=child::*    
-
-    [Return]      ${children}
-
-Open Browser In Jenkins
-    [Arguments]                         ${URL}
-    Set Selenium Speed                  ${SELENIUM_DELAY}
-    Import Library                      XvfbRobot
-    Start Virtual Display               1920                                                         1080
-    Open Browser                        ${URL}                                                       browser=firefox
-    Set Window Size                     1920                                                         1080
-
+Log Out As User
+    Wait Until Page Contains Element  //*[contains(@class,'mx-link mx-name-actionButton3')]  timeout=5
+    Sleep   0.5
+    Click Element  //*[@class='mx-link mx-name-actionButton3']  modifier=false
