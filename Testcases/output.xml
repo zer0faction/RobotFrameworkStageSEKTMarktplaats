@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.8.0 on win32)" generated="20191204 15:11:07.092" rpa="false">
-<suite id="s1" name="AuthenticationTestcases" source="C:\Users\Gijs\source\RobotFramework\RobotFrameworkStageSEKTMarktplaats\Testcases\AuthenticationTestcases.robot">
+<robot generator="Robot 3.1.2 (Python 3.8.0 on win32)" generated="20191209 11:29:19.226" rpa="false">
+<suite id="s1" name="OrganisationManagementECETestcases" source="C:\Users\Gijs\source\RobotFramework\RobotFrameworkStageSEKTMarktplaats\testcases\OrganisationManagementECETestcases.robot">
 <test id="s1-t1" name="Testcase 0: Site bezoeken">
 <kw name="Open Browser On Local Machine" library="SeleniumKeywords">
 <arguments>
@@ -12,7 +12,7 @@
 <arguments>
 <arg>${SELENIUM_DELAY}</arg>
 </arguments>
-<status status="PASS" starttime="20191204 15:11:07.440" endtime="20191204 15:11:07.441"></status>
+<status status="PASS" starttime="20191209 11:29:19.549" endtime="20191209 11:29:19.550"></status>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
@@ -20,10 +20,10 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20191204 15:11:07.442" level="INFO">Opening browser 'Chrome' to base url 'https://avansmarktplaats-test.mendixcloud.com/index.html'.</msg>
-<status status="PASS" starttime="20191204 15:11:07.441" endtime="20191204 15:11:13.277"></status>
+<msg timestamp="20191209 11:29:19.550" level="INFO">Opening browser 'Chrome' to base url 'https://avansmarktplaats-test.mendixcloud.com/index.html'.</msg>
+<status status="PASS" starttime="20191209 11:29:19.550" endtime="20191209 11:29:25.360"></status>
 </kw>
-<status status="PASS" starttime="20191204 15:11:07.439" endtime="20191204 15:11:13.278"></status>
+<status status="PASS" starttime="20191209 11:29:19.549" endtime="20191209 11:29:25.362"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -31,20 +31,21 @@
 <arg>//*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]</arg>
 <arg>timeout=5</arg>
 </arguments>
-<status status="PASS" starttime="20191204 15:11:13.278" endtime="20191204 15:11:14.133"></status>
+<status status="PASS" starttime="20191209 11:29:25.367" endtime="20191209 11:29:26.264"></status>
 </kw>
-<status status="PASS" starttime="20191204 15:11:07.438" endtime="20191204 15:11:14.133" critical="yes"></status>
-</test>
-<test id="s1-t2" name="Testcase 1: Aanmelden als extern bedrijfsmedewerker">
 <kw name="Login As Organisation" library="SeleniumKeywords">
+<arguments>
+<arg>g.vanmorsel@coolblue.nl</arg>
+<arg>Mendix1</arg>
+</arguments>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>//*[@class='btn mx-button mx-name-actionButton2 squarebutton btn-default']</arg>
 <arg>modifier=False</arg>
 </arguments>
-<msg timestamp="20191204 15:11:14.136" level="INFO">Clicking element '//*[@class='btn mx-button mx-name-actionButton2 squarebutton btn-default']'.</msg>
-<status status="PASS" starttime="20191204 15:11:14.136" endtime="20191204 15:11:14.279"></status>
+<msg timestamp="20191209 11:29:26.266" level="INFO">Clicking element '//*[@class='btn mx-button mx-name-actionButton2 squarebutton btn-default']'.</msg>
+<status status="PASS" starttime="20191209 11:29:26.265" endtime="20191209 11:29:26.448"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
@@ -52,25 +53,25 @@
 <arg>//*[contains(@class,'form-group mx-loginidtextbox no-columns mx-name-loginIdTextBox1')]</arg>
 <arg>timeout=5</arg>
 </arguments>
-<status status="PASS" starttime="20191204 15:11:14.279" endtime="20191204 15:11:14.567"></status>
+<status status="PASS" starttime="20191209 11:29:26.448" endtime="20191209 11:29:26.742"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
 <arg>id=55_13</arg>
-<arg>g.vanmorsel@coolblue.nl</arg>
+<arg>${EMPLOYEE_USERNAME}</arg>
 </arguments>
-<msg timestamp="20191204 15:11:14.567" level="INFO">Typing text 'g.vanmorsel@coolblue.nl' into text field 'id=55_13'.</msg>
-<status status="PASS" starttime="20191204 15:11:14.567" endtime="20191204 15:11:14.742"></status>
+<msg timestamp="20191209 11:29:26.742" level="INFO">Typing text 'g.vanmorsel@coolblue.nl' into text field 'id=55_13'.</msg>
+<status status="PASS" starttime="20191209 11:29:26.742" endtime="20191209 11:29:26.906"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
 <arg>id=55_14</arg>
-<arg>Mendix1</arg>
+<arg>${EMPLOYEE_PASSWORD}</arg>
 </arguments>
-<msg timestamp="20191204 15:11:14.742" level="INFO">Typing text 'Mendix1' into text field 'id=55_14'.</msg>
-<status status="PASS" starttime="20191204 15:11:14.742" endtime="20191204 15:11:14.870"></status>
+<msg timestamp="20191209 11:29:26.907" level="INFO">Typing text 'Mendix1' into text field 'id=55_14'.</msg>
+<status status="PASS" starttime="20191209 11:29:26.906" endtime="20191209 11:29:27.043"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
@@ -78,215 +79,927 @@
 <arg>id=mxui_widget_LoginButton_0</arg>
 <arg>modifier=False</arg>
 </arguments>
-<msg timestamp="20191204 15:11:14.870" level="INFO">Clicking element 'id=mxui_widget_LoginButton_0'.</msg>
-<status status="PASS" starttime="20191204 15:11:14.870" endtime="20191204 15:11:14.932"></status>
+<msg timestamp="20191209 11:29:27.044" level="INFO">Clicking element 'id=mxui_widget_LoginButton_0'.</msg>
+<status status="PASS" starttime="20191209 11:29:27.043" endtime="20191209 11:29:27.147"></status>
 </kw>
-<status status="PASS" starttime="20191204 15:11:14.135" endtime="20191204 15:11:14.933"></status>
+<status status="PASS" starttime="20191209 11:29:26.264" endtime="20191209 11:29:27.147"></status>
 </kw>
-<status status="PASS" starttime="20191204 15:11:14.135" endtime="20191204 15:11:14.933" critical="yes"></status>
+<status status="PASS" starttime="20191209 11:29:19.548" endtime="20191209 11:29:27.148" critical="yes"></status>
 </test>
-<test id="s1-t3" name="Testcase 2: Als willekeurig gebruiker afmelden">
-<kw name="Log Out As User" library="SeleniumKeywords">
+<test id="s1-t2" name="Testcase 6: Als extern bedrijfsmedewerker een stageopdracht aanmelden">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
 <arguments>
-<arg>//*[contains(@class,'mx-link mx-name-actionButton3')]</arg>
+<arg>//*[contains(@class,'mx-link mx-name-actionButton9')]</arg>
 <arg>timeout=5</arg>
 </arguments>
-<status status="PASS" starttime="20191204 15:11:14.936" endtime="20191204 15:11:15.893"></status>
+<status status="PASS" starttime="20191209 11:29:27.154" endtime="20191209 11:29:28.048"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-link mx-name-actionButton9']</arg>
+<arg>modifier=false</arg>
+</arguments>
+<msg timestamp="20191209 11:29:28.049" level="INFO">Clicking element '//*[@class='mx-link mx-name-actionButton9']'.</msg>
+<status status="PASS" starttime="20191209 11:29:28.049" endtime="20191209 11:29:28.196"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191209 11:29:28.196" endtime="20191209 11:29:28.450"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='btn mx-button mx-name-actionButton1 btn-default']</arg>
+<arg>modifier=false</arg>
+</arguments>
+<msg timestamp="20191209 11:29:28.451" level="INFO">Clicking element '//*[@class='btn mx-button mx-name-actionButton1 btn-default']'.</msg>
+<status status="PASS" starttime="20191209 11:29:28.450" endtime="20191209 11:29:28.557"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[contains(@class,'form-group mx-referenceselector mx-name-referenceSelector1 StudyprogramNL')]</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191209 11:29:28.557" endtime="20191209 11:29:28.847"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>//*[@class='form-group mx-referenceselector mx-name-referenceSelector1 StudyprogramNL']//*[@class='col-sm-9']//*[@class='mx-compound-control']//*[@class='form-control']</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20191209 11:29:28.848" level="INFO">Selecting options from selection list '//*[@class='form-group mx-referenceselector mx-name-referenceSelector1 StudyprogramNL']//*[@class='col-sm-9']//*[@class='mx-compound-control']//*[@class='form-control']' by index 1.</msg>
+<status status="PASS" starttime="20191209 11:29:28.848" endtime="20191209 11:29:28.990"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-textBoxTitel Titel mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
+<arg>testopdracht</arg>
+</arguments>
+<msg timestamp="20191209 11:29:28.991" level="INFO">Typing text 'testopdracht' into text field '//*[@class='mx-name-textBoxTitel Titel mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']'.</msg>
+<status status="PASS" starttime="20191209 11:29:28.991" endtime="20191209 11:29:29.262"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-textAreaAanleiding Aanleiding mx-textarea form-group']//*[@class='col-sm-9']//*[@class='form-control mx-textarea-input']</arg>
+<arg>we makem een testopdracht</arg>
+</arguments>
+<msg timestamp="20191209 11:29:29.263" level="INFO">Typing text 'we makem een testopdracht' into text field '//*[@class='mx-name-textAreaAanleiding Aanleiding mx-textarea form-group']//*[@class='col-sm-9']//*[@class='form-control mx-textarea-input']'.</msg>
+<status status="PASS" starttime="20191209 11:29:29.262" endtime="20191209 11:29:29.543"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-textAreaOmschrijving OpdrachtOmschrijving mx-textarea form-group']//*[@class='col-sm-9']//*[@class='form-control mx-textarea-input']</arg>
+<arg>we maken een testopdracht</arg>
+</arguments>
+<msg timestamp="20191209 11:29:29.544" level="INFO">Typing text 'we maken een testopdracht' into text field '//*[@class='mx-name-textAreaOmschrijving OpdrachtOmschrijving mx-textarea form-group']//*[@class='col-sm-9']//*[@class='form-control mx-textarea-input']'.</msg>
+<status status="PASS" starttime="20191209 11:29:29.543" endtime="20191209 11:29:29.774"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-textBoxAanbvullendeInfo Literatuur mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
+<arg>www.chatmetvreemden.nl</arg>
+</arguments>
+<msg timestamp="20191209 11:29:29.775" level="INFO">Typing text 'www.chatmetvreemden.nl' into text field '//*[@class='mx-name-textBoxAanbvullendeInfo Literatuur mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']'.</msg>
+<status status="PASS" starttime="20191209 11:29:29.775" endtime="20191209 11:29:30.052"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-textAreaSolliciterenVia Solliciteren mx-textarea form-group']//*[@class='col-sm-9']//*[@class='form-control mx-textarea-input']</arg>
+<arg>diego sweet</arg>
+</arguments>
+<msg timestamp="20191209 11:29:30.054" level="INFO">Typing text 'diego sweet' into text field '//*[@class='mx-name-textAreaSolliciterenVia Solliciteren mx-textarea form-group']//*[@class='col-sm-9']//*[@class='form-control mx-textarea-input']'.</msg>
+<status status="PASS" starttime="20191209 11:29:30.053" endtime="20191209 11:29:30.231"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-Opmerkingen Opmerkingen mx-textarea form-group']//*[@class='col-sm-9']//*[@class='form-control mx-textarea-input']</arg>
+<arg>wwww.chatmetvreemden.nl</arg>
+</arguments>
+<msg timestamp="20191209 11:29:30.231" level="INFO">Typing text 'wwww.chatmetvreemden.nl' into text field '//*[@class='mx-name-Opmerkingen Opmerkingen mx-textarea form-group']//*[@class='col-sm-9']//*[@class='form-control mx-textarea-input']'.</msg>
+<status status="PASS" starttime="20191209 11:29:30.231" endtime="20191209 11:29:30.459"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='btn mx-button mx-name-actionButton1 btn-primary']</arg>
+<arg>modifier=false</arg>
+</arguments>
+<msg timestamp="20191209 11:29:30.460" level="INFO">Clicking element '//*[@class='btn mx-button mx-name-actionButton1 btn-primary']'.</msg>
+<status status="PASS" starttime="20191209 11:29:30.460" endtime="20191209 11:29:30.544"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[contains(@class,'btn btn-primary')]</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191209 11:29:30.544" endtime="20191209 11:29:31.216"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='btn btn-primary']</arg>
+<arg>modifier=false</arg>
+</arguments>
+<msg timestamp="20191209 11:29:31.218" level="INFO">Clicking element '//*[@class='btn btn-primary']'.</msg>
+<status status="PASS" starttime="20191209 11:29:31.217" endtime="20191209 11:29:31.292"></status>
+</kw>
+<status status="PASS" starttime="20191209 11:29:27.151" endtime="20191209 11:29:31.293" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Testcase 7: Als extern bedrijfsmedewerker uw opdrachten inzien">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[contains(@class,'btn mx-button mx-name-actionButton12 nowrap btn-default')]</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191209 11:29:31.295" endtime="20191209 11:29:31.312"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='btn mx-button mx-name-actionButton12 nowrap btn-default']</arg>
+<arg>modifier=false</arg>
+</arguments>
+<msg timestamp="20191209 11:29:31.313" level="INFO">Clicking element '//*[@class='btn mx-button mx-name-actionButton12 nowrap btn-default']'.</msg>
+<status status="PASS" starttime="20191209 11:29:31.313" endtime="20191209 11:29:31.413"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[contains(@class,'mx-grid-search-input mx-name-searchField2')]</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191209 11:29:31.413" endtime="20191209 11:29:31.643"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-grid-search-input mx-name-searchField2']//*[@class='form-control']</arg>
+<arg>testopdracht</arg>
+</arguments>
+<msg timestamp="20191209 11:29:31.644" level="INFO">Typing text 'testopdracht' into text field '//*[@class='mx-grid-search-input mx-name-searchField2']//*[@class='form-control']'.</msg>
+<status status="PASS" starttime="20191209 11:29:31.644" endtime="20191209 11:29:31.807"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='btn mx-button btn-default mx-name-search mx-grid-search-button']</arg>
+<arg>modifier=false</arg>
+</arguments>
+<msg timestamp="20191209 11:29:31.808" level="INFO">Clicking element '//*[@class='btn mx-button btn-default mx-name-search mx-grid-search-button']'.</msg>
+<status status="PASS" starttime="20191209 11:29:31.807" endtime="20191209 11:29:31.880"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>0.5</arg>
 </arguments>
-<msg timestamp="20191204 15:11:16.395" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20191204 15:11:15.893" endtime="20191204 15:11:16.395"></status>
+<msg timestamp="20191209 11:29:32.382" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20191209 11:29:31.881" endtime="20191209 11:29:32.382"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>//*[@class='mx-link mx-name-actionButton3']</arg>
+<arg>//*[contains(text(),'testopdracht')]</arg>
 <arg>modifier=false</arg>
 </arguments>
-<msg timestamp="20191204 15:11:16.395" level="INFO">Clicking element '//*[@class='mx-link mx-name-actionButton3']'.</msg>
-<status status="PASS" starttime="20191204 15:11:16.395" endtime="20191204 15:11:16.458"></status>
+<msg timestamp="20191209 11:29:32.383" level="INFO">Clicking element '//*[contains(text(),'testopdracht')]'.</msg>
+<status status="PASS" starttime="20191209 11:29:32.382" endtime="20191209 11:29:32.444"></status>
 </kw>
-<status status="PASS" starttime="20191204 15:11:14.936" endtime="20191204 15:11:16.458"></status>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='btn mx-button mx-name-actionButton2 btn-default']</arg>
+<arg>modifier=false</arg>
+</arguments>
+<msg timestamp="20191209 11:29:32.445" level="INFO">Clicking element '//*[@class='btn mx-button mx-name-actionButton2 btn-default']'.</msg>
+<status status="PASS" starttime="20191209 11:29:32.444" endtime="20191209 11:29:32.528"></status>
 </kw>
-<status status="PASS" starttime="20191204 15:11:14.935" endtime="20191204 15:11:16.459" critical="yes"></status>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[contains(@class,'btn mx-button mx-name-actionButton2 btn-inverse')]</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191209 11:29:32.528" endtime="20191209 11:29:32.787"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-159b6aef-dbc3-5b23-a735-cf99f8341771-1']</arg>
+<arg>modifier=false</arg>
+</arguments>
+<msg timestamp="20191209 11:29:32.788" level="INFO">Clicking element '//*[@class='mx-name-159b6aef-dbc3-5b23-a735-cf99f8341771-1']'.</msg>
+<status status="PASS" starttime="20191209 11:29:32.788" endtime="20191209 11:29:32.910"></status>
+</kw>
+<status status="PASS" starttime="20191209 11:29:31.294" endtime="20191209 11:29:32.911" critical="yes"></status>
 </test>
-<test id="s1-t4" name="Testcase 3: Registreren als extern bedrijfsmedewerker">
+<test id="s1-t4" name="Testcase 9: Als extern bedrijfsmedewerker mijn persoonsgegevens wijzigen">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
 <arguments>
-<arg>//*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]</arg>
+<arg>//*[contains(@class,'mx-name-container4')]//*[contains(@class,'mx-link mx-name-actionButton1')]</arg>
 <arg>timeout=5</arg>
 </arguments>
-<status status="PASS" starttime="20191204 15:11:16.462" endtime="20191204 15:11:17.169"></status>
+<status status="PASS" starttime="20191209 11:29:32.913" endtime="20191209 11:29:32.941"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>//*[@class='btn mx-button mx-name-actionButton2 squarebutton btn-default']</arg>
-<arg>modifier=False</arg>
+<arg>//*[@class='mx-link mx-name-actionButton1']</arg>
+<arg>modifier=false</arg>
 </arguments>
-<msg timestamp="20191204 15:11:17.170" level="INFO">Clicking element '//*[@class='btn mx-button mx-name-actionButton2 squarebutton btn-default']'.</msg>
-<status status="PASS" starttime="20191204 15:11:17.169" endtime="20191204 15:11:17.268"></status>
+<msg timestamp="20191209 11:29:32.942" level="INFO">Clicking element '//*[@class='mx-link mx-name-actionButton1']'.</msg>
+<status status="PASS" starttime="20191209 11:29:32.942" endtime="20191209 11:29:33.065"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
 <arguments>
-<arg>id=55_13</arg>
+<arg>//*[contains(@class,'mx-name-MijnOrganisatie')]</arg>
 <arg>timeout=5</arg>
 </arguments>
-<status status="PASS" starttime="20191204 15:11:17.269" endtime="20191204 15:11:17.285"></status>
+<status status="PASS" starttime="20191209 11:29:33.068" endtime="20191209 11:29:33.324"></status>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>//*[@class='mx-link mx-name-actionButton2']</arg>
-<arg>modifier=False</arg>
+<arg>1.0</arg>
 </arguments>
-<msg timestamp="20191204 15:11:17.287" level="INFO">Clicking element '//*[@class='mx-link mx-name-actionButton2']'.</msg>
-<status status="PASS" starttime="20191204 15:11:17.286" endtime="20191204 15:11:17.373"></status>
+<msg timestamp="20191209 11:29:34.330" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20191209 11:29:33.328" endtime="20191209 11:29:34.330"></status>
 </kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
 <arguments>
-<arg>//*[contains(@class,'mx-name-textBox1 mx-textbox form-group')]</arg>
-<arg>timeout=5</arg>
+<arg>//*[@class='mx-name-textBox4 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
+<arg>CTRL+a+BACKSPACE</arg>
 </arguments>
-<status status="PASS" starttime="20191204 15:11:17.374" endtime="20191204 15:11:17.613"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>//*[@class='mx-name-textBox1 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
-<arg>Ed</arg>
-</arguments>
-<msg timestamp="20191204 15:11:17.614" level="INFO">Typing text 'Ed' into text field '//*[@class='mx-name-textBox1 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']'.</msg>
-<status status="PASS" starttime="20191204 15:11:17.613" endtime="20191204 15:11:17.742"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>//*[@class='mx-name-textBox3 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
-<arg>van</arg>
-</arguments>
-<msg timestamp="20191204 15:11:17.743" level="INFO">Typing text 'van' into text field '//*[@class='mx-name-textBox3 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']'.</msg>
-<status status="PASS" starttime="20191204 15:11:17.742" endtime="20191204 15:11:17.860"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<arguments>
-<arg>//*[@class='mx-name-textBox2 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
-<arg>Vreemden</arg>
-</arguments>
-<msg timestamp="20191204 15:11:17.861" level="INFO">Typing text 'Vreemden' into text field '//*[@class='mx-name-textBox2 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']'.</msg>
-<status status="PASS" starttime="20191204 15:11:17.861" endtime="20191204 15:11:18.003"></status>
+<msg timestamp="20191209 11:29:34.333" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to //*[@class='mx-name-textBox4 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control'] element.</msg>
+<msg timestamp="20191209 11:29:34.379" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20191209 11:29:34.379" level="INFO">Sending key a</msg>
+<msg timestamp="20191209 11:29:34.379" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20191209 11:29:34.380" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20191209 11:29:34.380" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20191209 11:29:34.332" endtime="20191209 11:29:34.695"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
 <arg>//*[@class='mx-name-textBox4 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
-<arg>Edje@Outlook.com</arg>
+<arg>Gino</arg>
 </arguments>
-<msg timestamp="20191204 15:11:18.004" level="INFO">Typing text 'Edje@Outlook.com' into text field '//*[@class='mx-name-textBox4 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']'.</msg>
-<status status="PASS" starttime="20191204 15:11:18.004" endtime="20191204 15:11:18.218"></status>
+<msg timestamp="20191209 11:29:34.696" level="INFO">Typing text 'Gino' into text field '//*[@class='mx-name-textBox4 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']'.</msg>
+<status status="PASS" starttime="20191209 11:29:34.696" endtime="20191209 11:29:34.787"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>//*[@class='mx-name-textBox6 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
+<arg>CTRL+a+BACKSPACE</arg>
+</arguments>
+<msg timestamp="20191209 11:29:34.788" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to //*[@class='mx-name-textBox6 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control'] element.</msg>
+<msg timestamp="20191209 11:29:34.803" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20191209 11:29:34.803" level="INFO">Sending key a</msg>
+<msg timestamp="20191209 11:29:34.803" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20191209 11:29:34.803" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20191209 11:29:34.803" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20191209 11:29:34.788" endtime="20191209 11:29:35.147"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
 <arg>//*[@class='mx-name-textBox6 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
-<arg>ChatMetVreemden.nl</arg>
+<arg>van</arg>
 </arguments>
-<msg timestamp="20191204 15:11:18.219" level="INFO">Typing text 'ChatMetVreemden.nl' into text field '//*[@class='mx-name-textBox6 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']'.</msg>
-<status status="PASS" starttime="20191204 15:11:18.219" endtime="20191204 15:11:18.448"></status>
+<msg timestamp="20191209 11:29:35.149" level="INFO">Typing text 'van' into text field '//*[@class='mx-name-textBox6 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']'.</msg>
+<status status="PASS" starttime="20191209 11:29:35.149" endtime="20191209 11:29:35.230"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>//*[@class='mx-name-textBox5 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
+<arg>CTRL+a+BACKSPACE</arg>
+</arguments>
+<msg timestamp="20191209 11:29:35.231" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to //*[@class='mx-name-textBox5 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control'] element.</msg>
+<msg timestamp="20191209 11:29:35.244" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20191209 11:29:35.244" level="INFO">Sending key a</msg>
+<msg timestamp="20191209 11:29:35.245" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20191209 11:29:35.245" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20191209 11:29:35.245" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20191209 11:29:35.231" endtime="20191209 11:29:35.578"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
 <arg>//*[@class='mx-name-textBox5 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
-<arg>Werkloos</arg>
+<arg>Morsel</arg>
 </arguments>
-<msg timestamp="20191204 15:11:18.449" level="INFO">Typing text 'Werkloos' into text field '//*[@class='mx-name-textBox5 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']'.</msg>
-<status status="PASS" starttime="20191204 15:11:18.448" endtime="20191204 15:11:18.590"></status>
+<msg timestamp="20191209 11:29:35.581" level="INFO">Typing text 'Morsel' into text field '//*[@class='mx-name-textBox5 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']'.</msg>
+<status status="PASS" starttime="20191209 11:29:35.581" endtime="20191209 11:29:35.783"></status>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
 <arguments>
-<arg>id=mxui_widget_ReferenceSelector_0</arg>
-<arg>modifier=False</arg>
+<arg>//*[@class='mx-name-textBox1 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
+<arg>CTRL+a+BACKSPACE</arg>
 </arguments>
-<msg timestamp="20191204 15:11:18.591" level="INFO">Clicking element 'id=mxui_widget_ReferenceSelector_0'.</msg>
-<status status="PASS" starttime="20191204 15:11:18.591" endtime="20191204 15:11:18.705"></status>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<arguments>
-<arg>//*[contains(text(),'+30 (Griekenland)')]</arg>
-</arguments>
-<status status="PASS" starttime="20191204 15:11:18.710" endtime="20191204 15:11:18.744"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click the element identified by ``locator``.</doc>
-<arguments>
-<arg>//*[text()='+30 (Griekenland)']</arg>
-<arg>modifier=False</arg>
-</arguments>
-<msg timestamp="20191204 15:11:18.746" level="INFO">Clicking element '//*[text()='+30 (Griekenland)']'.</msg>
-<status status="PASS" starttime="20191204 15:11:18.745" endtime="20191204 15:11:18.814"></status>
+<msg timestamp="20191209 11:29:35.785" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to //*[@class='mx-name-textBox1 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control'] element.</msg>
+<msg timestamp="20191209 11:29:35.806" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20191209 11:29:35.806" level="INFO">Sending key a</msg>
+<msg timestamp="20191209 11:29:35.806" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20191209 11:29:35.807" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20191209 11:29:35.807" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20191209 11:29:35.784" endtime="20191209 11:29:36.163"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>//*[contains(@id,'53_26')]</arg>
-<arg>46123124</arg>
+<arg>//*[@class='mx-name-textBox1 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
+<arg>g.vanmorsel@coolblue.nl</arg>
 </arguments>
-<msg timestamp="20191204 15:11:18.815" level="INFO">Typing text '46123124' into text field '//*[contains(@id,'53_26')]'.</msg>
-<msg timestamp="20191204 15:11:18.842" level="FAIL">Element with locator '//*[contains(@id,'53_26')]' not found.</msg>
-<status status="FAIL" starttime="20191204 15:11:18.815" endtime="20191204 15:11:18.842"></status>
+<msg timestamp="20191209 11:29:36.166" level="INFO">Typing text 'g.vanmorsel@coolblue.nl' into text field '//*[@class='mx-name-textBox1 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']'.</msg>
+<status status="PASS" starttime="20191209 11:29:36.165" endtime="20191209 11:29:36.422"></status>
 </kw>
-<status status="FAIL" starttime="20191204 15:11:16.461" endtime="20191204 15:11:18.843" critical="yes">Element with locator '//*[contains(@id,'53_26')]' not found.</status>
-</test>
-<test id="s1-t5" name="Testcase 4: Aanmelden als Avans student/medewerker">
-<kw name="Login As Student Or Teacher" library="SeleniumKeywords">
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
 <arguments>
-<arg>${STUDENT_PASSWORD}</arg>
+<arg>//*[@class='mx-name-textBox2 mx-textbox form-group no-columns']//*[@class='form-control']</arg>
+<arg>CTRL+a+BACKSPACE</arg>
 </arguments>
+<msg timestamp="20191209 11:29:36.424" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to //*[@class='mx-name-textBox2 mx-textbox form-group no-columns']//*[@class='form-control'] element.</msg>
+<msg timestamp="20191209 11:29:36.441" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20191209 11:29:36.441" level="INFO">Sending key a</msg>
+<msg timestamp="20191209 11:29:36.441" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20191209 11:29:36.441" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20191209 11:29:36.441" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20191209 11:29:36.423" endtime="20191209 11:29:36.742"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-textBox2 mx-textbox form-group no-columns']//*[@class='form-control']</arg>
+<arg>677825691</arg>
+</arguments>
+<msg timestamp="20191209 11:29:36.743" level="INFO">Typing text '677825691' into text field '//*[@class='mx-name-textBox2 mx-textbox form-group no-columns']//*[@class='form-control']'.</msg>
+<status status="PASS" starttime="20191209 11:29:36.743" endtime="20191209 11:29:36.892"></status>
+</kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
-<arg>//*[@type='submit']</arg>
+<arg>//*[@class='btn mx-button mx-name-actionButton1 btn-default']</arg>
 <arg>modifier=False</arg>
 </arguments>
-<msg timestamp="20191204 15:11:18.847" level="INFO">Clicking element '//*[@type='submit']'.</msg>
-<msg timestamp="20191204 15:11:18.864" level="FAIL">Element with locator '//*[@type='submit']' not found.</msg>
-<status status="FAIL" starttime="20191204 15:11:18.847" endtime="20191204 15:11:18.864"></status>
+<msg timestamp="20191209 11:29:36.893" level="INFO">Clicking element '//*[@class='btn mx-button mx-name-actionButton1 btn-default']'.</msg>
+<status status="PASS" starttime="20191209 11:29:36.893" endtime="20191209 11:29:36.974"></status>
 </kw>
-<status status="FAIL" starttime="20191204 15:11:18.846" endtime="20191204 15:11:18.865"></status>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[contains(@class, 'modal-footer mx-dialog-footer')]</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191209 11:29:36.974" endtime="20191209 11:29:37.198"></status>
 </kw>
-<status status="FAIL" starttime="20191204 15:11:18.845" endtime="20191204 15:11:18.865" critical="yes">Element with locator '//*[@type='submit']' not found.</status>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='modal-footer mx-dialog-footer']//*[@class='btn btn-primary']</arg>
+<arg>modifier=False</arg>
+</arguments>
+<msg timestamp="20191209 11:29:37.199" level="INFO">Clicking element '//*[@class='modal-footer mx-dialog-footer']//*[@class='btn btn-primary']'.</msg>
+<status status="PASS" starttime="20191209 11:29:37.199" endtime="20191209 11:29:37.274"></status>
+</kw>
+<status status="PASS" starttime="20191209 11:29:32.912" endtime="20191209 11:29:37.275" critical="yes"></status>
+</test>
+<test id="s1-t5" name="Testcase 10: Als extern bedrijfsmedewerker mijn werkervaringsgegevens wijzigen">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[contains(@class, 'mx-name-mijnwerkervaring')]</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191209 11:29:37.278" endtime="20191209 11:29:37.293"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20191209 11:29:38.295" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20191209 11:29:37.294" endtime="20191209 11:29:38.295"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-mijnwerkervaring']</arg>
+</arguments>
+<msg timestamp="20191209 11:29:38.298" level="INFO">Clicking element '//*[@class='mx-name-mijnwerkervaring']'.</msg>
+<status status="PASS" starttime="20191209 11:29:38.297" endtime="20191209 11:29:38.412"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[contains(text(),'Afdeling')]</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191209 11:29:38.412" endtime="20191209 11:29:38.432"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>//*[@class='mx-name-Functie mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
+<arg>CTRL+a+BACKSPACE</arg>
+</arguments>
+<msg timestamp="20191209 11:29:38.434" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to //*[@class='mx-name-Functie mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control'] element.</msg>
+<msg timestamp="20191209 11:29:38.449" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20191209 11:29:38.449" level="INFO">Sending key a</msg>
+<msg timestamp="20191209 11:29:38.449" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20191209 11:29:38.449" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20191209 11:29:38.449" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20191209 11:29:38.433" endtime="20191209 11:29:38.842"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-Functie mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
+<arg>Manager Logistiek</arg>
+</arguments>
+<msg timestamp="20191209 11:29:38.845" level="INFO">Typing text 'Manager Logistiek' into text field '//*[@class='mx-name-Functie mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']'.</msg>
+<status status="PASS" starttime="20191209 11:29:38.844" endtime="20191209 11:29:39.071"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>//*[@class='mx-name-Afdeling mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
+<arg>CTRL+a+BACKSPACE</arg>
+</arguments>
+<msg timestamp="20191209 11:29:39.072" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to //*[@class='mx-name-Afdeling mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control'] element.</msg>
+<msg timestamp="20191209 11:29:39.088" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20191209 11:29:39.089" level="INFO">Sending key a</msg>
+<msg timestamp="20191209 11:29:39.089" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20191209 11:29:39.089" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20191209 11:29:39.089" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20191209 11:29:39.072" endtime="20191209 11:29:39.438"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-Afdeling mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
+<arg>Logistiek</arg>
+</arguments>
+<msg timestamp="20191209 11:29:39.442" level="INFO">Typing text 'Logistiek' into text field '//*[@class='mx-name-Afdeling mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']'.</msg>
+<status status="PASS" starttime="20191209 11:29:39.441" endtime="20191209 11:29:39.614"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>//*[@class='mx-name-Werkzaambijbedrijfsinds mx-datepicker form-group']//*[@class='col-sm-9']//*[@class='mx-compound-control']//*[@class='form-control']</arg>
+<arg>CTRL+a+BACKSPACE</arg>
+</arguments>
+<msg timestamp="20191209 11:29:39.615" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to //*[@class='mx-name-Werkzaambijbedrijfsinds mx-datepicker form-group']//*[@class='col-sm-9']//*[@class='mx-compound-control']//*[@class='form-control'] element.</msg>
+<msg timestamp="20191209 11:29:39.630" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20191209 11:29:39.630" level="INFO">Sending key a</msg>
+<msg timestamp="20191209 11:29:39.630" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20191209 11:29:39.630" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20191209 11:29:39.630" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20191209 11:29:39.615" endtime="20191209 11:29:39.944"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-Werkzaambijbedrijfsinds mx-datepicker form-group']//*[@class='col-sm-9']//*[@class='mx-compound-control']//*[@class='form-control']</arg>
+<arg>01-06-2016</arg>
+</arguments>
+<msg timestamp="20191209 11:29:39.949" level="INFO">Typing text '01-06-2016' into text field '//*[@class='mx-name-Werkzaambijbedrijfsinds mx-datepicker form-group']//*[@class='col-sm-9']//*[@class='mx-compound-control']//*[@class='form-control']'.</msg>
+<status status="PASS" starttime="20191209 11:29:39.947" endtime="20191209 11:29:40.198"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-Werkervaring mx-dropdown form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20191209 11:29:40.199" level="INFO">Selecting options from selection list '//*[@class='mx-name-Werkervaring mx-dropdown form-group']//*[@class='col-sm-9']//*[@class='form-control']' by index 2.</msg>
+<status status="PASS" starttime="20191209 11:29:40.199" endtime="20191209 11:29:40.315"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-Opleidingsniveau mx-dropdown form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20191209 11:29:40.317" level="INFO">Selecting options from selection list '//*[@class='mx-name-Opleidingsniveau mx-dropdown form-group']//*[@class='col-sm-9']//*[@class='form-control']' by index 2.</msg>
+<status status="PASS" starttime="20191209 11:29:40.317" endtime="20191209 11:29:40.434"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='btn mx-button mx-name-actionButton1 btn-default']</arg>
+<arg>modifier=False</arg>
+</arguments>
+<msg timestamp="20191209 11:29:40.435" level="INFO">Clicking element '//*[@class='btn mx-button mx-name-actionButton1 btn-default']'.</msg>
+<status status="PASS" starttime="20191209 11:29:40.435" endtime="20191209 11:29:40.492"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[contains(@class, 'modal-footer mx-dialog-footer')]</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191209 11:29:40.493" endtime="20191209 11:29:40.733"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='modal-footer mx-dialog-footer']//*[@class='btn btn-primary']</arg>
+<arg>modifier=False</arg>
+</arguments>
+<msg timestamp="20191209 11:29:40.736" level="INFO">Clicking element '//*[@class='modal-footer mx-dialog-footer']//*[@class='btn btn-primary']'.</msg>
+<status status="PASS" starttime="20191209 11:29:40.734" endtime="20191209 11:29:40.823"></status>
+</kw>
+<status status="PASS" starttime="20191209 11:29:37.277" endtime="20191209 11:29:40.824" critical="yes"></status>
+</test>
+<test id="s1-t6" name="Testcase 11: Als extern bedrijfsmedewerker mijn organisatiegegevens wijzigen">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[contains(@role,'presentation')]//*[contains(@class,'mx-name-MijnOrganisatie')]</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191209 11:29:40.830" endtime="20191209 11:29:40.850"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5</arg>
+</arguments>
+<msg timestamp="20191209 11:29:41.352" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20191209 11:29:40.850" endtime="20191209 11:29:41.353"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@role='presentation']//*[@class='mx-name-MijnOrganisatie']</arg>
+<arg>modifier=False</arg>
+</arguments>
+<msg timestamp="20191209 11:29:41.358" level="INFO">Clicking element '//*[@role='presentation']//*[@class='mx-name-MijnOrganisatie']'.</msg>
+<status status="PASS" starttime="20191209 11:29:41.356" endtime="20191209 11:29:41.574"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[contains(@class,'mx-name-layoutGrid2 mx-layoutgrid mx-layoutgrid-fluid')]//*[contains(@class,'btn mx-button mx-name-actionButton3 btn-default')]</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191209 11:29:41.575" endtime="20191209 11:29:41.593"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5</arg>
+</arguments>
+<msg timestamp="20191209 11:29:42.095" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20191209 11:29:41.593" endtime="20191209 11:29:42.095"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-layoutGrid2 mx-layoutgrid mx-layoutgrid-fluid']//*[@class='btn mx-button mx-name-actionButton3 btn-default']</arg>
+<arg>modifier=False</arg>
+</arguments>
+<msg timestamp="20191209 11:29:42.098" level="INFO">Clicking element '//*[@class='mx-name-layoutGrid2 mx-layoutgrid mx-layoutgrid-fluid']//*[@class='btn mx-button mx-name-actionButton3 btn-default']'.</msg>
+<status status="PASS" starttime="20191209 11:29:42.097" endtime="20191209 11:29:42.261"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[contains(@class,'mx-name-layoutGrid4 mx-layoutgrid mx-layoutgrid-fluid')]//*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191209 11:29:42.262" endtime="20191209 11:29:42.500"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5</arg>
+</arguments>
+<msg timestamp="20191209 11:29:43.003" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20191209 11:29:42.501" endtime="20191209 11:29:43.004"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-layoutGrid4 mx-layoutgrid mx-layoutgrid-fluid']//*[@class='btn mx-button mx-name-actionButton1 btn-default']</arg>
+<arg>modifier=False</arg>
+</arguments>
+<msg timestamp="20191209 11:29:43.008" level="INFO">Clicking element '//*[@class='mx-name-layoutGrid4 mx-layoutgrid mx-layoutgrid-fluid']//*[@class='btn mx-button mx-name-actionButton1 btn-default']'.</msg>
+<status status="PASS" starttime="20191209 11:29:43.006" endtime="20191209 11:29:43.205"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[contains(@class,'mx-name-Organisatienaam mx-textbox form-group')]//*[contains(@class,'col-sm-8')]//*[contains(@class,'form-control')]</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191209 11:29:43.208" endtime="20191209 11:29:43.457"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>//*[@class='mx-name-Organisatienaam mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']</arg>
+<arg>CTRL+a+BACKSPACE</arg>
+</arguments>
+<msg timestamp="20191209 11:29:43.459" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to //*[@class='mx-name-Organisatienaam mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control'] element.</msg>
+<msg timestamp="20191209 11:29:43.477" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20191209 11:29:43.477" level="INFO">Sending key a</msg>
+<msg timestamp="20191209 11:29:43.477" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20191209 11:29:43.477" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20191209 11:29:43.478" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20191209 11:29:43.458" endtime="20191209 11:29:43.839"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-Organisatienaam mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']</arg>
+<arg>Coolblue</arg>
+</arguments>
+<msg timestamp="20191209 11:29:43.840" level="INFO">Typing text 'Coolblue' into text field '//*[@class='mx-name-Organisatienaam mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']'.</msg>
+<status status="PASS" starttime="20191209 11:29:43.839" endtime="20191209 11:29:43.960"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-Ondernemingsvorm mx-dropdown form-group']//*[@class='col-sm-8']//*[@class='form-control']</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20191209 11:29:43.961" level="INFO">Selecting options from selection list '//*[@class='mx-name-Ondernemingsvorm mx-dropdown form-group']//*[@class='col-sm-8']//*[@class='form-control']' by index 1.</msg>
+<status status="PASS" starttime="20191209 11:29:43.960" endtime="20191209 11:29:44.033"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>//*[@class='mx-name-Website mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']</arg>
+<arg>CTRL+a+BACKSPACE</arg>
+</arguments>
+<msg timestamp="20191209 11:29:44.034" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to //*[@class='mx-name-Website mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control'] element.</msg>
+<msg timestamp="20191209 11:29:44.049" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20191209 11:29:44.050" level="INFO">Sending key a</msg>
+<msg timestamp="20191209 11:29:44.050" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20191209 11:29:44.050" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20191209 11:29:44.050" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20191209 11:29:44.034" endtime="20191209 11:29:44.378"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-Website mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']</arg>
+<arg>http://www.coolblue.nl</arg>
+</arguments>
+<msg timestamp="20191209 11:29:44.383" level="INFO">Typing text 'http://www.coolblue.nl' into text field '//*[@class='mx-name-Website mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']'.</msg>
+<status status="PASS" starttime="20191209 11:29:44.381" endtime="20191209 11:29:44.627"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-Aantalmdw mx-dropdown form-group']//*[@class='col-sm-8']//*[@class='form-control']</arg>
+<arg>8</arg>
+</arguments>
+<msg timestamp="20191209 11:29:44.628" level="INFO">Selecting options from selection list '//*[@class='mx-name-Aantalmdw mx-dropdown form-group']//*[@class='col-sm-8']//*[@class='form-control']' by index 8.</msg>
+<status status="PASS" starttime="20191209 11:29:44.628" endtime="20191209 11:29:44.753"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>//*[@class='mx-name-KorteOmschrijving TestTooltip mx-textarea form-group']//*[@class='col-sm-8']//*[@class='form-control mx-textarea-input']</arg>
+<arg>CTRL+a+BACKSPACE</arg>
+</arguments>
+<msg timestamp="20191209 11:29:44.754" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to //*[@class='mx-name-KorteOmschrijving TestTooltip mx-textarea form-group']//*[@class='col-sm-8']//*[@class='form-control mx-textarea-input'] element.</msg>
+<msg timestamp="20191209 11:29:44.768" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20191209 11:29:44.768" level="INFO">Sending key a</msg>
+<msg timestamp="20191209 11:29:44.768" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20191209 11:29:44.768" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20191209 11:29:44.768" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20191209 11:29:44.753" endtime="20191209 11:29:45.093"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-KorteOmschrijving TestTooltip mx-textarea form-group']//*[@class='col-sm-8']//*[@class='form-control mx-textarea-input']</arg>
+<arg>Coolblue. Ooit begonnen als studentenbedrijf. Nu een snelgroeiend e-commercebedrijf met 11 fysieke winkels in Nederland en België. Sinds onze oprichting in 1999 hebben we maar één doel: jou blij maken. We geven advies met verstand van zaken en we hebben een obsessieve focus op klanttevredenheid. Met meer dan 3.000 Coolblue'ers werken we keihard om onze klanten te verwonderen.</arg>
+</arguments>
+<msg timestamp="20191209 11:29:45.095" level="INFO">Typing text 'Coolblue. Ooit begonnen als studentenbedrijf. Nu een snelgroeiend e-commercebedrijf met 11 fysieke winkels in Nederland en België. Sinds onze oprichting in 1999 hebben we maar één doel: jou blij maken. We geven advies met verstand van zaken en we hebben een obsessieve focus op klanttevredenheid. Met meer dan 3.000 Coolblue'ers werken we keihard om onze klanten te verwonderen.' into text field '//*[@class='mx-name-KorteOmschrijving TestTooltip mx-textarea form-group']//*[@class='col-sm-8']//*[@class='form-control mx-textarea-input']'.</msg>
+<status status="PASS" starttime="20191209 11:29:45.094" endtime="20191209 11:29:47.449"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='btn mx-button mx-name-actionButton1 btn-default']</arg>
+<arg>modifier=False</arg>
+</arguments>
+<msg timestamp="20191209 11:29:47.450" level="INFO">Clicking element '//*[@class='btn mx-button mx-name-actionButton1 btn-default']'.</msg>
+<status status="PASS" starttime="20191209 11:29:47.450" endtime="20191209 11:29:47.531"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[contains(@class,'mx-name-tabPage2')]</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191209 11:29:47.532" endtime="20191209 11:29:47.756"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-tabPage2']</arg>
+<arg>modifier=False</arg>
+</arguments>
+<msg timestamp="20191209 11:29:47.757" level="INFO">Clicking element '//*[@class='mx-name-tabPage2']'.</msg>
+<status status="PASS" starttime="20191209 11:29:47.757" endtime="20191209 11:29:47.841"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[contains(@class,'btn mx-button mx-name-actionButton3 btn-default')]</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191209 11:29:47.842" endtime="20191209 11:29:47.855"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='btn mx-button mx-name-actionButton3 btn-default']</arg>
+<arg>modifier=False</arg>
+</arguments>
+<msg timestamp="20191209 11:29:47.856" level="INFO">Clicking element '//*[@class='btn mx-button mx-name-actionButton3 btn-default']'.</msg>
+<status status="PASS" starttime="20191209 11:29:47.856" endtime="20191209 11:29:47.939"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[contains(@class,'btn mx-button mx-name-actionButton1 btn-primary')]</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191209 11:29:47.940" endtime="20191209 11:29:48.167"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-Postcode mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
+<arg>3011KW</arg>
+</arguments>
+<msg timestamp="20191209 11:29:48.169" level="INFO">Typing text '3011KW' into text field '//*[@class='mx-name-Postcode mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']'.</msg>
+<status status="PASS" starttime="20191209 11:29:48.168" endtime="20191209 11:29:48.308"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-Huisnummer mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20191209 11:29:48.310" level="INFO">Typing text '3' into text field '//*[@class='mx-name-Huisnummer mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']'.</msg>
+<status status="PASS" starttime="20191209 11:29:48.309" endtime="20191209 11:29:48.437"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-Straatnaam mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
+<arg>Oostplein</arg>
+</arguments>
+<msg timestamp="20191209 11:29:48.438" level="INFO">Typing text 'Oostplein' into text field '//*[@class='mx-name-Straatnaam mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']'.</msg>
+<status status="PASS" starttime="20191209 11:29:48.438" endtime="20191209 11:29:48.588"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-SoortAdres mx-dropdown form-group']//*[@class='col-sm-9']//*[@class='form-control']</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20191209 11:29:48.590" level="INFO">Selecting options from selection list '//*[@class='mx-name-SoortAdres mx-dropdown form-group']//*[@class='col-sm-9']//*[@class='form-control']' by index 1.</msg>
+<status status="PASS" starttime="20191209 11:29:48.589" endtime="20191209 11:29:48.675"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='btn mx-button mx-name-actionButton1 btn-primary']</arg>
+<arg>modifier=False</arg>
+</arguments>
+<msg timestamp="20191209 11:29:48.676" level="INFO">Clicking element '//*[@class='btn mx-button mx-name-actionButton1 btn-primary']'.</msg>
+<status status="PASS" starttime="20191209 11:29:48.676" endtime="20191209 11:29:48.756"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[contains(@class, 'mx-grid-search-input mx-name-searchField4')]//*[contains(@class,'form-control')]</arg>
+<arg>timeout=5</arg>
+</arguments>
+<status status="PASS" starttime="20191209 11:29:48.757" endtime="20191209 11:29:48.772"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[contains(@class, 'mx-grid-search-input mx-name-searchField4')]//*[contains(@class,'form-control')]</arg>
+<arg>3011KW</arg>
+</arguments>
+<msg timestamp="20191209 11:29:48.773" level="INFO">Typing text '3011KW' into text field '//*[contains(@class, 'mx-grid-search-input mx-name-searchField4')]//*[contains(@class,'form-control')]'.</msg>
+<status status="PASS" starttime="20191209 11:29:48.772" endtime="20191209 11:29:48.919"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[contains(@class, 'mx-grid-search-input mx-name-searchField5')]//*[contains(@class,'form-control')]</arg>
+<arg>Oostplein</arg>
+</arguments>
+<msg timestamp="20191209 11:29:48.920" level="INFO">Typing text 'Oostplein' into text field '//*[contains(@class, 'mx-grid-search-input mx-name-searchField5')]//*[contains(@class,'form-control')]'.</msg>
+<status status="PASS" starttime="20191209 11:29:48.919" endtime="20191209 11:29:49.056"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>//*[contains(@class, 'mx-grid-search-input mx-name-searchField6')]//*[contains(@class,'form-control')]</arg>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20191209 11:29:49.057" level="INFO">Typing text '3' into text field '//*[contains(@class, 'mx-grid-search-input mx-name-searchField6')]//*[contains(@class,'form-control')]'.</msg>
+<status status="PASS" starttime="20191209 11:29:49.057" endtime="20191209 11:29:49.141"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='btn mx-button btn-default mx-name-search mx-grid-search-button']</arg>
+<arg>modifier=False</arg>
+</arguments>
+<msg timestamp="20191209 11:29:49.142" level="INFO">Clicking element '//*[@class='btn mx-button btn-default mx-name-search mx-grid-search-button']'.</msg>
+<status status="PASS" starttime="20191209 11:29:49.141" endtime="20191209 11:29:49.222"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20191209 11:29:50.224" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20191209 11:29:49.223" endtime="20191209 11:29:50.224"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='mx-name-index-0']</arg>
+<arg>modifier=False</arg>
+</arguments>
+<msg timestamp="20191209 11:29:50.227" level="INFO">Clicking element '//*[@class='mx-name-index-0']'.</msg>
+<status status="PASS" starttime="20191209 11:29:50.226" endtime="20191209 11:29:50.311"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='btn mx-button mx-name-actionButton5 btn-inverse']</arg>
+<arg>modifier=False</arg>
+</arguments>
+<msg timestamp="20191209 11:29:50.312" level="INFO">Clicking element '//*[@class='btn mx-button mx-name-actionButton5 btn-inverse']'.</msg>
+<status status="PASS" starttime="20191209 11:29:50.312" endtime="20191209 11:29:50.388"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@class='btn mx-button mx-name-actionButton2 btn-inverse']</arg>
+<arg>modifier=False</arg>
+</arguments>
+<msg timestamp="20191209 11:29:50.389" level="INFO">Clicking element '//*[@class='btn mx-button mx-name-actionButton2 btn-inverse']'.</msg>
+<status status="PASS" starttime="20191209 11:29:50.389" endtime="20191209 11:29:50.460"></status>
+</kw>
+<status status="PASS" starttime="20191209 11:29:40.828" endtime="20191209 11:29:50.461" critical="yes"></status>
 </test>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="teardown">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20191204 15:11:18.868" endtime="20191204 15:11:21.355"></status>
+<status status="PASS" starttime="20191209 11:29:50.465" endtime="20191209 11:29:52.741"></status>
 </kw>
 <doc>Keyword documentation: https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html
 
 Kijk goed of er keywords zijn die je kan gebruiken in de Keywords/SeleniumKeywords.robot file</doc>
-<status status="FAIL" starttime="20191204 15:11:07.095" endtime="20191204 15:11:21.355"></status>
+<status status="PASS" starttime="20191209 11:29:19.228" endtime="20191209 11:29:52.741"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="2">Critical Tests</stat>
-<stat pass="3" fail="2">All Tests</stat>
+<stat pass="6" fail="0">Critical Tests</stat>
+<stat pass="6" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="2" id="s1" name="AuthenticationTestcases">AuthenticationTestcases</stat>
+<stat pass="6" fail="0" id="s1" name="OrganisationManagementECETestcases">OrganisationManagementECETestcases</stat>
 </suite>
 </statistics>
 <errors>

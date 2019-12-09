@@ -8,19 +8,21 @@ Open Browser On Local Machine
     Open Browser                        ${URL}                                                       ${BROWSER} 
 
 Login As Organisation
+    [Arguments]                         ${EMPLOYEE_USERNAME}                                         ${EMPLOYEE_PASSWORD}
     # Klik op de "Inloggen voor bedrijven" knop
     Click Element   //*[@class='btn mx-button mx-name-actionButton2 squarebutton btn-default']      modifier=False
     Wait Until Page Contains Element    //*[contains(@class,'form-group mx-loginidtextbox no-columns mx-name-loginIdTextBox1')]    timeout=5
     # Gebruikersnaam invullen
-    input text        id=55_13  g.vanmorsel@coolblue.nl
+    input text        id=55_13  ${EMPLOYEE_USERNAME}
     # Wachtwoord invullen
-    input text        id=55_14  Mendix1
+    input text        id=55_14  ${EMPLOYEE_PASSWORD}
     # Klik op de "Aanmelden" knop
     Click Element       id=mxui_widget_LoginButton_0    modifier=False
 
 Login As Student Or Teacher
     [Arguments]                         ${STUDENT_PASSWORD}
     # Klik op de "Inloggen voor studenten en medewerkers" knop
+    Sleep   0.5
     Click Element   //*[@type='submit']    modifier=False
     Wait Until Page Contains Element    //*[contains(@class,'mod-search-input active')]   timeout=5
     # Naam van instelling invullen

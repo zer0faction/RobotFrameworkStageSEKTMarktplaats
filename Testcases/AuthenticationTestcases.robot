@@ -50,7 +50,7 @@ Testcase 3: Registreren als extern bedrijfsmedewerker
     Wait Until Page Contains Element    //*[contains(text(),'+30 (Griekenland)')]
     click element   //*[text()='+30 (Griekenland)']       modifier=False
     # Telefoonnummer invullen
-    input text      //*[contains(@id,'53_26')]        46123124
+    input text      //*[contains(@id,'53_30')]        46123124
     # Aanhef kiezen
     click element   //*[contains(@name,'53_16')]       modifier=False
     # Klik op de "Registreer!" knop
@@ -58,6 +58,7 @@ Testcase 3: Registreren als extern bedrijfsmedewerker
     Wait Until Page Contains Element    //*[contains(@class,'btn btn-primary')]     timeout=5
     # Klik op de "OK" knop
     click element   //*[@class='btn btn-primary']       modifier=False
+    Wait Until Page Contains Element       //*[contains(@type,'submit')]   timeout=5
 
 Testcase 4: Aanmelden als Avans student/medewerker
     Login As Student Or Teacher  ${STUDENT_PASSWORD}
