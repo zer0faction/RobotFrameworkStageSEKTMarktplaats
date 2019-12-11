@@ -33,7 +33,7 @@ Login As Student Or Teacher
     
     Wait Until Page Contains Element  id=Ecom_User_ID  timeout=5
     # Gebruikersnaam invullen
-    input text  id=Ecom_User_ID  e.wallaard@student.avans.nl
+    input text  id=Ecom_User_ID  ewallaar
     # Wachtwoord invullen
     input text  id=Ecom_Password  ${STUDENT_PASSWORD}
     # Klik op de "Sign in" knop
