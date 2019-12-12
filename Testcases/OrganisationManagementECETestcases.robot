@@ -25,11 +25,14 @@ Testcase 6: Als extern bedrijfsmedewerker een stageopdracht aanmelden
 
     # Klik op de "Volgende" knop
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
+    Sleep   0.5
     Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']    modifier=false
 
     # Kies een academy
     Wait Until Page Contains Element        //*[contains(@class,'form-group mx-referenceselector mx-name-referenceSelector1 StudyprogramNL')]      timeout=5
-    Select From List By Index   //*[@class='form-group mx-referenceselector mx-name-referenceSelector1 StudyprogramNL']//*[@class='col-sm-9']//*[@class='mx-compound-control']//*[@class='form-control']   1
+    Sleep   0.5
+    Select From List By Index           //*[@class='form-group mx-referenceselector mx-name-referenceSelector1 StudyprogramNL']//*[@class='col-sm-9']//*[@class='mx-compound-control']//*[@class='form-control']       2
+    Select From List By Index           //*[@class='form-group mx-referenceselector mx-name-referenceSelector2']//*[@class='col-sm-9']//*[@class='mx-compound-control']//*[@class='form-control']       1
 
     # Naam opdracht invullen
     input text      //*[@class='mx-name-textBoxTitel Titel mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        testopdracht
@@ -50,9 +53,69 @@ Testcase 6: Als extern bedrijfsmedewerker een stageopdracht aanmelden
     # Wacht totdat het versturen bevestigd is, klik dan op "OK"
     Wait Until Page Contains Element    //*[contains(@class,'btn btn-primary')]   timeout=5
     Click Element  //*[@class='btn btn-primary']  modifier=false
+    Sleep   0.5
+
+Testcase 41: Als extern bedrijfsmedewerker een stageopdracht als concept opslaan
+    # Klik op de "Meld uw opdracht direct aan" link
+    Sleep   0.5
+    Wait Until Page Contains Element    //*[contains(@class,'mx-link mx-name-actionButton9')]   timeout=5
+    Sleep   0.5
+    Click Element  //*[@class='mx-link mx-name-actionButton9']  modifier=false
+
+    # Klik op de "Volgende" knop
+    Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
+    Sleep   0.5
+    Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']    modifier=false
+
+    # Kies een academy
+    Wait Until Page Contains Element        //*[contains(@class,'form-group mx-referenceselector mx-name-referenceSelector1 StudyprogramNL')]      timeout=5
+    Sleep   0.5
+    Select From List By Index   //*[@class='form-group mx-referenceselector mx-name-referenceSelector1 StudyprogramNL']//*[@class='col-sm-9']//*[@class='mx-compound-control']//*[@class='form-control']    1
+
+    # Naam opdracht invullen
+    input text      //*[@class='mx-name-textBoxTitel Titel mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        tempopdracht
+    # Aanleiding invullen
+    input text      //*[@class='mx-name-textAreaAanleiding Aanleiding mx-textarea form-group']//*[@class='col-sm-9']//*[@class='form-control mx-textarea-input']        we maken een tempopdracht
+
+    # Pagine refreshen
+    Click Element  //*[@class='btn mx-button mx-name-actionButton5 btn-default']  modifier=false
+
+    # Klik op de "Meld uw opdracht direct aan" link
+    Wait Until Page Contains Element    //*[contains(@class,'mx-link mx-name-actionButton9')]   timeout=5
+    Sleep   0.5
+    Click Element  //*[@class='mx-link mx-name-actionButton9']  modifier=false
+
+    # Klik op "Ja/Yes"
+    Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 btn-default')]   timeout=5
+    Sleep       0.5
+    Click Element  //*[@class='btn mx-button mx-name-actionButton2 btn-default']    modifier=false
+
+    Sleep   0.5
+    # Nakijken of de concept is opgeslagen
+    Wait Until Page Contains Element  //*[contains(text(),'tempopdracht')]  timeout=5
+
+    # Klik op de knop "Annuleren"
+    Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton4 btn-inverse')]   timeout=5
+    Click Element  //*[@class='btn mx-button mx-name-actionButton4 btn-inverse']    modifier=false
+
+    # Klik op de "Meld uw opdracht direct aan" link
+    Wait Until Page Contains Element    //*[contains(@class,'mx-link mx-name-actionButton9')]   timeout=5
+    Sleep   0.5
+    Click Element  //*[@class='mx-link mx-name-actionButton9']  modifier=false
+
+    # Klik op "Nee/No"
+    Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton1 btn-inverse')]   timeout=5
+    Sleep   0.5
+    Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-inverse']    modifier=false
+
+    # Klik op de knop "Annuleren"
+    Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton4 btn-inverse')]   timeout=5
+    Sleep   0.5
+    Click Element  //*[@class='btn mx-button mx-name-actionButton4 btn-inverse']  modifier=false
 
 Testcase 7: Als extern bedrijfsmedewerker uw opdrachten inzien
     # Klik op de knop "Mijn Opdrachten"
+    Sleep   0.5
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton12 nowrap btn-default')]   timeout=5
     Click Element  //*[@class='btn mx-button mx-name-actionButton12 nowrap btn-default']  modifier=false
 
@@ -78,7 +141,7 @@ Testcase 9: Als extern bedrijfsmedewerker mijn persoonsgegevens wijzigen
     Click Element  //*[@class='mx-link mx-name-actionButton1']  modifier=false
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-MijnOrganisatie')]   timeout=5
 
-    Sleep  1.0
+    Sleep   0.5
     # Voornaam invullen
     Press Keys  //*[@class='mx-name-textBox4 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']       CTRL+a+BACKSPACE
     input text  //*[@class='mx-name-textBox4 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']  Gino
@@ -109,7 +172,7 @@ Testcase 9: Als extern bedrijfsmedewerker mijn persoonsgegevens wijzigen
 Testcase 10: Als extern bedrijfsmedewerker mijn werkervaringsgegevens wijzigen
     # Klik op de het tabje "Mijn werkervaring"
     Wait Until Page Contains Element  //*[contains(@class, 'mx-name-mijnwerkervaring')]  timeout=5
-    Sleep  1
+    Sleep   0.5
     Click Element  //*[@class='mx-name-mijnwerkervaring']
 
     Wait Until Page Contains Element  //*[contains(text(),'Afdeling')]  timeout=5
@@ -220,7 +283,7 @@ Testcase 11: Als extern bedrijfsmedewerker mijn organisatiegegevens wijzigen
 
     # Klik op de knop "Zoeken"
     Click Element  //*[@class='btn mx-button btn-default mx-name-search mx-grid-search-button']  modifier=False
-    Sleep   1
+    Sleep   0.5
 
     # Klik op het eerste zoekresultaat
     Click Element  //*[@class='mx-name-index-0']  modifier=False

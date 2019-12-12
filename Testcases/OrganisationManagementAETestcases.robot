@@ -165,15 +165,17 @@ Testcase 14: Als admin een organisatie verwijderen
     # Op de dashboard knop "Relatiebeheer" klikken
     Click Element  //*[@class='mx-name-container26 card cardaction col-center ClickableContainer']    modifier=false
     Wait Until Page Contains Element    //*[contains(@class,'widget-text-box-search mx-name-textBoxSearch1 ')]   timeout=5
+    Sleep   0.5
     # Vul de organisatie naam in
     input text      //*[@class='widget-text-box-search mx-name-textBoxSearch1 ']//*[@class='search-bar']//*[@class='form-control']        chatmetvreemden
-    Sleep   1
+    Sleep   0.5
 
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-container8 cardOrganisation')]   timeout=5
+    Sleep   0.5
     # Klik op het gevonden bedrijf
     Click Element  //*[@class='mx-name-container7 card']//*[@class='mx-name-container8 cardOrganisation']    modifier=false
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton11 btn-danger')]   timeout=5
-
+    Sleep   0.5
     # Klik op de "Verwijderen(admin)" knop
     Click Element  //*[@class='btn mx-button mx-name-actionButton11 btn-danger']    modifier=false
 
