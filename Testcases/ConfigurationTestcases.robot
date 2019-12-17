@@ -16,7 +16,8 @@ ${STUDENT_PASSWORD}
 Testcase 0: Site bezoeken
     Open Browser On Local Machine  ${TEST_URL}  ${BROWSER}
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]    timeout=5
-    Login As Student Or Teacher  ${STUDENT_PASSWORD}
+    Login As Student Or Teacher Navigate To Page
+    Login As Student Or Teacher Fill In Page  ${STUDENT_PASSWORD}
 
 Testcase 17: Als willekeurig gebruiker de taal wijzigen
     # Rechtsboven op "Instellingen" klikken

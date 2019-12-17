@@ -19,8 +19,7 @@ Login As Organisation
     # Klik op de "Aanmelden" knop
     Click Element       id=mxui_widget_LoginButton_0    modifier=False
 
-Login As Student Or Teacher
-    [Arguments]                         ${STUDENT_PASSWORD}
+Login As Student Or Teacher Navigate To Page
     # Klik op de "Inloggen voor studenten en medewerkers" knop
     Sleep   0.5
     Click Element   //*[@type='submit']    modifier=False
@@ -30,7 +29,9 @@ Login As Student Or Teacher
     Wait Until Page Contains Element    //*[contains(@class,'result active access focussed')]   timeout=2
     # Instelling kiezen
     Click Element   //*[@class='result active access focussed']    modifier=False
-    
+
+Login As Student Or Teacher Fill In Page
+    [Arguments]                         ${STUDENT_PASSWORD}
     Wait Until Page Contains Element  id=Ecom_User_ID  timeout=5
     # Gebruikersnaam invullen
     input text  id=Ecom_User_ID  ewallaar

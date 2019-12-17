@@ -18,7 +18,7 @@ Testcase 0: Site bezoeken
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]    timeout=5
     Login As Organisation       gijs@avans.nl       Welkom1234
 
-Testcase 12: Als Avans medewerker een organisatie toevoegen
+Testcase 12.0: Als Avans medewerker naar het nieuwe organisatie form navigeren
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-container26 card cardaction col-center ClickableContainer')]   timeout=5
 
     # Klik op knop(tegel) "Relatiebeheer"
@@ -29,9 +29,17 @@ Testcase 12: Als Avans medewerker een organisatie toevoegen
     # Klik op de knop "+Organisatie"
     Click Element  //*[@class='btn mx-button mx-name-actionButton6 btn-default']    modifier=false
 
-    #
     Wait Until Page Contains Element        //*[contains(@class,'mx-name-Organisatienaam mx-textbox form-group')]      timeout=5
 
+Testcase 12.1: Als Avans medewerker een organisatie toevoegen zonder alle gegevens in te vullen
+    # Klik op de knop "Opslaan"
+    Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-primary']    modifier=false
+
+    # Er zou een foutmelding moeten komen die aangeeft dat er een fout is opgetreden. Klik op OK
+    Wait Until Page Contains Element    //*[contains(@class,'btn btn-primary')]   timeout=5
+    Click Element  //*[@class='btn btn-primary']    modifier=false
+
+Testcase 12.2: Als Avans medewerker een organisatie toevoegen
     # Vul de organisatienaam in
     input text      //*[@class='mx-name-Organisatienaam mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        chatmetvreemden.nl
 
@@ -72,9 +80,9 @@ Testcase 12: Als Avans medewerker een organisatie toevoegen
     # Klik op het tabje "Home"
     Click Element  //*[@class='mx-name-159b6aef-dbc3-5b23-a735-cf99f8341771-0']    modifier=false
 
-Testcase 13: Als Avans medewerker een organisatie aanpassen
-
+Testcase 13.0: Als Avans medewerker navigeren naar een organisatie (chatmetvreemden.nl)
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-container26 card cardaction col-center ClickableContainer')]   timeout=5
+    Sleep  0.5
 
     # Klik op knop(tegel) "Relatiebeheer"
     Click Element  //*[@class='mx-name-container26 card cardaction col-center ClickableContainer']    modifier=false
@@ -90,13 +98,42 @@ Testcase 13: Als Avans medewerker een organisatie aanpassen
     # Klik op knop(tegel) voor de organisatie Chat met Vreemden
     Click Element  //*[@class='mx-name-container7 card']//*[@class='mx-name-container8 cardOrganisation']    modifier=false
 
+Testcase 13.1: Als Avans medewerker een organisatie aanpassen met verkeerde gegevens
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
+
+    # Klik op de knop "Organisatiegegevens wijzigen"
+    Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']    modifier=false
+
+    Wait Until Page Contains Element    //*[@class='mx-name-Organisatienaam mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']      timeout=5
+
+    # Haal de organisatienaam weg
+    Press Keys    //*[@class='mx-name-Organisatienaam mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']        CTRL+a+BACKSPACE
+
+    # Klik op de knop "Opslaan"
+    Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']    modifier=false
+
+    # Er zou een waarschuwing moeten komen die aangeeft dat de organisatienaam niet is ingevuld
+    Wait Until Page Contains Element   //*[@class='mx-name-Organisatienaam mx-textbox form-group has-error']//*[@class='col-sm-8']//*[@class='form-control']  timeout=5
+    Sleep  5.0
+
+    # Vul de naam weer goed in en sla het op
+    Press Keys    //*[@class='mx-name-Organisatienaam mx-textbox form-group has-error']//*[@class='col-sm-8']//*[@class='form-control']        CTRL+a+BACKSPACE
+    input text    //*[@class='mx-name-Organisatienaam mx-textbox form-group has-error']//*[@class='col-sm-8']//*[@class='form-control']        chatmetvreemden.com
+
+    # Klik op de knop "Opslaan"
+    Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']    modifier=false
+    Sleep  0.5
+
+Testcase 13: Als Avans medewerker een organisatie aanpassen
+    Wait Until Page Contains Element    //*[@class='col-md-9 col-sm-12 col-xs-12']//*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
+    Sleep  0.5
 
     # Klik op de knop "Organisatiegegevens wijzigen"
     Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']    modifier=false
     
     Wait Until Page Contains Element    //*[@class='mx-name-Organisatienaam mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']      timeout=5
 
+    Sleep  0.5
     Press Keys    //*[@class='mx-name-Organisatienaam mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']        CTRL+a+BACKSPACE
     # Vul de organisatienaam in
     input text    //*[@class='mx-name-Organisatienaam mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']        chatmetvreemden.com

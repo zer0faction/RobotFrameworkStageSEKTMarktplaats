@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e9563ec-8882-4a8f-9b96-74b346169677" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Keywords/SeleniumKeywords.robot" afterPath="$PROJECT_DIR$/Keywords/SeleniumKeywords.robot" />
-      <change beforePath="$PROJECT_DIR$/Testcases/SeleniumTest.robot" afterPath="$PROJECT_DIR$/Testcases/SeleniumTest.robot" />
-      <change beforePath="$PROJECT_DIR$/log.html" afterPath="$PROJECT_DIR$/log.html" />
-      <change beforePath="$PROJECT_DIR$/output.xml" afterPath="$PROJECT_DIR$/output.xml" />
-      <change beforePath="$PROJECT_DIR$/report.html" afterPath="$PROJECT_DIR$/report.html" />
+      <change beforePath="$PROJECT_DIR$/Testcases/AuthenticationTestcases.robot" afterPath="$PROJECT_DIR$/Testcases/AuthenticationTestcases.robot" />
+      <change beforePath="$PROJECT_DIR$/Testcases/ConfigurationTestcases.robot" afterPath="$PROJECT_DIR$/Testcases/ConfigurationTestcases.robot" />
+      <change beforePath="$PROJECT_DIR$/Testcases/OrganisationManagementAETestcases.robot" afterPath="$PROJECT_DIR$/Testcases/OrganisationManagementAETestcases.robot" />
+      <change beforePath="$PROJECT_DIR$/Testcases/RegistrationManagementTestcases.robot" afterPath="$PROJECT_DIR$/Testcases/RegistrationManagementTestcases.robot" />
+      <change beforePath="$PROJECT_DIR$/Testcases/debug.log" afterPath="$PROJECT_DIR$/Testcases/debug.log" />
+      <change beforePath="$PROJECT_DIR$/Testcases/log.html" afterPath="$PROJECT_DIR$/Testcases/log.html" />
+      <change beforePath="$PROJECT_DIR$/Testcases/output.xml" afterPath="$PROJECT_DIR$/Testcases/output.xml" />
+      <change beforePath="$PROJECT_DIR$/Testcases/report.html" afterPath="$PROJECT_DIR$/Testcases/report.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,34 +24,91 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="SeleniumTest.robot" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Testcases/SeleniumTest.robot">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="SeleniumKeywords.robot" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Keywords/SeleniumKeywords.robot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="52" column="7" lean-forward="false" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+            <state relative-caret-position="510">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
-                <element signature="e#0#339#0" expanded="true" />
-                <marker date="1574846209499" expanded="true" signature="541:2410" ph="*** Test Cases ***" />
-                <marker date="1574846209499" expanded="true" signature="1565:2410" ph="Testcase 2: Aanmelden als Avans student/medewerker" />
+                <element signature="e#0#71#0" expanded="true" />
+                <marker date="1576151002508" expanded="true" signature="0:43" ph="*** Settings ***" />
+                <marker date="1576151002508" expanded="true" signature="73:455" ph="*** Keywords ***" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SeleniumKeywords.robot" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Keywords/SeleniumKeywords.robot">
+      <file leaf-file-name="OrganisationManagementAETestcases.robot" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Testcases/OrganisationManagementAETestcases.robot">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <caret line="132" column="4" lean-forward="true" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="4" />
               <folding>
-                <element signature="e#0#43#0" expanded="true" />
+                <element signature="e#0#339#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegistrationManagementTestcases.robot" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Testcases/RegistrationManagementTestcases.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#339#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrganisationManagementECETestcases.robot" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Testcases/OrganisationManagementECETestcases.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2346">
+              <caret line="143" column="14" lean-forward="false" selection-start-line="143" selection-start-column="14" selection-end-line="143" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#339#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthenticationTestcases.robot" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Testcases/AuthenticationTestcases.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1547">
+              <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#339#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfigurationTestcases.robot" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Testcases/ConfigurationTestcases.robot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#339#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>sleep</find>
+      <find>text()</find>
+      <find>login as student</find>
+      <find>btn-primary</find>
+      <find>controlbarbutton</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,8 +121,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Keywords/SeleniumKeywords.robot" />
         <option value="$PROJECT_DIR$/Testcases/SeleniumTest.robot" />
+        <option value="$PROJECT_DIR$/Keywords/SeleniumKeywords.robot" />
+        <option value="$PROJECT_DIR$/Testcases/ConfigurationTestcases.robot" />
+        <option value="$PROJECT_DIR$/Testcases/RegistrationManagementTestcases.robot" />
+        <option value="$PROJECT_DIR$/Testcases/AuthenticationTestcases.robot" />
+        <option value="$PROJECT_DIR$/Testcases/OrganisationManagementAETestcases.robot" />
       </list>
     </option>
   </component>
@@ -71,9 +137,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1620" />
+    <option name="x" value="526" />
+    <option name="width" value="1093" />
     <option name="height" value="920" />
   </component>
   <component name="ProjectView">
@@ -91,9 +156,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,6 +178,9 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -239,15 +304,15 @@
       <updated>1574759726120</updated>
       <workItem from="1574759899622" duration="614000" />
       <workItem from="1574845180932" duration="1023000" />
+      <workItem from="1576571650801" duration="7000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1637000" />
+    <option name="totallyTimeSpent" value="9370000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -258,7 +323,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.149375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -296,22 +361,320 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Keywords/SeleniumKeywords.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#71#0" expanded="true" />
+            <marker date="1576151002508" expanded="true" signature="0:43" ph="*** Settings ***" />
+            <marker date="1576151002508" expanded="true" signature="73:455" ph="*** Keywords ***" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Testcases/SeleniumTest.robot">
+    <entry file="file://$PROJECT_DIR$/Testcases/RegistrationManagementTestcases.robot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="52" column="7" lean-forward="false" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+        <state relative-caret-position="255">
+          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
           <folding>
             <element signature="e#0#339#0" expanded="true" />
-            <marker date="1574846209499" expanded="true" signature="541:2410" ph="*** Test Cases ***" />
-            <marker date="1574846209499" expanded="true" signature="1565:2410" ph="Testcase 2: Aanmelden als Avans student/medewerker" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/OrganisationManagementECETestcases.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="143" column="14" lean-forward="false" selection-start-line="143" selection-start-column="14" selection-end-line="143" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/AuthenticationTestcases.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/ConfigurationTestcases.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/OrganisationManagementAETestcases.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2159">
+          <caret line="132" column="4" lean-forward="true" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Keywords/SeleniumKeywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+            <marker date="1576151002508" expanded="true" signature="0:43" ph="*** Settings ***" />
+            <marker date="1576151002508" expanded="true" signature="73:455" ph="*** Keywords ***" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/OrganisationManagementAETestcases.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/OrganisationManagementECETestcases.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/ConfigurationTestcases.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/RegistrationManagementTestcases.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="24" column="56" lean-forward="true" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/SeleniumTest.robot" />
+    <entry file="file://$PROJECT_DIR$/Keywords/SeleniumKeywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+            <marker date="1576151002508" expanded="true" signature="0:43" ph="*** Settings ***" />
+            <marker date="1576151002508" expanded="true" signature="73:455" ph="*** Keywords ***" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/SeleniumTest.robot" />
+    <entry file="file://$PROJECT_DIR$/Keywords/SeleniumKeywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+            <marker date="1576151002508" expanded="true" signature="0:43" ph="*** Settings ***" />
+            <marker date="1576151002508" expanded="true" signature="73:455" ph="*** Keywords ***" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/SeleniumTest.robot" />
+    <entry file="file://$PROJECT_DIR$/Keywords/SeleniumKeywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="26" lean-forward="false" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+            <marker date="1576151002508" expanded="true" signature="0:43" ph="*** Settings ***" />
+            <marker date="1576151002508" expanded="true" signature="73:455" ph="*** Keywords ***" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Keywords/SeleniumKeywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+            <marker date="1576151002508" expanded="true" signature="0:43" ph="*** Settings ***" />
+            <marker date="1576151002508" expanded="true" signature="73:455" ph="*** Keywords ***" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/SeleniumTest.robot" />
+    <entry file="file://$PROJECT_DIR$/Keywords/SeleniumKeywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="97" lean-forward="false" selection-start-line="44" selection-start-column="97" selection-end-line="44" selection-end-column="97" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+            <marker date="1576151002508" expanded="true" signature="0:43" ph="*** Settings ***" />
+            <marker date="1576151002508" expanded="true" signature="73:455" ph="*** Keywords ***" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selenium-screenshot-18.png" />
+    <entry file="file://$PROJECT_DIR$/selenium-screenshot-23.png" />
+    <entry file="file://$PROJECT_DIR$/selenium-screenshot-26.png" />
+    <entry file="file://$PROJECT_DIR$/selenium-screenshot-29.png" />
+    <entry file="file://$PROJECT_DIR$/selenium-screenshot-25.png" />
+    <entry file="file://$PROJECT_DIR$/Testcases/SeleniumTest.robot" />
+    <entry file="file://$PROJECT_DIR$/Keywords/SeleniumKeywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-475">
+          <caret line="1" column="26" lean-forward="false" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+            <marker date="1576151002508" expanded="true" signature="0:43" ph="*** Settings ***" />
+            <marker date="1576151002508" expanded="true" signature="73:455" ph="*** Keywords ***" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/SeleniumTest.robot" />
+    <entry file="file://$PROJECT_DIR$/Keywords/SeleniumKeywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+            <marker date="1576151002508" expanded="true" signature="0:43" ph="*** Settings ***" />
+            <marker date="1576151002508" expanded="true" signature="73:455" ph="*** Keywords ***" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/SeleniumTest.robot" />
+    <entry file="file://$PROJECT_DIR$/Keywords/SeleniumKeywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+            <marker date="1576151002508" expanded="true" signature="0:43" ph="*** Settings ***" />
+            <marker date="1576151002508" expanded="true" signature="73:455" ph="*** Keywords ***" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/SeleniumTest.robot" />
+    <entry file="file://$PROJECT_DIR$/Testcases/SeleniumTest.robot" />
+    <entry file="file://$PROJECT_DIR$/Keywords/SeleniumKeywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+            <marker date="1576151002508" expanded="true" signature="0:43" ph="*** Settings ***" />
+            <marker date="1576151002508" expanded="true" signature="73:455" ph="*** Keywords ***" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/SeleniumTest.robot" />
+    <entry file="file://$PROJECT_DIR$/Keywords/SeleniumKeywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+            <marker date="1576151002508" expanded="true" signature="0:43" ph="*** Settings ***" />
+            <marker date="1576151002508" expanded="true" signature="73:455" ph="*** Keywords ***" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/SeleniumTest.robot" />
+    <entry file="file://$PROJECT_DIR$/Keywords/SeleniumKeywords.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#71#0" expanded="true" />
+            <marker date="1576151002508" expanded="true" signature="0:43" ph="*** Settings ***" />
+            <marker date="1576151002508" expanded="true" signature="73:455" ph="*** Keywords ***" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/OrganisationManagementECETestcases.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="143" column="14" lean-forward="false" selection-start-line="143" selection-start-column="14" selection-end-line="143" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/RegistrationManagementTestcases.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/ConfigurationTestcases.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/AuthenticationTestcases.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testcases/OrganisationManagementAETestcases.robot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="132" column="4" lean-forward="true" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#339#0" expanded="true" />
           </folding>
         </state>
       </provider>
