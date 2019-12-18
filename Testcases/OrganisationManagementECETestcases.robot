@@ -293,6 +293,7 @@ Testcase 11.4: Als extern bedrijfsmedewerker mijn vestigingen niet succesvol wij
     # Klik op het tabje "Vestigingen"
     Click Element   //*[@class='mx-name-tabPage2']  modifier=False
 
+    Sleep   0.5
     # Klik op de knop "Nieuw"
     Click Element   //*[@class='btn mx-button mx-name-actionButton3 btn-default']  modifier=False
 

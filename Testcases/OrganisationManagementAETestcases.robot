@@ -12,7 +12,7 @@ ${TEST_URL}          https://avansmarktplaats-test.mendixcloud.com/index.html
 ${BROWSER}          Chrome
 ${STUDENT_PASSWORD}
 
-*** Test Cases ***\
+*** Test Cases ***
 Testcase 0: Site bezoeken
     Open Browser On Local Machine  ${TEST_URL}  ${BROWSER}
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]    timeout=5
@@ -87,14 +87,15 @@ Testcase 13.0: Als Avans medewerker navigeren naar een organisatie (chatmetvreem
     # Klik op knop(tegel) "Relatiebeheer"
     Click Element  //*[@class='mx-name-container26 card cardaction col-center ClickableContainer']    modifier=false
 
-    Wait Until Page Contains Element    //*[contains(@class,'widget-text-box-search mx-name-textBoxSearch1 ')]   timeout=5
+    Wait Until Page Contains Element    //*[contains(@class,'widget-text-box-search mx-name-textBoxSearch1')]   timeout=5
 
     # Vul de tekst "chatmetvreemden" in de zoekbar
     input text      //*[@class='widget-text-box-search mx-name-textBoxSearch1 ']//*[@class='search-bar']//*[@class='form-control']        chatmetvreemden
-    Sleep   1.0
+    Sleep   0.5
 
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-container8 cardOrganisation')]   timeout=5
-
+    
+    Sleep   0.5
     # Klik op knop(tegel) voor de organisatie Chat met Vreemden
     Click Element  //*[@class='mx-name-container7 card']//*[@class='mx-name-container8 cardOrganisation']    modifier=false
 
@@ -114,7 +115,7 @@ Testcase 13.1: Als Avans medewerker een organisatie aanpassen met verkeerde gege
 
     # Er zou een waarschuwing moeten komen die aangeeft dat de organisatienaam niet is ingevuld
     Wait Until Page Contains Element   //*[@class='mx-name-Organisatienaam mx-textbox form-group has-error']//*[@class='col-sm-8']//*[@class='form-control']  timeout=5
-    Sleep  5.0
+    Sleep  0.5
 
     # Vul de naam weer goed in en sla het op
     Press Keys    //*[@class='mx-name-Organisatienaam mx-textbox form-group has-error']//*[@class='col-sm-8']//*[@class='form-control']        CTRL+a+BACKSPACE
@@ -122,15 +123,15 @@ Testcase 13.1: Als Avans medewerker een organisatie aanpassen met verkeerde gege
 
     # Klik op de knop "Opslaan"
     Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']    modifier=false
-    Sleep  0.5
+    Sleep   0.5
+    Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']    modifier=false
 
 Testcase 13: Als Avans medewerker een organisatie aanpassen
-    Wait Until Page Contains Element    //*[@class='col-md-9 col-sm-12 col-xs-12']//*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
-    Sleep  0.5
+    Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
+    Sleep   0.5
 
     # Klik op de knop "Organisatiegegevens wijzigen"
     Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']    modifier=false
-    
     Wait Until Page Contains Element    //*[@class='mx-name-Organisatienaam mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']      timeout=5
 
     Sleep  0.5
