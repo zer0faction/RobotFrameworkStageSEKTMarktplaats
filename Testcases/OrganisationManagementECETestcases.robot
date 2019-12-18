@@ -18,21 +18,28 @@ Testcase 0: Site bezoeken
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]    timeout=5
     Login As Organisation   g.vanmorsel@coolblue.nl  Mendix1
 
-Testcase 6: Als extern bedrijfsmedewerker een stageopdracht aanmelden
-    # Klik op de "Meld uw opdracht direct aan" link
-    Wait Until Page Contains Element    //*[contains(@class,'mx-link mx-name-actionButton9')]   timeout=5
-    Click Element  //*[@class='mx-link mx-name-actionButton9']  modifier=false
+Testcase 6.1: Als extern bedrijfsmedewerker naar het opdrachtform navigeren
+    As External Employee Navigate To Assignment Form
 
-    # Klik op de "Volgende" knop
-    Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
-    Sleep   0.5
-    Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']    modifier=false
+Testcase 6.2: Als extern bedrijfsmedewerker een stageopdracht aanmelden maar niet alle gegevens invullen
+    Wait Until Page Contains Element  //*[contains(@class,'btn mx-button mx-name-actionButton1 btn-primary')]  timeout=5
+
+    # Klik op de "Bevestigen en verzenden" knop. De
+    Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-primary']  modifier=false
+
+    Wait Until Page Contains Element  //*[contains(@class,'alert alert-danger mx-validation-message')]  timeout=5
+
+    # Klik op de "Annuleren" knop
+    Click Element  //*[@class='btn mx-button mx-name-actionButton4 btn-inverse']  modifier=false
+
+Testcase 6.3: Als extern bedrijfsmedewerker succesvol een stageopdracht aanmelden
+    As External Employee Navigate To Assignment Form
 
     # Kies een academy
     Wait Until Page Contains Element        //*[contains(@class,'form-group mx-referenceselector mx-name-referenceSelector1 StudyprogramNL')]      timeout=5
     Sleep   0.5
-    Select From List By Index           //*[@class='form-group mx-referenceselector mx-name-referenceSelector1 StudyprogramNL']//*[@class='col-sm-9']//*[@class='mx-compound-control']//*[@class='form-control']       2
-    Select From List By Index           //*[@class='form-group mx-referenceselector mx-name-referenceSelector2']//*[@class='col-sm-9']//*[@class='mx-compound-control']//*[@class='form-control']       1
+    Select From List By Index           //*[@class='form-group mx-referenceselector mx-name-referenceSelector2']//*[@class='col-sm-9']//*[@class='mx-compound-control']//*[@class='form-control']       2
+    Select From List By Index           //*[@class='form-group mx-referenceselector mx-name-referenceSelector1 StudyprogramNL']//*[@class='col-sm-9']//*[@class='mx-compound-control']//*[@class='form-control']       1
 
     # Naam opdracht invullen
     input text      //*[@class='mx-name-textBoxTitel Titel mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        testopdracht
@@ -135,11 +142,24 @@ Testcase 7: Als extern bedrijfsmedewerker uw opdrachten inzien
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 btn-inverse')]   timeout=5
     Click Element  //*[@class='mx-name-159b6aef-dbc3-5b23-a735-cf99f8341771-1']  modifier=false
 
-Testcase 9: Als extern bedrijfsmedewerker mijn persoonsgegevens wijzigen
-    # Klik boven op de knop "Mijn gegevens"
-    Wait Until Page Contains Element    //*[contains(@class,'mx-name-container4')]//*[contains(@class,'mx-link mx-name-actionButton1')]   timeout=5
-    Click Element  //*[@class='mx-link mx-name-actionButton1']  modifier=false
-    Wait Until Page Contains Element    //*[contains(@class,'mx-name-MijnOrganisatie')]   timeout=5
+Testcase 9.1: Als extern medewerker naar "Mijn gegevens" navigeren
+    As External Employee Go To My Details
+
+Testcase 9.1: Als extern bedrijfsmedewerker mijn persoonsgegevens niet succesvol wijzigen
+    Sleep   0.5
+    # Voornaam leeghalen
+    Press Keys  //*[@class='mx-name-textBox4 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']       CTRL+a+BACKSPACE
+
+    # Klik op de knop "Wijzigingen opslaan"
+    Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']  modifier=False
+
+    Wait Until Page Contains Element  //*[contains(@class,'alert alert-danger mx-validation-message')]  timeout=5
+
+    # klik op de knop "Pagina Sluiten"
+    Click Element  //*[@class='btn mx-button mx-name-actionButton2 btn-inverse']  modifier=False
+
+Testcase 9: Als extern bedrijfsmedewerker mijn persoonsgegevens succesvol wijzigen
+    As External Employee Go To My Details
 
     Sleep   0.5
     # Voornaam invullen
@@ -169,12 +189,16 @@ Testcase 9: Als extern bedrijfsmedewerker mijn persoonsgegevens wijzigen
     Wait Until Page Contains Element  //*[contains(@class, 'modal-footer mx-dialog-footer')]  timeout=5
     Click Element  //*[@class='modal-footer mx-dialog-footer']//*[@class='btn btn-primary']  modifier=False
 
-Testcase 10: Als extern bedrijfsmedewerker mijn werkervaringsgegevens wijzigen
-    # Klik op de het tabje "Mijn werkervaring"
-    Wait Until Page Contains Element  //*[contains(@class, 'mx-name-mijnwerkervaring')]  timeout=5
-    Sleep   0.5
-    Click Element  //*[@class='mx-name-mijnwerkervaring']
+    # klik op de knop "Pagina Sluiten"
+    Click Element  //*[@class='btn mx-button mx-name-actionButton2 btn-inverse']  modifier=False
 
+Testcase 10.1: Als extern bedrijfsmedewerker naar "Mijn werkervaring" navigeren
+    As External Employee Go To My Work Experience
+
+# Testcase 10.2: Als extern bedrijfsmedewerker mijn werkervaringsgegevens niet succesvol wijzigen
+    # Er is niks verplicht, dus ik kan niet testen of je dit onsuccevol kan wijzigen
+
+Testcase 10.0: Als extern bedrijfsmedewerker mijn werkervaringsgegevens succesvol wijzigen
     Wait Until Page Contains Element  //*[contains(text(),'Afdeling')]  timeout=5
 
     # Functie invullen
@@ -202,7 +226,7 @@ Testcase 10: Als extern bedrijfsmedewerker mijn werkervaringsgegevens wijzigen
     Wait Until Page Contains Element  //*[contains(@class, 'modal-footer mx-dialog-footer')]  timeout=5
     Click Element  //*[@class='modal-footer mx-dialog-footer']//*[@class='btn btn-primary']  modifier=False
 
-Testcase 11: Als extern bedrijfsmedewerker mijn organisatiegegevens wijzigen
+Testcase 11.1: Als extern bedrijfsmedewerker naar mijn organisatiegegevens navigeren
     Wait Until Page Contains Element    //*[contains(@role,'presentation')]//*[contains(@class,'mx-name-MijnOrganisatie')]   timeout=5
     Sleep   0.5
 
@@ -214,9 +238,29 @@ Testcase 11: Als extern bedrijfsmedewerker mijn organisatiegegevens wijzigen
 
     # Klik op de knop "Naar organisatie details"
     Click Element  //*[@class='mx-name-layoutGrid2 mx-layoutgrid mx-layoutgrid-fluid']//*[@class='btn mx-button mx-name-actionButton3 btn-default']  modifier=False
+    Sleep  5.0
 
-    # ------- algemene organisatiegegevens wijzigen -------
+Testcase 11.2: Als extern bedrijfsmedewerker mijn algemene organisatiegegevens niet succesvol wijzigen
+    Wait Until Page Contains Element    //*[contains(@class,'mx-name-layoutGrid4 mx-layoutgrid mx-layoutgrid-fluid')]//*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
+    Sleep   0.5
+    # Klik op de knop "Organisatie gegevens wijzigen", onder het tabje "Organisatiegegevens"
+    Click Element  //*[@class='mx-name-layoutGrid4 mx-layoutgrid mx-layoutgrid-fluid']//*[@class='btn mx-button mx-name-actionButton1 btn-default']  modifier=False
 
+    Sleep  0.5
+    Wait Until Page Contains Element  //*[contains(@class,'mx-name-Organisatienaam mx-textbox form-group')]  timeout=5
+
+    # Maak het veldje voor organisatienaam leeg
+    Press Keys  //*[@class='mx-name-Organisatienaam mx-textbox form-group']//*[@class='col-sm-8']//*[@class='form-control']       CTRL+a+BACKSPACE
+
+    # Klik op knop "Opslaan"
+    Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']  modifier=False
+
+    Wait Until Page Contains Element  //*[contains(@class,'alert alert-danger mx-validation-message')]  timeout=5
+
+    # Klik op de knop "Pagina Sluiten"
+    Click Element  //*[@class='btn mx-button mx-name-actionButton2 btn-inverse']  modifier=false
+
+Testcase 11.3: Als extern bedrijfsmedewerker mijng algemene organisatiegegevens succesvol wijzigen
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-layoutGrid4 mx-layoutgrid mx-layoutgrid-fluid')]//*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
     Sleep   0.5
      # Klik op de knop "Organisatie gegevens wijzigen", onder het tabje "Organisatiegegevens"
@@ -245,6 +289,26 @@ Testcase 11: Als extern bedrijfsmedewerker mijn organisatiegegevens wijzigen
 
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-tabPage2')]   timeout=5
 
+Testcase 11.4: Als extern bedrijfsmedewerker mijn vestigingen niet succesvol wijzigen
+    # Klik op het tabje "Vestigingen"
+    Click Element   //*[@class='mx-name-tabPage2']  modifier=False
+
+    # Klik op de knop "Nieuw"
+    Click Element   //*[@class='btn mx-button mx-name-actionButton3 btn-default']  modifier=False
+
+    Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton1 btn-primary')]   timeout=5
+
+    # Klik op de knop "Opslaan"
+    Click Element   //*[@class='btn mx-button mx-name-actionButton1 btn-primary']  modifier=False
+
+    Wait Until Page Contains Element  //*[contains(@class,'alert alert-danger mx-validation-message')]
+
+    # Klik de knop "Annuleren"
+    Click Element  //*[@class='btn mx-button mx-name-actionButton2 btn-default']  modifier=False
+
+    Sleep  0.5
+
+Testcase 11.4: Als extern bedrijfsmedewerker mijn vestigingen succesvol wijzigen
     # ------- Vestigingen wijzigen -------
 
     # Klik op het tabje "Vestigingen"

@@ -12,7 +12,7 @@ ${TEST_URL}          https://avansmarktplaats-test.mendixcloud.com/index.html
 ${BROWSER}          Chrome
 ${STUDENT_PASSWORD}
 
-*** Test Cases ***
+*** Test Cases ***\
 Testcase 0: Site bezoeken
     Open Browser On Local Machine  ${TEST_URL}  ${BROWSER}
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]    timeout=5

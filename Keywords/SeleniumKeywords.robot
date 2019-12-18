@@ -44,3 +44,32 @@ Log Out As User
     Wait Until Page Contains Element  //*[contains(@class,'mx-link mx-name-actionButton3')]  timeout=5
     Sleep   0.5
     Click Element  //*[@class='mx-link mx-name-actionButton3']  modifier=false
+
+As External Employee Navigate To Assignment Form
+    Sleep  2.0
+
+    # Klik op de "Meld uw opdracht direct aan" link
+    Wait Until Page Contains Element    //*[contains(@class,'mx-link mx-name-actionButton9')]   timeout=5
+    Click Element  //*[@class='mx-link mx-name-actionButton9']  modifier=false
+
+    # Klik op de "Volgende" knop
+    Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
+    Sleep   0.5
+    Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']    modifier=false
+
+As External Employee Go To My Details
+    # Klik boven op de knop "Mijn gegevens"
+    Wait Until Page Contains Element    //*[contains(@class,'mx-name-container4')]//*[contains(@class,'mx-link mx-name-actionButton1')]   timeout=5
+    Click Element  //*[@class='mx-link mx-name-actionButton1']  modifier=false
+    Wait Until Page Contains Element    //*[contains(@class,'mx-name-MijnOrganisatie')]   timeout=5
+
+As External Employee Go To My Work Experience
+    # Klik boven op de knop "Mijn gegevens"
+    Wait Until Page Contains Element    //*[contains(@class,'mx-name-container4')]//*[contains(@class,'mx-link mx-name-actionButton1')]   timeout=5
+    Click Element  //*[@class='mx-link mx-name-actionButton1']  modifier=false
+    Wait Until Page Contains Element    //*[contains(@class,'mx-name-MijnOrganisatie')]   timeout=5
+
+    # Klik op de het tabje "Mijn werkervaring"
+    Wait Until Page Contains Element  //*[contains(@class, 'mx-name-mijnwerkervaring')]  timeout=5
+    Sleep   0.5
+    Click Element  //*[@class='mx-name-mijnwerkervaring']
