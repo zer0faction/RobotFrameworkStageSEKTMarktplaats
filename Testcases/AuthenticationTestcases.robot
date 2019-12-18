@@ -17,7 +17,7 @@ Testcase 0: Site bezoeken
     Open Browser On Local Machine  ${TEST_URL}  ${BROWSER}
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]    timeout=5
 
-Testcase 1.1: Aanmelden als extern bedrijfsmedewerker met een niet bestaand account
+Testcase 1.0: Aanmelden als extern bedrijfsmedewerker met een niet bestaand account
     Login As Organisation  ditiseennietbestaandaccount@mislukkeling.nl  wachtwoord12943289
 
     # Check of de validatie inderdaad niet klopt
@@ -27,7 +27,7 @@ Testcase 1.1: Aanmelden als extern bedrijfsmedewerker met een niet bestaand acco
     Reload Page
     Sleep  0.5
 
-Testcase 1.2: Aanmelden als extern bedrijfsmedewerker
+Testcase 1.1: Aanmelden als extern bedrijfsmedewerker
     Login As Organisation   g.vanmorsel@coolblue.nl     Mendix1
 
 Testcase 2: Als willekeurig gebruiker afmelden
@@ -40,7 +40,7 @@ Testcase 3: Navigeren naar Registeren forum
     # Klik op de "Registreer via deze link!" knop
     Click Element       //*[@class='mx-link mx-name-actionButton2']    modifier=False
 
-Testcase 4.1: Registreren als extern bedrijfsmedewerker: mislukkeling versie (klikt meteen op "Registreer!" knop)
+Testcase 4: Registreren als extern bedrijfsmedewerker: mislukkeling versie (klikt meteen op "Registreer!" knop)
     Wait Until Page Contains Element        //*[contains(@class,'mx-name-textBox1 mx-textbox form-group')]      timeout=5
     Sleep   0.5
 
@@ -50,7 +50,7 @@ Testcase 4.1: Registreren als extern bedrijfsmedewerker: mislukkeling versie (kl
     # Check of de er een "Dit veld is verplicht" of "This field is required" div bestaat.
     Wait Until Page Contains ELement  //*[contains(@class, 'alert alert-danger mx-validation-message')]  timeout=5
 
-Testcase 5.2: Registreren als extern bedrijfsmedewerker
+Testcase 5.0: Registreren als extern bedrijfsmedewerker
     # Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]    timeout=5
     # Klik op de "Inloggen voor bedrijven" knop
     # Click Element   //*[@class='btn mx-button mx-name-actionButton2 squarebutton btn-default']      modifier=False

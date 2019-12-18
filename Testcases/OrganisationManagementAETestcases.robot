@@ -126,7 +126,7 @@ Testcase 13.1: Als Avans medewerker een organisatie aanpassen met verkeerde gege
     Sleep   0.5
     Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']    modifier=false
 
-Testcase 13: Als Avans medewerker een organisatie aanpassen
+Testcase 13.2: Als Avans medewerker een organisatie aanpassen
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
     Sleep   0.5
 
@@ -225,7 +225,7 @@ Testcase 14: Als admin een organisatie verwijderen
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-159b6aef-dbc3-5b23-a735-cf99f8341771-0')]   timeout=5
     Click Element  //*[@class='mx-name-159b6aef-dbc3-5b23-a735-cf99f8341771-0']    modifier=false
 
-Testcase 16: Als Technisch beheer medewerker een organisatie registratie goedkeuren/afkeuren
+Testcase 15: Als Technisch beheer medewerker een organisatie registratie goedkeuren/afkeuren
     Wait Until Page Contains Element    //*[contains(@class,'mx-link mx-name-actionButton26 nowrap')]   timeout=5
     # Klik op de dashboard knop "Registratie verzoeken"
     Click Element  //*[@class='mx-link mx-name-actionButton26 nowrap']  modifier=false
