@@ -14,6 +14,12 @@ ${STUDENT_PASSWORD}
 
 *** Test Cases ***
 Testcase 0: Site bezoeken
+    # Omschrijving:
+    # ----------------------------------------------------------------------------------
+    # In deze testcase wordt de browser geopend en ingelogd met een student account.
+    # Hier is een student account voor nodig.
+    # Na het succesvol inloggen is de huidige pagina de homepagina
+    # ----------------------------------------------------------------------------------
     Open Browser On Local Machine  ${TEST_URL}  ${BROWSER}
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]    timeout=5
     Login As Student Or Teacher Navigate To Page

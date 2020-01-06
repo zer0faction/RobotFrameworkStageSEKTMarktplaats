@@ -408,8 +408,9 @@ Testcase 11.3: Als extern bedrijfsmedewerker mijn vestigingen niet succesvol wij
 Testcase 11.4: Als extern bedrijfsmedewerker mijn vestigingen succesvol wijzigen
     # Omschrijving:
     # -----------------------------------------------------------------------------------------------------------------------------------------
-    # In deze testwordt word een vestiging toegevoegd. Vervolgens wordt gekeken of deze vestiging goed is toegevoegt, en deze wordt verwijderd.
-    # Dit kan alleen vanuit "Mijn vestigingen", en daar bevind de pagina zich ook na de testcase.
+    # In deze testwordt word een vestiging toegevoegd. Vervolgens wordt gekeken of deze vestiging goed is toegevoegt, en wordt deze weer verwijderd.
+    # Op het moment van het uitvoeren van de testcase moet het systeem op de "Mijn vestigingen" pagina zijn. 
+    # Na het uitvoeren is de huidige pagina opnieuw de "Mijn vestigingen" pagina.
     # -----------------------------------------------------------------------------------------------------------------------------------------
 
     # Klik op het tabje "Vestigingen"
