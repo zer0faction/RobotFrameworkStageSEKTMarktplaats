@@ -18,8 +18,13 @@ Testcase 0: Site bezoeken
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]    timeout=5
 
 Testcase 1.0: Aanmelden als extern bedrijfsmedewerker met een niet bestaand account
-    Login As Organisation  ditiseennietbestaandaccount@mislukkeling.nl  wachtwoord12943289
+    # Omschrijving:
+    # ----------------------------------------------------------------------------------------------------------------------------------------------------------
+    # Dit is een falende versie van het aanmelden als bedrijf medewerken. In deze testcase onstaan foutmeldingen die aangeven dat de logingegevens niet kloppen.
+    # Op het moment van het uitvoeren van de testcase moet het systeem op de login pagina zijn. Na het uitvoeren is de huidige pagina opnieuw de aanmeld pagina.
+    # ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
+    Login As Organisation  ditiseennietbestaandaccount@faal.nl  wachtwoord12943289
     # Check of de validatie inderdaad niet klopt
     Wait Until Page Contains Element  //*[contains(@class,'alert alert-danger mx-name-validationMessage1')]  timeout=5
 
@@ -28,19 +33,45 @@ Testcase 1.0: Aanmelden als extern bedrijfsmedewerker met een niet bestaand acco
     Sleep  0.5
 
 Testcase 1.1: Aanmelden als extern bedrijfsmedewerker
+    # Omschrijving:
+    # -----------------------------------------------------------------------------------------
+    # In deze Testcase wordt er ingelogd als extern bedrijfsmedewerker.
+    # Op het moment van het uitvoeren van de testcase moet het systeem op de login pagina zijn. 
+    # Na het uitvoeren is de huidige pagina de home pagina.
+    # -----------------------------------------------------------------------------------------
+
     Login As Organisation   g.vanmorsel@coolblue.nl     Mendix1
 
 Testcase 2: Als willekeurig gebruiker afmelden
+    # Omschrijving:
+    # ---------------------------------------------------------------
+    # In deze Testcase wordt er uitgelogd als willekeurige gebruiker.
+    # Op het moment van het uitvoeren moet het systeem ingelogd zijn.
+    # Na het uitvoeren is de huidige pagina de login pagina.
+    # ---------------------------------------------------------------
     Log Out As User
-
+    
 Testcase 3: Navigeren naar Registeren forum
+    # Omschrijving:
+    # ------------------------------------------------------------------------------------------------------------------------------
+    # De testcase regelt het navigeren naar de registratie pagina. 
+    # De navigatie is opgesplits, omdat er ook een falende testcase versie is van het registreren van een extern bedrijfsmedewerker.
+    # Op het moment van het uitvoeren van de testcase moet het systeem op de login pagina zijn. 
+    # ------------------------------------------------------------------------------------------------------------------------------
+
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]    timeout=5
     # Klik op de "Inloggen voor bedrijven" knop
     Click Element   //*[@class='btn mx-button mx-name-actionButton2 squarebutton btn-default']      modifier=False
     # Klik op de "Registreer via deze link!" knop
     Click Element       //*[@class='mx-link mx-name-actionButton2']    modifier=False
 
-Testcase 4: Registreren als extern bedrijfsmedewerker: mislukkeling versie (klikt meteen op "Registreer!" knop)
+Testcase 4: Registreren als extern bedrijfsmedewerker: faal versie (klikt meteen op "Registreer!" knop)
+    # Omschrijving:
+    # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    # Dit is een falende versie van het registreren als bedrijf medewerken. In deze testcase onstaan foutmeldingen die aangeven dat bepaalde invoervelden nog niet zijn ingevuld.
+    # Op het moment van het uitvoeren van de testcase moet het systeem op de registratie pagina zijn. Na het uitvoeren is de huidige pagina opnieuw de registratie pagina.
+    # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     Wait Until Page Contains Element        //*[contains(@class,'mx-name-textBox1 mx-textbox form-group')]      timeout=5
     Sleep   0.5
 
@@ -51,26 +82,26 @@ Testcase 4: Registreren als extern bedrijfsmedewerker: mislukkeling versie (klik
     Wait Until Page Contains ELement  //*[contains(@class, 'alert alert-danger mx-validation-message')]  timeout=5
 
 Testcase 5.0: Registreren als extern bedrijfsmedewerker
-    # Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]    timeout=5
-    # Klik op de "Inloggen voor bedrijven" knop
-    # Click Element   //*[@class='btn mx-button mx-name-actionButton2 squarebutton btn-default']      modifier=False
-    # Klik op de "Registreer via deze link!" knop
-    # Click Element       //*[@class='mx-link mx-name-actionButton2']    modifier=False
+    # Omschrijving:
+    # ------------------------------------------------------------------------------------------------------------------------------------------------------
+    # De testcase voert het registreren als extern bedrijf medewerker uit. Alle informatie dat wordt ingevuld is nep.
+    # Op het moment van het uitvoeren van de testcase moet het systeem op de registratie pagina zijn. Na het uitvoeren is de huidige pagina de login pagina.
+    # ------------------------------------------------------------------------------------------------------------------------------------------------------
 
     Wait Until Page Contains Element        //*[contains(@class,'mx-name-textBox1 mx-textbox form-group')]      timeout=5
     Sleep   0.5
     # Voornaam invullen
     input text      //*[contains(@class,'mx-name-textBox1 mx-textbox form-group')]//*[@class='col-sm-9']//*[@class='form-control']        Ed
     # Tussenvoegsel invullen
-    input text      //*[contains(@class,'mx-name-textBox3 mx-textbox form-group')]//*[@class='col-sm-9']//*[@class='form-control']        van
+    input text      //*[contains(@class,'mx-name-textBox3 mx-textbox form-group')]//*[@class='col-sm-9']//*[@class='form-control']        de
     # Achternaam invullen
     input text      //*[contains(@class,'mx-name-textBox2 mx-textbox form-group')]//*[@class='col-sm-9']//*[@class='form-control']        Vreemden
     # E-mail invullen
-    input text      //*[contains(@class,'mx-name-textBox4 mx-textbox form-group')]//*[@class='col-sm-9']//*[@class='form-control']        Edje@Outlook.com
+    input text      //*[contains(@class,'mx-name-textBox4 mx-textbox form-group')]//*[@class='col-sm-9']//*[@class='form-control']        Ed@Outlook.com
     # Organisatie invullen
     input text      //*[contains(@class,'mx-name-textBox6 mx-textbox form-group')]//*[@class='col-sm-9']//*[@class='form-control']        ChatMetVreemden.nl
     # Functie invullen
-    input text      //*[contains(@class,'mx-name-textBox5 mx-textbox form-group')]//*[@class='col-sm-9']//*[@class='form-control']        Werkloos
+    input text      //*[contains(@class,'mx-name-textBox5 mx-textbox form-group')]//*[@class='col-sm-9']//*[@class='form-control']        Leraar
 
     # Landnummer kiezen
     click element   id=mxui_widget_ReferenceSelector_0      modifier=False
@@ -87,10 +118,23 @@ Testcase 5.0: Registreren als extern bedrijfsmedewerker
     click element   //*[@class='btn btn-primary']       modifier=False
 
 Testcase 5.1: Aanmelden als Avans student/medewerker met een niet bestaand account
+    # Omschrijving:
+    # -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+    # Dit is een falende versie van het aanmedlden als Avans student/medewerker. In deze testcase onstaan foutmeldingen die aangeven dat de logingegevens niet kloppen.
+    # Op het moment van het uitvoeren van de testcase moet het systeem op de login pagina zijn. Na het uitvoeren is de huidige pagina opnieuw de login pagina.
+    # -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     Login As Student Or Teacher Navigate To Page
     Login As Student Or Teacher Fill In Page  ditwachtwoordklopthelemaalniet
 
 Testcase 5.2: Aanmelden als Avans student/medewerker
+    # Omschrijving:
+    # -----------------------------------------------------------------------------------------------
+    # In deze Testcase wordt er ingelogd als Avans student/medewerker.
+    # Op het moment van het uitvoeren van de testcase moet het systeem op de registratie pagina zijn. 
+    # Na het uitvoeren is de huidige pagina de home pagina.
+    # -----------------------------------------------------------------------------------------------
+
     Login As Student Or Teacher Fill In Page  ${STUDENT_PASSWORD}
     Wait Until Page Contains Element  //*[contains(@class,'mx-text mx-name-text1')]  timeout=15
 

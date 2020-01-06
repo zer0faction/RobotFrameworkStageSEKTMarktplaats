@@ -20,6 +20,12 @@ Testcase 0: Site bezoeken
     Login As Student Or Teacher Fill In Page  ${STUDENT_PASSWORD}
 
 Testcase 17: Als willekeurig gebruiker de taal wijzigen
+    # Omschrijving:
+    # ----------------------------------------------------------------------------------------------------------------------------------------
+    # In deze Testcase wordt de taal gewijzigd van Nederlands naar Engels en daarna terug.
+    # Op het moment van het uitvoeren van de testcase moet het systeem ingelogd zijn. Het systeem blijf op de huidige pagina na het uitvoeren.
+    # ----------------------------------------------------------------------------------------------------------------------------------------
+
     # Rechtsboven op "Instellingen" klikken
     Wait Until Page Contains Element  //*[contains(@class,'mx-link mx-name-actionButton2')]  timeout=5
     Sleep   0.5
@@ -34,7 +40,7 @@ Testcase 17: Als willekeurig gebruiker de taal wijzigen
     Wait Until Page Contains Element  //*[contains(text(),'Avans Marketplace')]
 
     # Terugzetten naar Nederlands, dus rechtsboven op "Instellingen" klikken
-    Wait Until Page Contains Element  //*[contains(@class,'mx-link mx-name-actionButton2')]  timeout=5
+    Wait Until Page Contains Element  //*[contains(@class,'mx-link mx-name-actionButton2')]     timeout=5
     Click Element  //*[@class='mx-link mx-name-actionButton2']  modifier=False
 
     # Op de knop "Change language..." klikken
@@ -46,6 +52,13 @@ Testcase 17: Als willekeurig gebruiker de taal wijzigen
     Wait Until Page Contains Element  //*[contains(text(),'Avans marktplaats')]
 
 Testcase 18: Als student jou primaire opleiding wijzigen
+    # Omschrijving:
+    # -------------------------------------------------------------------------------------------
+    # In deze testcase wordt de primaire opleiding van de student gewijzigd.
+    # Op het moment van het uitvoeren van de testcase moet het systeem ingelogd zijn als student. 
+    # Het systeem blijf op de huidige pagina na het uitvoeren.
+    # -------------------------------------------------------------------------------------------
+
     Wait Until Page Contains Element  //*[contains(@class,'mx-link mx-name-actionButton2')]  timeout=5
     Sleep   0.5
     # Rechtsboven op "Instellingen" klikken

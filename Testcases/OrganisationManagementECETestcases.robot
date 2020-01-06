@@ -14,14 +14,35 @@ ${STUDENT_PASSWORD}
 
 *** Test Cases ***
 Testcase 0: Site bezoeken
+    # Omschrijving:
+    # ---------------------------------------------------------------------------------------------------
+    # In deze testcase wordt de browser geopend en ingelogd met een medewerkers account.
+    # Hier is een Extern Bedrijfsmedewerker account voor nodig.
+    # Na het succesvol inloggen bevind de pagina zich op de Home pagina van de Extern Bedrijfsmedewerker.
+    # ---------------------------------------------------------------------------------------------------
+
     Open Browser On Local Machine  ${TEST_URL}  ${BROWSER}
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]    timeout=5
     Login As Organisation   g.vanmorsel@coolblue.nl  Mendix1
 
 Testcase 6.0: Als extern bedrijfsmedewerker naar het opdrachtform navigeren
+    # Omschrijving:
+    # ------------------------------------------------------------------------------------------
+    # In deze testcase navigeert de extern medewerker naar het Form om opdrachten in te vullen.
+    # Er wordt van uitgegaan dat ingelogd is met een medewerkers account.
+    # Na de testcase bevind de pagina zich op het opdracht invullen form.
+    # ------------------------------------------------------------------------------------------
+
     As External Employee Navigate To Assignment Form
 
 Testcase 6.1: Als extern bedrijfsmedewerker een stageopdracht aanmelden maar niet alle gegevens invullen
+    # Omschrijving:
+    # ---------------------------------------------------------------------------------------------------------------------
+    # In deze testcase wordt het Opdracht Invullen forum niet compleet ingevuld, maar wel op de "Bevestigen" knop gedrukt.
+    # Er wordt vanuit gegaan dat de pagina zich bevind op het opdracht invullen form.
+    # Na de testcase bevind de pagina zich nog steeds op het opdracht invullen form.
+    # ---------------------------------------------------------------------------------------------------------------------
+
     Wait Until Page Contains Element  //*[contains(@class,'btn mx-button mx-name-actionButton1 btn-primary')]  timeout=5
 
     # Klik op de "Bevestigen en verzenden" knop. De
@@ -33,6 +54,13 @@ Testcase 6.1: Als extern bedrijfsmedewerker een stageopdracht aanmelden maar nie
     Click Element  //*[@class='btn mx-button mx-name-actionButton4 btn-inverse']  modifier=false
 
 Testcase 6.2: Als extern bedrijfsmedewerker succesvol een stageopdracht aanmelden
+    # Omschrijving:
+    # ------------------------------------------------------------------------------------------------------------
+    # In deze testcase wordt het Opdracht Invullen forum compleet ingevuld, waardoor een opdracht verzonden wordt.
+    # Er wordt vanuit gegaan dat de pagina zich bevind op het opdracht invullen form.
+    # Na de testcase bevind de pagina zich op de home pagina.
+    # ------------------------------------------------------------------------------------------------------------
+
     As External Employee Navigate To Assignment Form
 
     # Kies een academy
@@ -63,6 +91,13 @@ Testcase 6.2: Als extern bedrijfsmedewerker succesvol een stageopdracht aanmelde
     Sleep   0.5
 
 Testcase 7: Als extern bedrijfsmedewerker een stageopdracht als concept opslaan
+    # Omschrijving:
+    # --------------------------------------------------------------------------------
+    # In deze testcase wordt getest of een opdracht goed opgeslagen wordt als concept.
+    # Er wordt vanuit gegaan dat de pagina zich bevind op Home.
+    # Na de testcase bevind de pagina zich op de Home pagina.
+    # --------------------------------------------------------------------------------
+
     # Klik op de "Meld uw opdracht direct aan" link
     Sleep   0.5
     Wait Until Page Contains Element    //*[contains(@class,'mx-link mx-name-actionButton9')]   timeout=5
@@ -121,6 +156,13 @@ Testcase 7: Als extern bedrijfsmedewerker een stageopdracht als concept opslaan
     Click Element  //*[@class='btn mx-button mx-name-actionButton4 btn-inverse']  modifier=false
 
 Testcase 8: Als extern bedrijfsmedewerker uw opdrachten inzien
+    # Omschrijving:
+    # --------------------------------------------------------------------------------------------------------
+    # In deze testcase wordt genavigeerd naar "Mijn opdrachten" om te kijken wat zich daar bevind.
+    # Er wordt vanuit gegaan dat er een opdracht die "Testopdracht" heet bestaat, aangemaakt in testcase 6.2.
+    # Na de testcase bevind de pagina zich op de "Mijn opdrachten" pagina.
+    # --------------------------------------------------------------------------------------------------------
+
     # Klik op de knop "Mijn Opdrachten"
     Sleep   0.5
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton12 nowrap btn-default')]   timeout=5
@@ -143,9 +185,22 @@ Testcase 8: Als extern bedrijfsmedewerker uw opdrachten inzien
     Click Element  //*[@class='mx-name-159b6aef-dbc3-5b23-a735-cf99f8341771-1']  modifier=false
 
 Testcase 9.0: Als extern medewerker naar "Mijn gegevens" navigeren
+    # Omschrijving:
+    # --------------------------------------------------------
+    # In deze testcase wordt genavigeerd naar "Mijn gegevens".
+    # Dit kan altijd.
+    # --------------------------------------------------------
+
     As External Employee Go To My Details
 
 Testcase 9.1: Als extern bedrijfsmedewerker mijn persoonsgegevens niet succesvol wijzigen
+    # Omschrijving:
+    # --------------------------------------------------------------------------------------------------------------
+    # In deze testcase worden de persoonsgegevens niet volledig ingevuld, maar wel op "Wijzigingen Opslaan" gedrukt.
+    # Er wordt vanuit gegaan dat de pagina zich bevind op "Mijn persoonsgegevens".
+    # Na de testcase bevind de pagina zich weer op Home.
+    # --------------------------------------------------------------------------------------------------------------
+
     Sleep   0.5
     # Voornaam leeghalen
     Press Keys  //*[@class='mx-name-textBox4 mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']       CTRL+a+BACKSPACE
@@ -159,6 +214,13 @@ Testcase 9.1: Als extern bedrijfsmedewerker mijn persoonsgegevens niet succesvol
     Click Element  //*[@class='btn mx-button mx-name-actionButton2 btn-inverse']  modifier=False
 
 Testcase 9.2: Als extern bedrijfsmedewerker mijn persoonsgegevens succesvol wijzigen
+    # Omschrijving:
+    # ------------------------------------------------------------------
+    # In deze testcase worden de persoonsgegevens ingevuld en veranderd.
+    # Dit kan altijd.
+    # Na deze testcase bevind de pagina zich op "Mijn gegevens".
+    # ------------------------------------------------------------------
+
     As External Employee Go To My Details
 
     Sleep   0.5
@@ -193,12 +255,23 @@ Testcase 9.2: Als extern bedrijfsmedewerker mijn persoonsgegevens succesvol wijz
     Click Element  //*[@class='btn mx-button mx-name-actionButton2 btn-inverse']  modifier=False
 
 Testcase 10.0: Als extern bedrijfsmedewerker naar "Mijn werkervaring" navigeren
+    # Omschrijving:
+    # -----------------------------------------------------------------------------------
+    # In deze testcase wordt naar "Mijn werkervaring" genavigeerd vanuit "Mijn gegevens".
+    # -----------------------------------------------------------------------------------
+
     As External Employee Go To My Work Experience
 
 # Testcase 10.2: Als extern bedrijfsmedewerker mijn werkervaringsgegevens niet succesvol wijzigen
     # Er is niks verplicht, dus ik kan niet testen of je dit onsuccevol kan wijzigen
 
 Testcase 10.1: Als extern bedrijfsmedewerker mijn werkervaringsgegevens succesvol wijzigen
+    # Omschrijving:
+    # ------------------------------------------------------------------------------------
+    # In deze testcase worden de werkervaringsgegevens succesvol gewijzigd.
+    # Dit kan alleen vanuit "Mijn werkervaringsgegevens", en daar eindigd de testcase ook.
+    # ------------------------------------------------------------------------------------
+
     Wait Until Page Contains Element  //*[contains(text(),'Afdeling')]  timeout=5
 
     # Functie invullen
@@ -227,6 +300,11 @@ Testcase 10.1: Als extern bedrijfsmedewerker mijn werkervaringsgegevens succesvo
     Click Element  //*[@class='modal-footer mx-dialog-footer']//*[@class='btn btn-primary']  modifier=False
 
 Testcase 11.0: Als extern bedrijfsmedewerker naar mijn organisatiegegevens navigeren
+    # Omschrijving:
+    # --------------------------------------------------------------------------------------------------------------------------
+    # Navigeren naar "Mijn organisatiegegevens". Dit kan alleen vanuit "Mijn werkervaringsgegevens" of "Mijn persoonsgegevens".
+    # --------------------------------------------------------------------------------------------------------------------------
+
     Wait Until Page Contains Element    //*[contains(@role,'presentation')]//*[contains(@class,'mx-name-MijnOrganisatie')]   timeout=5
     Sleep   0.5
 
@@ -241,6 +319,12 @@ Testcase 11.0: Als extern bedrijfsmedewerker naar mijn organisatiegegevens navig
     Sleep  5.0
 
 Testcase 11.1: Als extern bedrijfsmedewerker mijn algemene organisatiegegevens niet succesvol wijzigen
+    # Omschrijving:
+    # ------------------------------------------------------------------------------------------------------------------------------------------
+    # In deze testwordt worden organisatiegegevens verwijderd, maar wordt alsnog op "Opslaan" geklikt. Dit zou in een foutmelding moeten leiden.
+    # Dit kan alleen vanuit "Mijn organisatiegegevens", en daar bevind de pagina zich ook na de testcase.
+    # ------------------------------------------------------------------------------------------------------------------------------------------
+
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-layoutGrid4 mx-layoutgrid mx-layoutgrid-fluid')]//*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
     Sleep   0.5
     # Klik op de knop "Organisatie gegevens wijzigen", onder het tabje "Organisatiegegevens"
@@ -261,6 +345,12 @@ Testcase 11.1: Als extern bedrijfsmedewerker mijn algemene organisatiegegevens n
     Click Element  //*[@class='btn mx-button mx-name-actionButton2 btn-inverse']  modifier=false
 
 Testcase 11.2: Als extern bedrijfsmedewerker mijng algemene organisatiegegevens succesvol wijzigen
+    # Omschrijving:
+    # ---------------------------------------------------------------------------------------------------
+    # In deze testwordt worden organisatiegegevens verwijderd.
+    # Dit kan alleen vanuit "Mijn organisatiegegevens", en daar bevind de pagina zich ook na de testcase.
+    # ---------------------------------------------------------------------------------------------------
+
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-layoutGrid4 mx-layoutgrid mx-layoutgrid-fluid')]//*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
     Sleep   0.5
      # Klik op de knop "Organisatie gegevens wijzigen", onder het tabje "Organisatiegegevens"
@@ -290,6 +380,12 @@ Testcase 11.2: Als extern bedrijfsmedewerker mijng algemene organisatiegegevens 
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-tabPage2')]   timeout=5
 
 Testcase 11.3: Als extern bedrijfsmedewerker mijn vestigingen niet succesvol wijzigen
+    # Omschrijving:
+    # ---------------------------------------------------------------------------------------------------------------------------------
+    # In deze testwordt word een vestiging toegevoegd, maar worden niet alle gegevens ingevuld. Dit moet resulteren in een foutmelding.
+    # Dit kan alleen vanuit "Mijn vestigingen", en daar bevind de pagina zich ook na de testcase.
+    # ---------------------------------------------------------------------------------------------------------------------------------
+
     # Klik op het tabje "Vestigingen"
     Click Element   //*[@class='mx-name-tabPage2']  modifier=False
 
@@ -310,7 +406,11 @@ Testcase 11.3: Als extern bedrijfsmedewerker mijn vestigingen niet succesvol wij
     Sleep  0.5
 
 Testcase 11.4: Als extern bedrijfsmedewerker mijn vestigingen succesvol wijzigen
-    # ------- Vestigingen wijzigen -------
+    # Omschrijving:
+    # -----------------------------------------------------------------------------------------------------------------------------------------
+    # In deze testwordt word een vestiging toegevoegd. Vervolgens wordt gekeken of deze vestiging goed is toegevoegt, en deze wordt verwijderd.
+    # Dit kan alleen vanuit "Mijn vestigingen", en daar bevind de pagina zich ook na de testcase.
+    # -----------------------------------------------------------------------------------------------------------------------------------------
 
     # Klik op het tabje "Vestigingen"
     Click Element   //*[@class='mx-name-tabPage2']  modifier=False

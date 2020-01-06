@@ -19,6 +19,13 @@ Testcase 0: Site bezoeken
     Login As Organisation       gijs@avans.nl       Welkom1234
 
 Testcase 12.0: Als Avans medewerker naar het nieuwe organisatie form navigeren
+    # Omschrijving:
+    # ----------------------------------------------------------------------------------------------------------------------------
+    # De testcase regelt het navigeren naar de registratie pagina. 
+    # De navigatie is opgesplits, omdat er ook een falende testcase versie is van het toevoegen van een nieuwe organisatie.
+    # Op het moment van het uitvoeren van de testcase moet het systeem op de home pagina zijn. 
+    # ----------------------------------------------------------------------------------------------------------------------------
+
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-container26 card cardaction col-center ClickableContainer')]   timeout=5
 
     # Klik op knop(tegel) "Relatiebeheer"
@@ -32,6 +39,13 @@ Testcase 12.0: Als Avans medewerker naar het nieuwe organisatie form navigeren
     Wait Until Page Contains Element        //*[contains(@class,'mx-name-Organisatienaam mx-textbox form-group')]      timeout=5
 
 Testcase 12.1: Als Avans medewerker een organisatie toevoegen zonder alle gegevens in te vullen
+    # Omschrijving:
+    # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    # Dit is een falende versie van het toevoegen van een nieuwe organisatie. In deze testcase onstaan foutmeldingen die aangeven dat bepaalde invoervelden nog niet zijn ingevuld.
+    # Op het moment van het uitvoeren van de testcase moet het systeem op de "Nieuwe organisatie" pagina zijn. 
+    # Na het uitvoeren is de huidige pagina opnieuw de "Nieuwe organisatie" pagina.
+    # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     # Klik op de knop "Opslaan"
     Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-primary']    modifier=false
 
@@ -40,6 +54,13 @@ Testcase 12.1: Als Avans medewerker een organisatie toevoegen zonder alle gegeve
     Click Element  //*[@class='btn btn-primary']    modifier=false
 
 Testcase 12.2: Als Avans medewerker een organisatie toevoegen
+    # Omschrijving:
+    # --------------------------------------------------------------------------------------------------------
+    # De testcase voert het toevoegen van een nieuwe organisatie in het systeem uit.
+    # Op het moment van het uitvoeren van de testcase moet het systeem op de "Nieuwe organisatie" pagina zijn. 
+    # Na het uitvoeren is de huidige pagina de "Relatiebeheer" pagina.
+    # --------------------------------------------------------------------------------------------------------
+
     # Vul de organisatienaam in
     input text      //*[@class='mx-name-Organisatienaam mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        chatmetvreemden.nl
 
@@ -77,10 +98,17 @@ Testcase 12.2: Als Avans medewerker een organisatie toevoegen
     Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-primary']    modifier=false
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-159b6aef-dbc3-5b23-a735-cf99f8341771-0')]   timeout=5
 
-    # Klik op het tabje "Home"
+    # Klik links-boven op het tabje "Home"
     Click Element  //*[@class='mx-name-159b6aef-dbc3-5b23-a735-cf99f8341771-0']    modifier=false
 
 Testcase 13.0: Als Avans medewerker navigeren naar een organisatie (chatmetvreemden.nl)
+    # Omschrijving:
+    # ----------------------------------------------------------------------------------------------------------------------------
+    # De testcase regelt het navigeren naar de "Organisatie details" pagina van chatmetvreemden.nl pagina. 
+    # De navigatie is opgesplits, omdat er ook een falend testcase versie is van het wijzigen van de organisatie.
+    # Op het moment van het uitvoeren van de testcase moet het systeem op de home pagina zijn. 
+    # ----------------------------------------------------------------------------------------------------------------------------
+
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-container26 card cardaction col-center ClickableContainer')]   timeout=5
     Sleep  0.5
 
@@ -100,6 +128,13 @@ Testcase 13.0: Als Avans medewerker navigeren naar een organisatie (chatmetvreem
     Click Element  //*[@class='mx-name-container7 card']//*[@class='mx-name-container8 cardOrganisation']    modifier=false
 
 Testcase 13.1: Als Avans medewerker een organisatie aanpassen met verkeerde gegevens
+    # Omschrijving:
+    # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    # Dit is een falende versie van het gegevens wijzigen van een organisatie. In deze testcase onstaan foutmeldingen die aangeven dat bepaalde invoervelden nog niet zijn ingevuld.
+    # Op het moment van het uitvoeren van de testcase moet het systeem op de "Organisatie details" pagina zijn. 
+    # Na het uitvoeren is de huidige pagina opnieuw de "Organisatie details" pagina.
+    # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
 
     # Klik op de knop "Organisatiegegevens wijzigen"
@@ -127,6 +162,13 @@ Testcase 13.1: Als Avans medewerker een organisatie aanpassen met verkeerde gege
     Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']    modifier=false
 
 Testcase 13.2: Als Avans medewerker een organisatie aanpassen
+    # Omschrijving:
+    # ------------------------------------------------------------------------------------------------------------------------------------------------------
+    # De testcase voert het gegevens wijzigen van een organisatie uit als Avans medewerker. Alle informatie dat wordt ingevuld is nep.
+    # Op het moment van het uitvoeren van de testcase moet het systeem op de "Organisatie details" pagina zijn. 
+    # Na het uitvoeren is de huidige pagina de home pagina.
+    # ------------------------------------------------------------------------------------------------------------------------------------------------------
+
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
     Sleep   0.5
 
@@ -173,15 +215,15 @@ Testcase 13.2: Als Avans medewerker een organisatie aanpassen
     
     Press Keys    //*[@class='mx-name-Postcode mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        CTRL+a+BACKSPACE
     # Vul de postcode in
-    input text      //*[@class='mx-name-Postcode mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']       4761 BK     True
+    input text      //*[@class='mx-name-Postcode mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        4818 AJ     True
     
     Press Keys    //*[@class='mx-name-Huisnummer mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        CTRL+a+BACKSPACE
     # Vul het type adres in
-    input text      //*[@class='mx-name-Huisnummer mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']       1        True
+    input text      //*[@class='mx-name-Huisnummer mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']       61        True
 
     Press Keys    //*[@class='mx-name-Straatnaam mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        CTRL+a+BACKSPACE
     # Vul straatnaam in
-    input text      //*[@class='mx-name-Straatnaam mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']       IJshof       True
+    input text      //*[@class='mx-name-Straatnaam mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']       Lovensdijkstraat       True
 
     Press Keys    //*[@class='mx-name-Plaatsnaam mx-textbox form-group']//*[@class='col-sm-9']//*[@class='form-control']        CTRL+a+BACKSPACE
     # Vul plaats in
@@ -199,6 +241,13 @@ Testcase 13.2: Als Avans medewerker een organisatie aanpassen
     Sleep   0.5
 
 Testcase 14: Als admin een organisatie verwijderen
+     # Omschrijving:
+    # ---------------------------------------------------------------------------------------------------------------------------------------------------------
+    # De testcase voert het verwijderen van een organisatie uit als Avans medewerker. 
+    # Op het moment van het uitvoeren van de testcase moet het systeem op de Home pagina zijn. Ook moet de chatmetvreemden.nl organisatie in het systeem staan.
+    # Na het uitvoeren is de huidige pagina de home pagina.
+    # ---------------------------------------------------------------------------------------------------------------------------------------------------------
+
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-container26 card cardaction col-center ClickableContainer')]   timeout=5
     # Op de dashboard knop "Relatiebeheer" klikken
     Click Element  //*[@class='mx-name-container26 card cardaction col-center ClickableContainer']    modifier=false
@@ -226,6 +275,13 @@ Testcase 14: Als admin een organisatie verwijderen
     Click Element  //*[@class='mx-name-159b6aef-dbc3-5b23-a735-cf99f8341771-0']    modifier=false
 
 Testcase 15: Als Technisch beheer medewerker een organisatie registratie goedkeuren/afkeuren
+    # Omschrijving:
+    # ----------------------------------------------------------------------------------------------------------------
+    # In deze testcase wordt het goedkeuren/afkeuren getest door het nieuwe registratieverzoek van "Ed" af te keuren.
+    # Deze testcase gaat ervan uit dat de Technisch beheer medewerker zich bevind op de home pagina.
+    # Na de testcase bevind de pagina zich op de pagina "Registratie verzoeken".
+    # ----------------------------------------------------------------------------------------------------------------
+
     Wait Until Page Contains Element    //*[contains(@class,'mx-link mx-name-actionButton26 nowrap')]   timeout=5
     # Klik op de dashboard knop "Registratie verzoeken"
     Click Element  //*[@class='mx-link mx-name-actionButton26 nowrap']  modifier=false
