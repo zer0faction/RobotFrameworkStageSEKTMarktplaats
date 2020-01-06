@@ -15,11 +15,11 @@ ${STUDENT_PASSWORD}
 *** Test Cases ***
 Testcase 0: Site bezoeken
     # Omschrijving:
-    # ---------------------------------------------------------------------------------------------------
+    # ------------------------------------------------------------------------------------------------
     # In deze testcase wordt de browser geopend en ingelogd met een medewerkers account.
     # Hier is een Extern Bedrijfsmedewerker account voor nodig.
-    # Na het succesvol inloggen bevind de pagina zich op de Home pagina van de Extern Bedrijfsmedewerker.
-    # ---------------------------------------------------------------------------------------------------
+    # Na het succesvol inloggen is de huidige pagina de Home pagina van de externe bedrijfsmedewerker.
+    # ------------------------------------------------------------------------------------------------
 
     Open Browser On Local Machine  ${TEST_URL}  ${BROWSER}
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]    timeout=5
@@ -27,11 +27,11 @@ Testcase 0: Site bezoeken
 
 Testcase 6.0: Als extern bedrijfsmedewerker naar het opdrachtform navigeren
     # Omschrijving:
-    # ------------------------------------------------------------------------------------------
-    # In deze testcase navigeert de extern medewerker naar het Form om opdrachten in te vullen.
-    # Er wordt van uitgegaan dat ingelogd is met een medewerkers account.
-    # Na de testcase bevind de pagina zich op het opdracht invullen form.
-    # ------------------------------------------------------------------------------------------
+    # ------------------------------------------------------------------------------------------------------------------------------------------
+    # In deze testcase navigeert de extern medewerker naar de pagina om opdrachten in te vullen.
+    # Er wordt van uitgegaan dat er ingelogd is met een medewerkers account.
+    # Na het uivoeren van de testcase is de hudige de pagina de "Opdrachtomschrijving" pagina waarin de bedrijfsgegevens ingevuld kunnen worden.
+    # ------------------------------------------------------------------------------------------------------------------------------------------
 
     As External Employee Navigate To Assignment Form
 
@@ -39,8 +39,8 @@ Testcase 6.1: Als extern bedrijfsmedewerker een stageopdracht aanmelden maar nie
     # Omschrijving:
     # ---------------------------------------------------------------------------------------------------------------------
     # In deze testcase wordt het Opdracht Invullen forum niet compleet ingevuld, maar wel op de "Bevestigen" knop gedrukt.
-    # Er wordt vanuit gegaan dat de pagina zich bevind op het opdracht invullen form.
-    # Na de testcase bevind de pagina zich nog steeds op het opdracht invullen form.
+    # Op het moment van het uitvoeren van de testcase moet het systeem zich op de "Opdrachtomschrijving" pagina bevinden.
+    # Na de testcase is de huidige pagina nog steeds de "Opdrachtomschrijving" pagina.
     # ---------------------------------------------------------------------------------------------------------------------
 
     Wait Until Page Contains Element  //*[contains(@class,'btn mx-button mx-name-actionButton1 btn-primary')]  timeout=5
@@ -55,11 +55,11 @@ Testcase 6.1: Als extern bedrijfsmedewerker een stageopdracht aanmelden maar nie
 
 Testcase 6.2: Als extern bedrijfsmedewerker succesvol een stageopdracht aanmelden
     # Omschrijving:
-    # ------------------------------------------------------------------------------------------------------------
+    # -------------------------------------------------------------------------------------------------------------------
     # In deze testcase wordt het Opdracht Invullen forum compleet ingevuld, waardoor een opdracht verzonden wordt.
-    # Er wordt vanuit gegaan dat de pagina zich bevind op het opdracht invullen form.
-    # Na de testcase bevind de pagina zich op de home pagina.
-    # ------------------------------------------------------------------------------------------------------------
+    # Op het moment van het uitvoeren van de testcase moet het systeem zich op de "Opdrachtomschrijving" pagina bevinden.
+    # Na de testcase is de huidige pagina de home pagina.
+    # -------------------------------------------------------------------------------------------------------------------
 
     As External Employee Navigate To Assignment Form
 
@@ -92,11 +92,11 @@ Testcase 6.2: Als extern bedrijfsmedewerker succesvol een stageopdracht aanmelde
 
 Testcase 7: Als extern bedrijfsmedewerker een stageopdracht als concept opslaan
     # Omschrijving:
-    # --------------------------------------------------------------------------------
+    # -------------------------------------------------------------------------------------------------
     # In deze testcase wordt getest of een opdracht goed opgeslagen wordt als concept.
-    # Er wordt vanuit gegaan dat de pagina zich bevind op Home.
-    # Na de testcase bevind de pagina zich op de Home pagina.
-    # --------------------------------------------------------------------------------
+    # Op het moment van het uitvoeren van de testcase moet het systeem zich op de home pagina bevinden.
+    # Na de testcase is de huidige pagina de home pagina.
+    # -------------------------------------------------------------------------------------------------
 
     # Klik op de "Meld uw opdracht direct aan" link
     Sleep   0.5
@@ -119,7 +119,7 @@ Testcase 7: Als extern bedrijfsmedewerker een stageopdracht als concept opslaan
     # Aanleiding invullen
     input text      //*[@class='mx-name-textAreaAanleiding Aanleiding mx-textarea form-group']//*[@class='col-sm-9']//*[@class='form-control mx-textarea-input']        we maken een tempopdracht
 
-    # Pagine refreshen
+    # Pagina refreshen
     Click Element  //*[@class='btn mx-button mx-name-actionButton5 btn-default']  modifier=false
 
     # Klik op de "Meld uw opdracht direct aan" link
@@ -160,7 +160,7 @@ Testcase 8: Als extern bedrijfsmedewerker uw opdrachten inzien
     # --------------------------------------------------------------------------------------------------------
     # In deze testcase wordt genavigeerd naar "Mijn opdrachten" om te kijken wat zich daar bevind.
     # Er wordt vanuit gegaan dat er een opdracht die "Testopdracht" heet bestaat, aangemaakt in testcase 6.2.
-    # Na de testcase bevind de pagina zich op de "Mijn opdrachten" pagina.
+    # Na de testcase is de huidige pagina de home pagina.
     # --------------------------------------------------------------------------------------------------------
 
     # Klik op de knop "Mijn Opdrachten"
@@ -197,8 +197,8 @@ Testcase 9.1: Als extern bedrijfsmedewerker mijn persoonsgegevens niet succesvol
     # Omschrijving:
     # --------------------------------------------------------------------------------------------------------------
     # In deze testcase worden de persoonsgegevens niet volledig ingevuld, maar wel op "Wijzigingen Opslaan" gedrukt.
-    # Er wordt vanuit gegaan dat de pagina zich bevind op "Mijn persoonsgegevens".
-    # Na de testcase bevind de pagina zich weer op Home.
+    # Er wordt vanuit gegaan dat het systeem zich op de"Mijn persoonsgegevens" pagina bevind.
+    # Na het uitvoeren van de testcases bevind het systeem zich weer op de home pagina.
     # --------------------------------------------------------------------------------------------------------------
 
     Sleep   0.5
@@ -215,11 +215,10 @@ Testcase 9.1: Als extern bedrijfsmedewerker mijn persoonsgegevens niet succesvol
 
 Testcase 9.2: Als extern bedrijfsmedewerker mijn persoonsgegevens succesvol wijzigen
     # Omschrijving:
-    # ------------------------------------------------------------------
+    # ---------------------------------------------------------------------------------------
     # In deze testcase worden de persoonsgegevens ingevuld en veranderd.
-    # Dit kan altijd.
-    # Na deze testcase bevind de pagina zich op "Mijn gegevens".
-    # ------------------------------------------------------------------
+    # Na het uitvoeren van de testcase bevindt het systeem zich op de "Mijn gegevens" pagina.
+    # ---------------------------------------------------------------------------------------
 
     As External Employee Go To My Details
 
@@ -269,7 +268,7 @@ Testcase 10.1: Als extern bedrijfsmedewerker mijn werkervaringsgegevens succesvo
     # Omschrijving:
     # ------------------------------------------------------------------------------------
     # In deze testcase worden de werkervaringsgegevens succesvol gewijzigd.
-    # Dit kan alleen vanuit "Mijn werkervaringsgegevens", en daar eindigd de testcase ook.
+    # Dit kan alleen vanuit "Mijn werkervaringsgegevens" en daar eindigd de testcase ook.
     # ------------------------------------------------------------------------------------
 
     Wait Until Page Contains Element  //*[contains(text(),'Afdeling')]  timeout=5
@@ -322,7 +321,7 @@ Testcase 11.1: Als extern bedrijfsmedewerker mijn algemene organisatiegegevens n
     # Omschrijving:
     # ------------------------------------------------------------------------------------------------------------------------------------------
     # In deze testwordt worden organisatiegegevens verwijderd, maar wordt alsnog op "Opslaan" geklikt. Dit zou in een foutmelding moeten leiden.
-    # Dit kan alleen vanuit "Mijn organisatiegegevens", en daar bevind de pagina zich ook na de testcase.
+    # Dit kan alleen vanuit "Mijn organisatiegegevens". Hier bevindt het systeem zich ook na de testcase.
     # ------------------------------------------------------------------------------------------------------------------------------------------
 
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-layoutGrid4 mx-layoutgrid mx-layoutgrid-fluid')]//*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
@@ -348,7 +347,7 @@ Testcase 11.2: Als extern bedrijfsmedewerker mijng algemene organisatiegegevens 
     # Omschrijving:
     # ---------------------------------------------------------------------------------------------------
     # In deze testwordt worden organisatiegegevens verwijderd.
-    # Dit kan alleen vanuit "Mijn organisatiegegevens", en daar bevind de pagina zich ook na de testcase.
+    # Dit kan alleen vanuit "Mijn organisatiegegevens". Hier bevindt het systeem zich ook na de testcase.
     # ---------------------------------------------------------------------------------------------------
 
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-layoutGrid4 mx-layoutgrid mx-layoutgrid-fluid')]//*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
@@ -383,7 +382,7 @@ Testcase 11.3: Als extern bedrijfsmedewerker mijn vestigingen niet succesvol wij
     # Omschrijving:
     # ---------------------------------------------------------------------------------------------------------------------------------
     # In deze testwordt word een vestiging toegevoegd, maar worden niet alle gegevens ingevuld. Dit moet resulteren in een foutmelding.
-    # Dit kan alleen vanuit "Mijn vestigingen", en daar bevind de pagina zich ook na de testcase.
+    # Dit kan alleen vanuit "Mijn vestigingen". Hier bevindt het systeem zich ook na het uitvoeren van de testcase.
     # ---------------------------------------------------------------------------------------------------------------------------------
 
     # Klik op het tabje "Vestigingen"
@@ -407,11 +406,11 @@ Testcase 11.3: Als extern bedrijfsmedewerker mijn vestigingen niet succesvol wij
 
 Testcase 11.4: Als extern bedrijfsmedewerker mijn vestigingen succesvol wijzigen
     # Omschrijving:
-    # -----------------------------------------------------------------------------------------------------------------------------------------
+    # ----------------------------------------------------------------------------------------------------------------------------------------------
     # In deze testwordt word een vestiging toegevoegd. Vervolgens wordt gekeken of deze vestiging goed is toegevoegt, en wordt deze weer verwijderd.
     # Op het moment van het uitvoeren van de testcase moet het systeem op de "Mijn vestigingen" pagina zijn. 
     # Na het uitvoeren is de huidige pagina opnieuw de "Mijn vestigingen" pagina.
-    # -----------------------------------------------------------------------------------------------------------------------------------------
+    # -----------------------------------------------------------------------------------------------------------------------------------------------
 
     # Klik op het tabje "Vestigingen"
     Click Element   //*[@class='mx-name-tabPage2']  modifier=False

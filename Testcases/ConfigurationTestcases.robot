@@ -18,7 +18,7 @@ Testcase 0: Site bezoeken
     # ----------------------------------------------------------------------------------
     # In deze testcase wordt de browser geopend en ingelogd met een student account.
     # Hier is een student account voor nodig.
-    # Na het succesvol inloggen is de huidige pagina de homepagina
+    # Na het succesvol inloggen is de huidige pagina de home pagina
     # ----------------------------------------------------------------------------------
     Open Browser On Local Machine  ${TEST_URL}  ${BROWSER}
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]    timeout=5

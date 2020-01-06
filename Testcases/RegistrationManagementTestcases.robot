@@ -18,7 +18,7 @@ Testcase 0: Site bezoeken
     # ----------------------------------------------------------------------------------
     # In deze testcase wordt de browser geopend en ingelogd met een student account.
     # Hier is een student account voor nodig.
-    # Na het succesvol inloggen is de huidige pagina de homepagina
+    # Na het succesvol inloggen is de huidige pagina de home pagina
     # ----------------------------------------------------------------------------------
 
     Open Browser On Local Machine  ${TEST_URL}  ${BROWSER}
@@ -31,8 +31,8 @@ Testcase 28: Als student een opdracht zoeken
     # Omschrijving:
     # ------------------------------------------------------------------------------------------------------------------------------
     # In deze testcase zoekt een student naar de zoekterm "Broed". Er wordt vervolgens gecontroleerd of er een resultaat verschijnt.
-    # Deze testcase gaat ervan uit dat de pagina zich bevind op de home pagina van een student.
-    # Na het uitvoeren is de huidige pagina de homepagina en is de opdracht met "Broed" aangeklikt
+    # Deze testcase gaat ervan uit dat het systeem zich bevind op de home pagina van een student.
+    # Na het uitvoeren is de huidige pagina de home pagina en is de opdracht met "Broed" aangeklikt
     # ------------------------------------------------------------------------------------------------------------------------------
 
     Wait Until Page Contains Element  //*[contains(@class,'search-bar')]//*[contains(@class,'form-control')]
@@ -49,7 +49,7 @@ Testcase 29: Als student inschrijven voor een opdracht
     # -----------------------------------------------------------------------------------
     # In deze testcase klikt de student op de inschrijven knop. Er verschijnt een popup.
     # Deze testgate gaat ervan uit dat de student al op een opdracht heeft geklikt.
-    # Na het uitvoeren is de huidige pagina de homepagina pagina.
+    # Na het uitvoeren is de huidige pagina de home pagina pagina.
     # -----------------------------------------------------------------------------------
 
     Wait Until Page Contains Element  //*[@class='btn mx-button mx-name-actionButton2 btn-info']  timeout=5

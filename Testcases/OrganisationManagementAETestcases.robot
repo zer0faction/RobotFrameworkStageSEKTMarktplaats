@@ -15,11 +15,11 @@ ${STUDENT_PASSWORD}
 *** Test Cases ***
 Testcase 0: Site bezoeken
     # Omschrijving:
-    # ----------------------------------------------------------------------------------
+    # -------------------------------------------------------------------------------------------------
     # In deze testcase wordt de browser geopend en ingelogd met een externe bedrijfsmedewerker account.
     # Hier is een externe bedrijfsmedewerkers account voor nodig.
-    # Na het succesvol inloggen is de huidige pagina de homepagina
-    # ----------------------------------------------------------------------------------
+    # Na het succesvol inloggen is de huidige pagina de home pagina
+    # -------------------------------------------------------------------------------------------------
     Open Browser On Local Machine  ${TEST_URL}  ${BROWSER}
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]    timeout=5
     Login As Organisation       gijs@avans.nl       Welkom1234
@@ -48,7 +48,7 @@ Testcase 12.1: Als Avans medewerker een organisatie toevoegen zonder alle gegeve
     # Omschrijving:
     # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     # Dit is een falende versie van het toevoegen van een nieuwe organisatie. In deze testcase onstaan foutmeldingen die aangeven dat bepaalde invoervelden nog niet zijn ingevuld.
-    # Op het moment van het uitvoeren van de testcase moet het systeem op de "Nieuwe organisatie" pagina zijn. 
+    # Op het moment van het uitvoeren van de testcase moet het systeem zich op de "Nieuwe organisatie" pagina bevinden. 
     # Na het uitvoeren is de huidige pagina opnieuw de "Nieuwe organisatie" pagina.
     # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -109,11 +109,11 @@ Testcase 12.2: Als Avans medewerker een organisatie toevoegen
 
 Testcase 13.0: Als Avans medewerker navigeren naar een organisatie (chatmetvreemden.nl)
     # Omschrijving:
-    # ----------------------------------------------------------------------------------------------------------------------------
+    # -----------------------------------------------------------------------------------------------------------
     # De testcase regelt het navigeren naar de "Organisatie details" pagina van chatmetvreemden.nl pagina. 
     # De navigatie is opgesplits, omdat er ook een falend testcase versie is van het wijzigen van de organisatie.
     # Op het moment van het uitvoeren van de testcase moet het systeem op de home pagina zijn. 
-    # ----------------------------------------------------------------------------------------------------------------------------
+    # -----------------------------------------------------------------------------------------------------------
 
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-container26 card cardaction col-center ClickableContainer')]   timeout=5
     Sleep  0.5
@@ -250,7 +250,7 @@ Testcase 14: Als admin een organisatie verwijderen
      # Omschrijving:
     # ---------------------------------------------------------------------------------------------------------------------------------------------------------
     # De testcase voert het verwijderen van een organisatie uit als Avans medewerker. 
-    # Op het moment van het uitvoeren van de testcase moet het systeem op de Home pagina zijn. Ook moet de chatmetvreemden.nl organisatie in het systeem staan.
+    # Op het moment van het uitvoeren van de testcase moet het systeem op de home pagina zijn. Ook moet de chatmetvreemden.nl organisatie in het systeem staan.
     # Na het uitvoeren is de huidige pagina de home pagina.
     # ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -285,7 +285,7 @@ Testcase 15: Als Technisch beheer medewerker een organisatie registratie goedkeu
     # ----------------------------------------------------------------------------------------------------------------
     # In deze testcase wordt het goedkeuren/afkeuren getest door het nieuwe registratieverzoek van "Ed" af te keuren.
     # Deze testcase gaat ervan uit dat de Technisch beheer medewerker zich bevind op de home pagina.
-    # Na de testcase bevind de pagina zich op de pagina "Registratie verzoeken".
+    # Na de testcase bevind het systeem zich op de "Registratie verzoeken" pagina.
     # ----------------------------------------------------------------------------------------------------------------
 
     Wait Until Page Contains Element    //*[contains(@class,'mx-link mx-name-actionButton26 nowrap')]   timeout=5
