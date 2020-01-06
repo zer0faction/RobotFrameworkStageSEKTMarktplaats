@@ -25,7 +25,7 @@ Testcase 0: Site bezoeken
     Login As Student Or Teacher Navigate To Page
     Login As Student Or Teacher Fill In Page  ${STUDENT_PASSWORD}
 
-Testcase 17: Als willekeurig gebruiker de taal wijzigen
+Testcase 16: Als willekeurig gebruiker de taal wijzigen
     # Omschrijving:
     # ----------------------------------------------------------------------------------------------------------------------------------------
     # In deze Testcase wordt de taal gewijzigd van Nederlands naar Engels en daarna terug.
@@ -57,7 +57,7 @@ Testcase 17: Als willekeurig gebruiker de taal wijzigen
     # Nakijken of de website nu Nederlands is
     Wait Until Page Contains Element  //*[contains(text(),'Avans marktplaats')]
 
-Testcase 18: Als student jou primaire opleiding wijzigen
+Testcase 17: Als student jou primaire opleiding wijzigen
     # Omschrijving:
     # -------------------------------------------------------------------------------------------
     # In deze testcase wordt de primaire opleiding van de student gewijzigd.

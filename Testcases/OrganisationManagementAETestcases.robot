@@ -24,7 +24,7 @@ Testcase 0: Site bezoeken
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton2 squarebutton btn-default')]    timeout=5
     Login As Organisation       gijs@avans.nl       Welkom1234
 
-Testcase 12.0: Als Avans medewerker naar het nieuwe organisatie form navigeren
+Testcase 11.0: Als Avans medewerker naar het nieuwe organisatie form navigeren
     # Omschrijving:
     # ----------------------------------------------------------------------------------------------------------------------------
     # De testcase regelt het navigeren naar de registratie pagina. 
@@ -44,7 +44,7 @@ Testcase 12.0: Als Avans medewerker naar het nieuwe organisatie form navigeren
 
     Wait Until Page Contains Element        //*[contains(@class,'mx-name-Organisatienaam mx-textbox form-group')]      timeout=5
 
-Testcase 12.1: Als Avans medewerker een organisatie toevoegen zonder alle gegevens in te vullen
+Testcase 11.1: Als Avans medewerker een organisatie toevoegen zonder alle gegevens in te vullen
     # Omschrijving:
     # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     # Dit is een falende versie van het toevoegen van een nieuwe organisatie. In deze testcase onstaan foutmeldingen die aangeven dat bepaalde invoervelden nog niet zijn ingevuld.
@@ -59,7 +59,7 @@ Testcase 12.1: Als Avans medewerker een organisatie toevoegen zonder alle gegeve
     Wait Until Page Contains Element    //*[contains(@class,'btn btn-primary')]   timeout=5
     Click Element  //*[@class='btn btn-primary']    modifier=false
 
-Testcase 12.2: Als Avans medewerker een organisatie toevoegen
+Testcase 11.2: Als Avans medewerker een organisatie toevoegen
     # Omschrijving:
     # --------------------------------------------------------------------------------------------------------
     # De testcase voert het toevoegen van een nieuwe organisatie in het systeem uit.
@@ -107,7 +107,7 @@ Testcase 12.2: Als Avans medewerker een organisatie toevoegen
     # Klik links-boven op het tabje "Home"
     Click Element  //*[@class='mx-name-159b6aef-dbc3-5b23-a735-cf99f8341771-0']    modifier=false
 
-Testcase 13.0: Als Avans medewerker navigeren naar een organisatie (chatmetvreemden.nl)
+Testcase 12.0: Als Avans medewerker navigeren naar een organisatie (chatmetvreemden.nl)
     # Omschrijving:
     # -----------------------------------------------------------------------------------------------------------
     # De testcase regelt het navigeren naar de "Organisatie details" pagina van chatmetvreemden.nl pagina. 
@@ -133,7 +133,7 @@ Testcase 13.0: Als Avans medewerker navigeren naar een organisatie (chatmetvreem
     # Klik op knop(tegel) voor de organisatie Chat met Vreemden
     Click Element  //*[@class='mx-name-container7 card']//*[@class='mx-name-container8 cardOrganisation']    modifier=false
 
-Testcase 13.1: Als Avans medewerker een organisatie aanpassen met verkeerde gegevens
+Testcase 12.1: Als Avans medewerker een organisatie aanpassen met verkeerde gegevens
     # Omschrijving:
     # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     # Dit is een falende versie van het gegevens wijzigen van een organisatie. In deze testcase onstaan foutmeldingen die aangeven dat bepaalde invoervelden nog niet zijn ingevuld.
@@ -167,7 +167,7 @@ Testcase 13.1: Als Avans medewerker een organisatie aanpassen met verkeerde gege
     Sleep   0.5
     Click Element  //*[@class='btn mx-button mx-name-actionButton1 btn-default']    modifier=false
 
-Testcase 13.2: Als Avans medewerker een organisatie aanpassen
+Testcase 12.2: Als Avans medewerker een organisatie aanpassen
     # Omschrijving:
     # ------------------------------------------------------------------------------------------------------------------------------------------------------
     # De testcase voert het gegevens wijzigen van een organisatie uit als Avans medewerker. Alle informatie dat wordt ingevuld is nep.
@@ -246,7 +246,7 @@ Testcase 13.2: Als Avans medewerker een organisatie aanpassen
     Click Element  //*[@class='mx-name-159b6aef-dbc3-5b23-a735-cf99f8341771-0']    modifier=false
     Sleep   0.5
 
-Testcase 14: Als admin een organisatie verwijderen
+Testcase 13: Als admin een organisatie verwijderen
      # Omschrijving:
     # ---------------------------------------------------------------------------------------------------------------------------------------------------------
     # De testcase voert het verwijderen van een organisatie uit als Avans medewerker. 

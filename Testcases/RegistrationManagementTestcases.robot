@@ -27,7 +27,7 @@ Testcase 0: Site bezoeken
     Login As Student Or Teacher Navigate To Page
     Login As Student Or Teacher Fill In Page  ${STUDENT_PASSWORD}
 
-Testcase 28: Als student een opdracht zoeken
+Testcase 26: Als student een opdracht zoeken
     # Omschrijving:
     # ------------------------------------------------------------------------------------------------------------------------------
     # In deze testcase zoekt een student naar de zoekterm "Broed". Er wordt vervolgens gecontroleerd of er een resultaat verschijnt.
@@ -44,7 +44,7 @@ Testcase 28: Als student een opdracht zoeken
     Click Element  //*[contains(@id, 'mxui_widget_ListViewItem')]  modifier=False
 
 
-Testcase 29: Als student inschrijven voor een opdracht
+Testcase 27: Als student inschrijven voor een opdracht
     # Omschrijving:
     # -----------------------------------------------------------------------------------
     # In deze testcase klikt de student op de inschrijven knop. Er verschijnt een popup.
@@ -61,7 +61,7 @@ Testcase 29: Als student inschrijven voor een opdracht
     # "Ok" klikken
     Click Element  //*[@class='btn btn-primary']  modifier=False
 
-Testcase 30: Als student mijn inschrijvingen bekijken
+Testcase 28: Als student mijn inschrijvingen bekijken
     # Omschrijving:
     # ------------------------------------------------------------------------------------------------------------
     # In deze testcase wordt genavigeerd naar "Mijn inschrijvingen" om te kijken of ingeschreven is voor "Broed".
@@ -76,7 +76,7 @@ Testcase 30: Als student mijn inschrijvingen bekijken
     # Nakijken of de "Broed" opdracht staat ingeschreven
     Wait Until Page Contains Element  //*[contains(text(),'Broed')]  timeout=5
 
-Testcase 31: Als student uitschrijven voor een opdracht
+Testcase 29: Als student uitschrijven voor een opdracht
     # Omschrijvingen
     # ---------------------------------------------------------------------------------------------------------
     # In deze testcase schrijft wordt de student uitgeschreven.

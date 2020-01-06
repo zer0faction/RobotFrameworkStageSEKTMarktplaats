@@ -42,7 +42,7 @@ Testcase 1.1: Aanmelden als extern bedrijfsmedewerker
 
     Login As Organisation   g.vanmorsel@coolblue.nl     Mendix1
 
-Testcase 2: Als willekeurig gebruiker afmelden
+Testcase 4: Als willekeurig gebruiker afmelden
     # Omschrijving:
     # ---------------------------------------------------------------
     # In deze Testcase wordt er uitgelogd als willekeurige gebruiker.
@@ -51,7 +51,7 @@ Testcase 2: Als willekeurig gebruiker afmelden
     # ---------------------------------------------------------------
     Log Out As User
     
-Testcase 3: Navigeren naar Registeren forum
+Testcase 3.0: Navigeren naar Registeren forum
     # Omschrijving:
     # ------------------------------------------------------------------------------------------------------------------------------
     # De testcase regelt het navigeren naar de registratie pagina. 
@@ -65,7 +65,7 @@ Testcase 3: Navigeren naar Registeren forum
     # Klik op de "Registreer via deze link!" knop
     Click Element       //*[@class='mx-link mx-name-actionButton2']    modifier=False
 
-Testcase 4: Registreren als extern bedrijfsmedewerker: faal versie (klikt meteen op "Registreer!" knop)
+Testcase 3.1: Registreren als extern bedrijfsmedewerker: faal versie (klikt meteen op "Registreer!" knop)
     # Omschrijving:
     # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     # Dit is een falende versie van het registreren als bedrijf medewerken. In deze testcase onstaan foutmeldingen die aangeven dat bepaalde invoervelden nog niet zijn ingevuld.
@@ -81,7 +81,7 @@ Testcase 4: Registreren als extern bedrijfsmedewerker: faal versie (klikt meteen
     # Check of de er een "Dit veld is verplicht" of "This field is required" div bestaat.
     Wait Until Page Contains ELement  //*[contains(@class, 'alert alert-danger mx-validation-message')]  timeout=5
 
-Testcase 5.0: Registreren als extern bedrijfsmedewerker
+Testcase 3.2: Registreren als extern bedrijfsmedewerker
     # Omschrijving:
     # ------------------------------------------------------------------------------------------------------------------------------------------------------
     # De testcase voert het registreren als extern bedrijf medewerker uit. Alle informatie dat wordt ingevuld is nep.
@@ -117,7 +117,7 @@ Testcase 5.0: Registreren als extern bedrijfsmedewerker
     # Klik op de "OK" knop
     click element   //*[@class='btn btn-primary']       modifier=False
 
-Testcase 5.1: Aanmelden als Avans student/medewerker met een niet bestaand account
+Testcase 2.0: Aanmelden als Avans student/medewerker met een niet bestaand account
     # Omschrijving:
     # -----------------------------------------------------------------------------------------------------------------------------------------------------------------
     # Dit is een falende versie van het aanmedlden als Avans student/medewerker. In deze testcase onstaan foutmeldingen die aangeven dat de logingegevens niet kloppen.
@@ -127,7 +127,7 @@ Testcase 5.1: Aanmelden als Avans student/medewerker met een niet bestaand accou
     Login As Student Or Teacher Navigate To Page
     Login As Student Or Teacher Fill In Page  ditwachtwoordklopthelemaalniet
 
-Testcase 5.2: Aanmelden als Avans student/medewerker
+Testcase 2.1: Aanmelden als Avans student/medewerker
     # Omschrijving:
     # -----------------------------------------------------------------------------------------------
     # In deze Testcase wordt er ingelogd als Avans student/medewerker.
