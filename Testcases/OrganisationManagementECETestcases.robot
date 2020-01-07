@@ -17,7 +17,7 @@ Testcase 0: Site bezoeken
     # Omschrijving:
     # ------------------------------------------------------------------------------------------------
     # In deze testcase wordt de browser geopend en ingelogd met een medewerkers account.
-    # Hier is een Extern Bedrijfsmedewerker account voor nodig.
+    # Hier is een extern bedrijfsmedewerker account voor nodig.
     # Na het succesvol inloggen is de huidige pagina de Home pagina van de externe bedrijfsmedewerker.
     # ------------------------------------------------------------------------------------------------
 
@@ -67,6 +67,7 @@ Testcase 5.2: Als extern bedrijfsmedewerker succesvol een stageopdracht aanmelde
     Wait Until Page Contains Element        //*[contains(@class,'form-group mx-referenceselector mx-name-referenceSelector1 StudyprogramNL')]      timeout=5
     Sleep   0.5
     Select From List By Index           //*[@class='form-group mx-referenceselector mx-name-referenceSelector2']//*[@class='col-sm-9']//*[@class='mx-compound-control']//*[@class='form-control']       2
+    Sleep   0.5
     Select From List By Index           //*[@class='form-group mx-referenceselector mx-name-referenceSelector1 StudyprogramNL']//*[@class='col-sm-9']//*[@class='mx-compound-control']//*[@class='form-control']       1
 
     # Naam opdracht invullen
@@ -92,11 +93,11 @@ Testcase 5.2: Als extern bedrijfsmedewerker succesvol een stageopdracht aanmelde
 
 Testcase 7: Als extern bedrijfsmedewerker een stageopdracht als concept opslaan
     # Omschrijving:
-    # -------------------------------------------------------------------------------------------------
-    # In deze testcase wordt getest of een opdracht goed opgeslagen wordt als concept.
+    # ----------------------------------------------------------------------------------------------------------------------
+    # In deze testcase wordt getest of een opdracht goed opgeslagen wordt als concept. De concept wordt ook weer verwijderd.
     # Op het moment van het uitvoeren van de testcase moet het systeem zich op de home pagina bevinden.
     # Na de testcase is de huidige pagina de home pagina.
-    # -------------------------------------------------------------------------------------------------
+    # -----------------------------------------------------------------------------------------------------------------------
 
     # Klik op de "Meld uw opdracht direct aan" link
     Sleep   0.5
@@ -188,7 +189,7 @@ Testcase 8.0: Als extern medewerker naar "Mijn gegevens" navigeren
     # Omschrijving:
     # --------------------------------------------------------
     # In deze testcase wordt genavigeerd naar "Mijn gegevens".
-    # Dit kan altijd.
+    # Dit kan vanuit elke pagina uitgevoerd worden.
     # --------------------------------------------------------
 
     As External Employee Go To My Details
@@ -321,7 +322,7 @@ Testcase 10.1: Als extern bedrijfsmedewerker mijn algemene organisatiegegevens n
     # Omschrijving:
     # ------------------------------------------------------------------------------------------------------------------------------------------
     # In deze testwordt worden organisatiegegevens verwijderd, maar wordt alsnog op "Opslaan" geklikt. Dit zou in een foutmelding moeten leiden.
-    # Dit kan alleen vanuit "Mijn organisatiegegevens". Hier bevindt het systeem zich ook na de testcase.
+    # Dit kan alleen vanuit "Mijn organisatiegegevens". Hier bevindt het systeem zich ook na het uitvoeren van de testcase.
     # ------------------------------------------------------------------------------------------------------------------------------------------
 
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-layoutGrid4 mx-layoutgrid mx-layoutgrid-fluid')]//*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
@@ -345,10 +346,10 @@ Testcase 10.1: Als extern bedrijfsmedewerker mijn algemene organisatiegegevens n
 
 Testcase 10.2: Als extern bedrijfsmedewerker mijn algemene organisatiegegevens succesvol wijzigen
     # Omschrijving:
-    # ---------------------------------------------------------------------------------------------------
+    # ---------------------------------------------------------------------------------------------------------------------
     # In deze testwordt worden organisatiegegevens verwijderd.
-    # Dit kan alleen vanuit "Mijn organisatiegegevens". Hier bevindt het systeem zich ook na de testcase.
-    # ---------------------------------------------------------------------------------------------------
+    # Dit kan alleen vanuit "Mijn organisatiegegevens". Hier bevindt het systeem zich ook na het uitvoeren van de testcase.
+    # ---------------------------------------------------------------------------------------------------------------------
 
     Wait Until Page Contains Element    //*[contains(@class,'mx-name-layoutGrid4 mx-layoutgrid mx-layoutgrid-fluid')]//*[contains(@class,'btn mx-button mx-name-actionButton1 btn-default')]   timeout=5
     Sleep   0.5

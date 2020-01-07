@@ -17,7 +17,7 @@ Testcase 0: Site bezoeken
     # Omschrijving:
     # -------------------------------------------------------------------------------------------------
     # In deze testcase wordt de browser geopend en ingelogd met een externe bedrijfsmedewerker account.
-    # Hier is een externe bedrijfsmedewerkers account voor nodig.
+    # Hier is een Avans medewerkersaccount voor nodig.
     # Na het succesvol inloggen is de huidige pagina de home pagina
     # -------------------------------------------------------------------------------------------------
     Open Browser On Local Machine  ${TEST_URL}  ${BROWSER}
