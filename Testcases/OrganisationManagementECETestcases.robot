@@ -33,6 +33,7 @@ Testcase 5.0: Als extern bedrijfsmedewerker naar het opdrachtform navigeren
     # Na het uivoeren van de testcase is de hudige de pagina de "Opdrachtomschrijving" pagina waarin de bedrijfsgegevens ingevuld kunnen worden.
     # ------------------------------------------------------------------------------------------------------------------------------------------
 
+    Sleep   0.5
     As External Employee Navigate To Assignment Form
 
 Testcase 5.1: Als extern bedrijfsmedewerker een stageopdracht aanmelden maar niet alle gegevens invullen

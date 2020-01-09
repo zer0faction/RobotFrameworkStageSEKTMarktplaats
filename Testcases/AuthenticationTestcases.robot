@@ -110,7 +110,7 @@ Testcase 3.2: Registreren als extern bedrijfsmedewerker
     # Telefoonnummer invullen
     input text      //*[contains(@class,'mx-name-textBox7 mx-textbox form-group')]//*[@class='form-control']        46123124
     # Aanhef kiezen
-    click element   //*[@class='mx-radiogroup']//*[@class='radio']//*[@value='Mr_']       modifier=False
+    click element   //*[@class='mx-radiogroup']//*[@class='radio']//*[@value='Heer']       modifier=False
     # Klik op de "Registreer!" knop
     click element   //*[@class='btn mx-button mx-name-actionButton1 btn-default']       modifier=False
     Wait Until Page Contains Element    //*[contains(@class,'btn btn-primary')]     timeout=5

@@ -282,17 +282,20 @@ Testcase 13: Als admin een organisatie verwijderen
 
 Testcase 15: Als Technisch beheer medewerker een organisatie registratie goedkeuren/afkeuren
     # Omschrijving:
-    # ----------------------------------------------------------------------------------------------------------------
+    # ------------------------------------------------------------------------------------------------------------------------------------
     # In deze testcase wordt het goedkeuren/afkeuren getest door het nieuwe registratieverzoek van "Ed" af te keuren.
     # Deze testcase gaat ervan uit dat de Technisch beheer medewerker zich bevind op de home pagina.
+    # Er moet 1 registratieverzoek van "Ed" zijn die wordt aangemaakt in de AuthenticatieTestcases. Bij te veel of geen faalt de testcase.
     # Na de testcase bevind het systeem zich op de "Registratie verzoeken" pagina.
-    # ----------------------------------------------------------------------------------------------------------------
+    # ------------------------------------------------------------------------------------------------------------------------------------
 
     Wait Until Page Contains Element    //*[contains(@class,'mx-link mx-name-actionButton26 nowrap')]   timeout=5
+    Sleep   0.5
     # Klik op de dashboard knop "Registratie verzoeken"
     Click Element  //*[@class='mx-link mx-name-actionButton26 nowrap']  modifier=false
 
     Wait Until Page Contains Element    //*[contains(@class,'btn mx-button mx-name-actionButton3 btn-default')]   timeout=5
+    Sleep   0.5
     # Klik op de registratie verzoek van "Ed"
     Click Element  //*[text()='Ed']    modifier=false
     # Klik op de "Beoordelen" knop
